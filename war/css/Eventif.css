@@ -1,0 +1,647 @@
+/*-------------------------------------*/
+/*--Estilos para tela HomeView-------- */
+/*-------------------------------------*/
+
+body{
+	float: none;
+	margin: 0 !important;
+	width: 100%;
+	height: 100%;
+	direction: ltr;
+	
+}
+p{    
+	margin-top: 129px;
+	margin-bottom: 129px;
+	position: relative;
+}
+.hpCabecalho{
+	position: relative;
+    width: 100%;
+    height: 100%;
+	background: #71964B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 0px !important;
+	clear: both;
+	box-shadow: 0px 3px 0px rgba(40, 2, 0, 0.62);
+}
+
+.lbCertificado{
+	position: relative;
+	margin-top: 62px;
+	margin-left: 10px;
+	float: left;
+	cursor: pointer;
+	font-size: 1.30em;
+	font-family: Times-new-roman, Verdana,Pristina, DaddysGirl, Arial;
+}
+
+.lbCertificado:visited{
+	color: black;
+}
+.lbCertificado:link{
+	color: gray;
+}
+.lbCertificado:hover{
+	color:white;
+	 animation: text-shadow 1s infinite alternate;
+    text-shadow: 0 0 black;
+}
+
+.linkComoFunciona{
+	position: relative;
+    width: 134px;
+    height: 22px;
+    margin-top: 62px;
+    margin-right: 8%;
+    float: left;
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: none; 
+}
+
+.linkComoFunciona:visited{
+	color: black;
+}
+
+.linkComoFunciona:hover{
+	color:white;
+	 animation: text-shadow 1s infinite alternate;
+    text-shadow: 0 0 black;
+}
+
+.lbEntrar{
+	position: relative;
+	margin-top: 62px;
+	margin-left: 14px;
+	float: left;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.lbEntrar:visited{
+	color: red;
+}
+.lbEntrar:link{
+	color: gray;
+}
+.lbEntrar:hover{
+	color:white;
+	animation: text-shadow 1s infinite alternate;
+    text-shadow: 0 0 black;
+}
+
+.iLogo{
+	position:relative;
+	margin-left:127px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.hpPainelRotativo{
+	background-image:  url(../Image/foto-evento.jpg);
+	width: 100%;
+	height: 100%;
+}
+
+.iFotoPainel{
+	position: relative;
+	margin-top: 214px;
+	margin-left: 20px;
+	margin-bottom: 131px;
+}
+
+.hpPainelfoto{
+	width: 60%;
+    height: 40%;
+}
+.btnPause{
+	width: 2%;
+	height: 4%;
+}
+.btnSetaDir{
+	position: relative;
+	width: 5%;
+	height: 6%;
+	font-size: 30px;
+	z-index: 800;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.btnSetaEsq{
+	position: relative;
+	width: 5%;
+	height: 6%;
+	font-size: 30px;
+	z-index: 800;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.vpComoFunciona{
+	width: 100%;
+	height: 50%;
+	background: white;
+	
+}
+
+.linkComoFunciona2{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 20px;
+	font-family: Verdana,Pristina, DaddysGirl, Arial;
+	font-size: 30px;
+	text-decoration:none;
+}
+
+.linkComoFunciona2:focus{
+	outline: none;
+}
+
+.vpPesquisarEvento{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: rgb(67, 149, 233);
+}
+
+.vpPainelLabelPesquisarEvento{
+	position: relative;
+	width: 70%;
+	height: 100%;
+	margin-right: 93px;
+}
+
+.fieldData{
+	position: relative;
+	width: 250px;
+	height: 35px;
+	font-size: 1em;
+	margin-left: 90px;
+
+}
+.fieldData:focus{
+	outline: none;
+}
+
+.fieldEvento {
+	position: relative;
+	width: 337px;
+	height: 35px;
+	font-size: 1em;
+	float: left;
+	margin-left: 130px;
+	margin-right: 20px;
+}
+
+.fieldEvento:focus{
+	outline: none;
+}
+
+.lbEvento{
+	position: relative;
+	width: 20px;
+	height: 20px;
+    top: 10px;
+    left: 425px;
+}
+.lbData{
+	position: relative;
+	width: 20px;
+	height: 20px;
+    top: 12px;
+    left: 68px;
+}
+
+.btnPesquisar{
+	position: relative;
+	width: 120%;
+	height: 80%;
+	margin-left: 3.0%;
+	margin-top: 5%;
+	border: 1px solid;
+	cursor: pointer;
+	text-align: center;
+}
+
+.lbPesquisaEvento{
+	font-size: 50px;
+    font-family: Verdana,Pristina, DaddysGirl, Arial;
+    margin-top: 84px;
+    margin-bottom: 56px;
+	
+}
+
+.ftTabelaEvento{
+	position:relative;
+	width: 70%;
+	height: 18em;
+	margin-top: 10px;
+	border: 0.5px solid white;
+	background: rgb(115, 172, 237);
+	margin-bottom: 30px;
+	outline: none;
+
+}
+
+.hpRodape{
+	background: purple;
+	width: 100%;
+	height: 10%;
+}
+
+.iLogoCentro{
+	/*margin: 180px 20px 311px 20px;*/
+	
+}
+
+.vpPai{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: black;
+}
+
+/*----------------------------------------------------*/
+/* Estilos para tela EscolhaModuloView ---------------*/
+/*----------------------------------------------------*/
+
+
+.EscolhaModuloView{
+    width: 100%;
+    height: 230%;
+    background: rgba(0, 0, 0, 0.63);
+}
+
+.hEscolhaModulo{
+	width: 27em;
+    height: 3em;
+}
+
+.lbGerente{
+	position: relative;
+	width: 53%;
+	height: 40%;
+	float: none;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 20px;
+    border: 2px #9FFF3F groove;
+}
+
+.lbCoordenador{
+	position: relative;
+	width: 53%;
+	height: 40%;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 20px;
+	border: 2px #9FFF3F groove;
+}
+
+.lbParticipante{
+	position: relative;
+	width: 53%;
+	height: 40%;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 2px #9FFF3F groove;
+}
+
+.vpe{
+	width: 40%;
+    height: 40%;
+    margin-left: 396px;
+    margin-right: 10px;
+    margin-top: 258px;
+    background: #FFFFFF;
+    /* border-radius: 4%; */
+    box-shadow: 1px 2px 5px rgba(0,0,0,2.3);
+}
+
+.btnFechar{
+    position: relative;
+    width: 26px;
+    height: 22px;
+    /* margin-top: 250px; */
+    margin-left: 586px;
+    float: right;
+    cursor: pointer;
+    border: none;
+    background: white;
+ 
+}
+
+/*-------------------------------------------------*/
+/*------------------Estilos tela LoginView---------*/
+/*-------------------------------------------------*/
+
+
+.DialogBoxLoginView{
+	width: 100%;
+    height: 100%;
+ 	background: rgba(0, 0, 0, 0.63);
+    box-shadow: 1px 2px 5px rgba(0,0,0,2.3);
+}
+
+.hpPainelPai{
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
+.vpAreaLogin{
+	width: 50%;
+	height: 100%;
+}
+.lbLoginemLogin{
+	position: relative;
+    margin-left: 31px;
+    margin-top: 95px;
+	
+}
+.tbNome{
+    position: relative;
+    width: 297px;
+    height: 43px;
+    margin-left: 30px;
+    margin-top: 4px;
+    
+    border: none;
+    background: #F1F1F1;
+    border-radius: 9px 9px 9px 9px;
+    color: #696161;
+}
+
+.tbNome:focus{
+	outline: none;
+}
+
+.lbSenhaemLogin{
+	position: relative;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.tbSenha{
+    position: relative;
+    width: 297px;
+    height: 43px;
+    margin-left: 30px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: none;
+    background: #F1F1F1;
+    border-radius: 9px 9px 9px 9px;
+    color: #696161;
+}
+
+.tbSenha:focus{
+	outline: none;
+}
+.hpAreaBotoes{
+	width: 100%;
+	heigth:20%;
+}
+.btnLogin{
+    position: relative;
+    margin-left: 45px;
+    margin-top: 11px;
+    margin-bottom: 49px;
+    background: none;
+    border: 1px solid;
+    width: 64%;
+    height: 49%;
+}
+.btnVoltar{
+    position: relative;
+    margin-top: 11px;
+    margin-left: 150px;
+    width: 44%;
+    height: 49%;
+    background: none;
+    border: 1px solid;
+}
+.btnFecharLogin{
+	position: relative;
+    width: 24px;
+    margin-top: 0px;
+    margin-left: 10px;
+    float: right;
+    cursor: pointer;
+    background: white;
+    border: none;
+}
+
+.btnFecharLogin{
+	outline: none;
+}
+.vpAreaFoto{
+	width: 50%;
+	height: 100%;
+    border-left: 2px #9EFB40 dashed;
+}
+
+.iLogoemLogin{
+	position: relative;
+    margin-top: 104px;
+    margin-left: 80px;
+    margin-bottom: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	
+}
+.hpPainelPai{
+    position: relative;
+    width: 76%;
+    height: 100%;
+    background: white;
+    margin-left: 342px;
+    margin-top: 233px;
+}
+
+
+/*--------------------------*/
+/*--Painel Escolhe Modulo----*/
+/*--------------------------*/
+.hpPainelModuloGerente{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 100%;
+    height: 15%;
+}
+.hpPainelModuloParticipante{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 15%;
+}
+
+.hpPainelModuloCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 15%;
+}
+
+.vpPainelAdicionaCabecalhoeEscolheModulo{
+	width: 100%;
+	height: 100%;
+}
+
+.vpPainelAdicionaBotoesModulos{
+	width: 100%;
+	height: 100%;
+}
+
+/*------------------------------*/
+/*--TelaInicialView-------------*/
+/*------------------------------*/
+
+#cabecalho{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 30%;
+}
+.hpPainelCabecalhoLabel{
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background: #71964B;
+	box-shadow: 0px 5px 6px rgba(0,0,0,2.3);
+}
+
+.vpPainelCabecalho{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.vpPainelPaiTelaInicial{
+	position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.lbCertificados{
+    position: relative;
+    margin-top: 33px;
+    margin-left: 33px;
+    font-size: 18px;
+	cursor: pointer;
+}
+
+.lbEntrarSite{
+    position: relative;
+    margin-top: 32px;
+    margin-left: 47px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.aComoFunciona{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 33px;
+    font-family: Verdana,Pristina, DaddysGirl, Arial;
+    font-size: 14px;
+    text-decoration:none;
+    width: 10px;
+}
+.aComoFunciona:link{
+	color: white;
+}
+.aComoFunciona:visited{
+	color: white;
+	outline: none;
+}
+
+.iLogoSite{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 91px;
+    
+}
+
+/*-----------------------*/
+/*--Painel Escolha Modulo*/
+/*-----------------------*/
+
+.hpPainelModulos{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 90%;
+	height: 100%;
+}
+
+.vpPainelNomesModulos{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 50%;
+	height: 80%;
+}
+
+.vpPainelLabelModulo{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50%;
+    height: 80%;	
+}
+
+.lbGerente{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.lbParticipante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;	
+}
+
+.lbCoordenador{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.lbTituloPainelModulos{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

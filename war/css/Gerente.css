@@ -1,0 +1,1649 @@
+/*-------------------------------------*/
+/*-------Tela HomeGerenteView----------*/
+/*-------------------------------------*/
+body{
+	margin: 0;
+	padding: 0;
+	background: darkred;
+}
+
+
+.vpTrocaFuncoes{
+	position: relative;
+	margin-right: 263px;
+	margin-left: 30px;
+	width: 97%;
+	height: 100%;
+	background: white;
+	
+}
+
+.hpPainelTitulo{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	
+}
+
+.hpPainelPesquisarCriar{
+	width: 100%;
+	height: 100%;
+}
+.vpGuardaTitulo{
+	position: relative;
+    margin-top: 46px;
+    margin-left: 33px;
+    margin-bottom: 30px;
+    width: 95%;
+    height: 30%;
+    margin: 2px solid;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 20px;
+   
+}
+.lbGerenciarEvento{
+	position: relative;
+    margin-top: 9px;
+    margin-left: 20px;
+    font-size: 25px;
+    margin-bottom: 4px;
+	
+}
+.tbPesquisaEvento{
+	position: relative;
+	width: 568%;
+	height: 49%;
+    margin-top: 11px;
+    margin-left: 22px;
+    margin-bottom: 18px;
+}
+.btnPesquisar{
+	position: relative;
+    float: left;
+    border: 1px solid;
+    width: 15%;
+    height: 60%;
+    cursor: pointer;
+    margin-left: 468px;
+    margin-top: 10px;
+}
+
+.btnAdicionar{
+	background: none;
+    border: 1px solid;
+    position: relative;
+    width: 65%;
+    height: 60%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+.btnExcluirSelecionados{
+	background: gray;
+    border: 1px solid;
+    position: relative;
+    width: 52%;
+    height: 60%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.vpPainelTabela{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	float: right;
+
+}
+
+.ftTabelaEvento{
+    background: rgba(0, 0, 0, 0.02);
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 27em;
+    border-bottom: 1px solid #E2E2E2;
+   
+}
+.ftTabelaEvento td{
+    text-align: left;
+    background-color: #FFFFFF;
+    padding-bottom: 6px;
+}
+
+.ftTabelaTitulo{
+	background: purple;
+	/*border-collapse: collapse;*/
+}
+.hpGuardaPainel{
+	width: 100%;
+	height: 100%;
+}
+.vpPai{
+	width: 78%;
+	height: 100%;
+	position: relative;
+
+}
+
+.vpPaiAumentado{
+	position: relative;
+	width: 90%;
+	height: 100%;
+	
+}
+/**************************************/
+.lbNomeTitulo{
+	position: relative;
+	
+}
+.lbDataInicioTitulo{
+	position: relative;
+	
+}
+
+.lbDataEncerraTitulo{
+	position: relative;
+   
+}
+.lbCoordenadorTitulo{
+	position: relative;
+   
+}
+.lbDataCertificadoTitulo{
+	position: relative;
+   
+}
+.lbAtividadeTitulo{
+	position: relative;
+   
+}
+.lbLocalEventoTitulo{
+	position: relative;
+    
+}
+
+/*************************************/
+/*--------------------------------------*/
+/*Paineis TelaInicialGerenteParticipante*/
+/*--------------------------------------*/
+
+.ftTabelaParticipante{
+	background: rgba(0, 0, 0, 0.02);
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 60px;
+	width: 89%;
+    height: 27em;
+    border-bottom: 1px solid #E2E2E2;
+}
+.lbGerenciarParticipante{
+	position: relative;
+    margin-top: 9px;
+    margin-left: 20px;
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.tbPesquisarParticipante{
+	position: relative;
+	width: 568%;
+	height: 49%;
+    margin-top: 11px;
+    margin-left: 22px;
+    margin-bottom: 18px;
+}
+/*-----------------------------------*/
+/*Estilos Tela MenuTelaInicialGerente*/
+/*-----------------------------------*/
+
+#painelEsquerdo{
+	background: darkred;
+	width: 15%;
+	height: 100%;
+	
+}
+
+#painelDireito{
+    background: white;
+    float: left;
+    margin-left: 8px;
+    width: 80.9%;
+    height: 100%;
+   
+}
+.vpMenu{
+	background: darkred;
+	width: 100%;
+	height: 100%;
+	float: left;
+	position:relative;
+}
+.hpEspacoLogoMenu{
+	width: 100%;
+	height: 20%;
+}
+
+.iLogo{
+	position: relative;
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-right: 40px;
+}
+.iMenu{
+	position: relative;
+    margin-top: 21px;
+    margin-left: 12px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.iMenu2{
+	position: relative;
+    margin-top: 21px;
+    margin-left: 12px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.hpEspacoNomeGerente{
+	position: relative;
+	background: rgba(0, 0, 0, 0.36); 
+	width: 100%;
+	height: 20%;
+	margin-top: 100px;
+	margin-bottom: 20px;
+
+}
+.menuEvento{
+	width: 90%;
+	height: 100%;
+}
+
+
+.lbEvento{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 9px;
+    margin-left: 11px;
+    font-size: 14px;
+}
+
+
+.iEvento2{
+	position: relative;
+    margin-left: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    padding: 0 0 0 225;
+}
+
+
+.lbSetaCimaE{
+    position: relative;
+    margin-top: 7px;
+    margin-left: 2px;
+}
+
+.lbSetaCimaC{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 9px;
+}
+.lbSetaCimaP{
+	position: relative;
+    margin-top: 7px;
+    margin-left: 25px;
+}
+.hplbEvento{
+	width: 100%;
+    height: 56%;
+    cursor: pointer;
+    background: rgba(156, 138, 142, 0.3);
+}
+.novolbEvento{
+	background: white;
+}
+.hplbEvento:hover{
+	background: white;
+}
+.hplbEvento:visited{
+	background: white;
+}
+
+.lbCoordenadores{
+    position: relative;
+    margin-top: 9px;
+    margin-left: 15px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    color: black;
+    font-size: 14px;
+}
+
+.iEvento{
+    position: relative;
+    margin-left: 12px;
+    margin-top: 3px;
+    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.3);*/
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    padding: 0 0 0 225;
+}
+.iCoordenador{
+	position: relative;
+    margin-left: 11px;
+    margin-top: 2px;
+	/*box-shadow: 5px 5px 5px rgba(0,0,0,0.3);*/
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+
+.iParticipantes{
+    position: relative;
+    margin-left: 11px;
+    margin-top: 2px;
+    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.3);*/
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+.iCoordenador2{
+	position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+.hplbCoordenadores{
+    width: 101%;
+    height: 56%;
+    cursor: pointer;
+    margin-left: 7px;
+    background: rgba(156, 138, 142, 0.3);
+    
+}
+
+.novolbCoordenadores{
+	background: white;
+}
+.hplbCoordenadores:hover{
+	background: white;
+	color: black;
+	
+}
+.hplbCoordenadores:visited{
+	background: white;
+	color: black;
+}
+.lbParticipantes{
+	position: relative;
+    margin-top: 8px;
+    margin-left: 11px;
+    margin-bottom: 2px;
+    color: black;
+    font-size: 14px;
+	
+}
+
+.iParticipantes2{
+	position: relative;
+    margin-left: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+.hplbParticipantes{
+	width: 100%;
+	height: 56%;
+	cursor: pointer;
+	background: rgba(156, 138, 142, 0.3);
+}
+
+.novolbParticipantes{
+	background: white;
+}
+
+.hplbParticipantes:hover{
+	background: white;
+}
+.hplbParticipantes:visited{
+	background: white;
+}
+.lbSair{
+    position: relative;
+    color: black;
+    margin-top: 9px;
+    margin-left: 4px;
+    font-size: 17px;
+}
+
+.iSair{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 11px;
+    
+}
+
+.iSair2{
+	position: relative;
+    margin-top: 6px;
+    margin-left: 8px;
+}
+.hplbSair{
+	width: 100%;
+	height: 14%;
+	cursor: pointer;
+	position: relative;
+	margin-top: 2px;
+	margin-left: 8px;
+	color: black;
+	background: rgba(156, 138, 142, 0.3);
+}
+
+.hplbSair:hover{
+	background: white;
+	color: black;
+	
+}
+.lbEvento:hover{
+	color: black;
+}
+.lbCoordenadores:hover{
+	color: black;
+}
+.lbParticipantes:hover{
+	color: black;
+}
+
+.vpAdicionaItensCoordenador{
+	position: relative;
+	margin-top: 1%;
+	width: 100%;
+	height: 20%;
+	cursor: pointer;
+	border: 1px solid darkred;
+}
+
+.vpAdicionaItensParticipante{
+	position: relative;
+	margin-top: 1%;
+	margin-left: 8px;
+	width: 100%;
+	height: 20%;
+	cursor: pointer;
+}
+
+.vpAdicionaItensEvento{
+	position: relative;
+	margin-top: 51%;
+	margin-left: 8px;
+	width: 100%;
+	height: 20%;
+	cursor: pointer;
+}
+
+.iEventoVoltaMenu{
+    position: relative;
+    margin-left: 12px;
+    margin-top: 3px;
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    padding: 0 0 0 225;
+}
+
+.iCoordenadoresVoltaMenu{
+    position: relative;
+    margin-left: 13px;
+    margin-top: 2px;
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.3); */
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.iParticipantesVoltaMenu{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 2px;
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.3); */
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.lbEventoVoltaMenu{
+	width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 9px;
+    margin-left: 11px;
+    font-size: 14px;
+}
+
+.lbCoordenadoresVoltaMenu{
+	position: relative;
+    margin-top: 9px;
+    margin-left: 15px;
+    margin-bottom: 1px;
+    margin-right: 10px;
+    color: black;
+    font-size: 14px;
+}
+
+.lbParticipantesVoltaMenu{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 11px;
+    margin-bottom: 2px;
+    color: black;
+    font-size: 14px;	
+}
+
+.lbSetaCimaEVoltaMenu{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 84px;
+}
+
+.lbSetaCimaCVoltaMenu{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.lbSetaCimaPVoltaMenu{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.hplbCoordenadoresVoltaMenu{
+	width: 101%;
+    height: 56%;
+    cursor: pointer;
+    margin-left: 7px;
+    background: rgba(156, 138, 142, 0.3);
+}
+/*---------------------------------------*/
+/*-Tela SubMenusGerenteView--------------*/
+/*---------------------------------------*/
+.vpPainelItemCadastrarEvento{
+    position: relative;
+    margin-left: 39px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+   /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+
+
+.vpPainelItemCadastrarCoordenador{
+    position: relative;
+    margin-left: 47px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+
+.vpPainelItemCrachaCoordenador{
+    position: relative;
+    margin-left: 47px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;  
+}
+
+
+.vpPainelItemCertificadoCoordenador{
+    position: relative;
+    margin-left: 47px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+
+.vpPainelItemCadastrarParticipante{
+    position: relative;
+    margin-left: 39px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+   /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+
+
+.vpPainelItemCracha{
+    position: relative;
+    margin-left: 39px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+
+.vpPainelItemCertificado{
+    position: relative;
+    margin-left: 39px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+.lbCadastrarEvento{
+    margin-top: 6px;
+    margin-bottom: 2px;
+    font-size: 17px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lbCadastrarCoordenador{
+	margin-top: 6px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+.lbCrachaCoordenador{
+	margin-top: 6px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+.lbCertificadoCoordenador{
+	margin-top: 6px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+.lbCadastrarParticipante{
+	margin-top: 5px;
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lbCracha{
+	margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 17px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+.lbCertificado{
+	margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 17px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+/*-----------------------------------------*/
+/* Menu telainicial reduzido---------------*/
+/*-----------------------------------------*/
+.iEventoReduzido{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: 2px;
+	
+}
+
+.iCoordenadorReduzido{
+    position: relative;
+    margin-top: 1px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.iParticipanteReduzido{
+    position: relative;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-right: 2px;
+}
+
+.iSairReduzido{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 11px;
+    margin-right: 2px;
+}
+
+.iMenuReduzido{
+    position: relative;
+    margin-top: 13px;
+    margin-left: 14px;
+    margin-right: 2px;
+}
+/*-----------------------------------------*/
+/*-Tela GerenteCadastrarEventoView---------*/
+/*-----------------------------------------*/
+
+.vpPainelFormularioCadastrarEvento{
+	position: relative;
+    margin-left: 23px;
+    width:97%;
+    height: 100%;
+    background: white;
+}
+
+.vpPainelInformacoes{
+	position: relative;
+    width: 90%;
+    height: 100%;
+    margin-top:3%;
+    margin-left: 6%;
+    margin-right: 10%;
+   /* border: 1px solid;*/
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelDataCertificado{
+	position: relative;
+	width: 90%;
+	height: 42%;
+	margin-top: 3%;
+	margin-left: 6%;
+	margin-right: 10%;
+	/*border: 1px solid;*/
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+	
+}
+
+.vpPainelContatos{
+	position: relative;
+	width: 90%;
+	margin-left: 6%;
+	margin-right: 10%;
+	/*border: 1px solid;*/
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+	
+}
+
+.vpPainelEndereco{
+	position: relative;
+	width: 90%;
+	height: 20%;
+    margin-left: 6%;
+	margin-right: 10%;
+	/*border: 1px solid;*/
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+	
+}
+
+.vpPainelBotoes{
+	position: relative;
+	width: 90%;
+	height: 20%;
+    margin-left: 6%;
+	margin-right: 10%;
+	margin-bottom: 3%;
+	/*border: 1px solid;*/
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelAdicionaTodosSubPaineis{
+	position: relative;
+	margin-left: 10%;
+	width: 90%;
+	height: 100%;
+	border: 1px solid;
+}
+.hpPainelLabelInformacoes{
+	width: 100%;
+	height: 55%;
+	background: #E84A49;
+}
+
+.hpPainelLabelETexboxNome{
+	width: 100%;
+	height: 5%;
+}
+
+.hpPainelLabelETexboxDescricao{
+	width: 100%;
+	height: 5%;
+	
+}
+
+.hpPainelLabelETexboxOrganizador{
+	width: 100%;
+	height: 5%;
+	
+}
+
+.hpPainelLabelETexboxDataInicioEncerramento{
+	width: 100%;
+	height: 5%;
+}
+.hpPainelLabelDataCertificados{
+	width: 100%;
+    height: 36%;
+    background:#E84A49;
+}
+.hpPainelLabelETexboxDataCertificados{
+	position: relative;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+	height: 5%;
+	
+}
+.hpPainelLabelContatos{
+	width: 100%;
+	height: 5%;
+	background:#E84A49;
+	
+	
+}
+.hpPainelLabelETexboxTelefone{
+	position: relative;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+	height: 5%;
+}
+
+.hpPainelLabelETexboxEmail{
+	position: relative;
+	margin-bottom: 2%;
+	width: 100%;
+	height: 5%;
+}
+
+.hpPainelLabelETexboxLocaldoevento{
+	position: relative;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 100%;
+	height: 5%;
+	
+}
+.hpPainelLabelEndereco{
+	width: 100%;
+	height: 86%;
+	background: #E84A49;
+	
+}
+
+.hpPainelLabelETexboxEndereco{
+	position: relative;
+	width: 100%;
+	height: 5%;
+	margin-bottom: 2%;
+}
+
+.hpPainelLabelETexboxCidadeEstado{
+    width: 95.22%;
+    height: 5%;
+    margin-bottom: 2%;
+}
+
+.hpPainelLabelETexboxNumeroBairro{
+	width: 100%;
+	height: 5%;
+	margin-bottom: 2%;
+}
+
+.hpPainelLabelETexboxComplemento{
+	width: 100%;
+	height: 5%;
+	margin-bottom: 2%;
+}
+
+.hpPainelButtonFecharVoltar{
+	position: relative;
+	margin-top: 2%;
+	width: 100%;
+	height: 10%;
+	
+}
+.hpPainelNomeCoordenador{
+	position: relative;
+	width: 100%;
+	height: 10%;
+}
+.vpPainelSalvar{
+	width: 100%;
+	height: 10%;
+	background: #E84A49;
+}
+
+.listboxNomeCoordenador{
+    position: relative;
+    margin-left: 0px;
+    margin-top: 5px;
+    width: 106%;
+    height: 26px;
+	
+}
+
+.lbNomeCoordenador{
+    position: relative;
+    margin-left: 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+	
+}
+.lbInformacoesEvento{
+	position: relative;
+	margin-left: 1%;
+	font-size: 20px;
+	color: white;
+}
+
+.lbTituloFormulario{
+    position: relative;
+    width: 90%;
+    height: 46%;
+    margin-left: 6%;
+    margin-top: 5%;
+    font-size: 20px;
+    background: darkred;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+	
+}
+.lbNomeEvento{
+	position: relative;
+    margin-left: 5%;
+    width: 113px;
+	
+}
+
+.lbDescricaoEvento{
+    position: relative;
+    margin-left: 51px;
+    width: 73px;
+}
+.lbOrganizador{
+	position: relative;
+    margin-left: 14%;
+    width: 113px;
+}
+
+.lbDataInicio{
+	position: relative;
+    margin-left: 21%;
+    width: 113px;
+}
+
+.lbDataEncerra{
+	position: relative;
+    margin-left: 56%;
+    width: 351px;
+}
+
+.lbDataDispoCertificado{
+	position: relative;
+	margin-left: 1%;
+    font-size: 18px;
+	color: white;
+}
+.lbDataCertificado{
+	position: relative;
+    margin-left: 65%;
+    width: 113px;
+}
+.lbContatosEvento{
+	position: relative;
+    margin-left: 1%;
+    width: 113px;
+    color: white;
+    font-size: 18px;
+}
+.lbTelefoneEvento{
+	position: relative;
+    margin-left: 49%;
+    width: 113px;
+}
+
+.lbEmailEvento{
+	position: relative;
+    margin-left: 66%;
+    width: 113px;
+}
+
+.lbLocaldoEvento{
+	position: relative;
+    margin-left: 5%;
+    width: 113px;
+}
+
+.lbEnderecoEventotitulo{
+	position: relative;
+    margin-left: 1%;
+    font-size: 18px;
+    color: white;
+}
+
+.lbEnderecoEvento{
+	position: relative;
+    margin-left: 41%;
+    width: 113px;
+}
+
+.lbNumeroEnderecoEvento{
+	position: relative;
+    margin-left: 52%;
+    width: 113px;
+}
+
+.lbBairroEnderecoEvento{
+	position: relative;
+    margin-left: 115%;
+    width: 113px;
+}
+.lbComplementoEnderecoEvento{
+	position: relative;
+    margin-left: 16%;
+    width: 113px;
+}
+.lbCidadeEnderecoEvento{
+	position: relative;
+    margin-left: 59%;
+    width: 113px;
+}
+
+.lbEstadoEnderecoEvento{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 38px;
+    width: 29px;
+
+}
+.lbsalvar{
+	position: relative;
+	margin-left: 1%;
+	color: white;
+	font-size: 18px;
+}
+
+.lbCepEvento{
+    position: relative;
+    margin-left: 36px;
+}
+.tbCepEvento{
+    position: relative;
+    width: 175px;
+    margin-left: 3px;
+}
+.tbNomeEvento{
+	position: relative;
+    width: 93%;
+    height: 100%;
+    margin-left: 1%;
+	
+}
+.taDescricaoEvento{
+    position: relative;
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
+    width: 755px;
+    height: 142px;
+    max-width: 93.6%;
+    max-height: 730px;
+    
+
+}
+
+.tbOrganizador{
+	position: relative;
+    width: 93%;
+    height: 100%;
+    margin-left: 1%;
+}
+.tbDataInicio{
+	position: relative;
+    margin-left: 10%;
+    width: 244%;
+    height: 98%;
+    margin-left: 26%;
+}
+.tbDataEncerra{
+	position: relative;
+	width: 32%;
+	height: 100%;
+}
+
+.tbDataCertificado{
+	position: relative;
+	width: 17%;
+	height: 100%;
+
+}
+.tbTelefoneEvento{
+	position: relative;
+	width: 17%;
+	height: 100%;
+	margin-left: 1.4%;
+}
+.tbEmailEvento{
+	position: relative;
+	margin-left: 2%;
+	width: 41%;
+	height: 100%;
+}
+.tbEnderecoEvento{
+	position: relative;
+	width: 94%;
+	height: 100%;
+}
+
+.tbNumeroEnderecoEvento{
+	position: relative;
+	width: 90%;
+	height: 100%;
+	margin-left: 11%;
+}
+.tbBairroEnderecoEvento{
+	position: relative;
+	width: 58%;
+	height: 100%;
+	margin-left: 14%;
+}
+
+.tbCidadeEnderecoEvento{
+    position: relative;
+    width: 319px;
+    height: 16px;
+    margin-left: 19px;
+}
+.tbEstadoEnderecoEvento{
+	position: relative;
+    width: 31.7%;
+    height: 100%;
+    margin-left: 45%;
+}
+.tbComplementoEnderecoEvento{
+	position: relative;
+	width: 81.2%;
+	height: 100%;
+}
+.tbLocaldoEvento{
+	position: relative;
+	width: 94%;
+	height: 100%;
+}
+.btnVoltar{
+	position: relative;
+    margin-left: 89%;
+    width: 13%;
+    height: 91%;
+    margin-bottom: 2%;
+    background: darkred;
+    border: 1px solid;
+    color: white;
+}
+
+.btnCadastrar{
+	position: relative;
+	margin-left:15%;
+    margin-bottom: 10%;
+    padding-bottom: 2%;
+    width: 59%;
+    height: 98%;
+    background: darkred;
+    border: 1px solid;
+    color: white;
+}
+
+.btnCadastrarCoordenador{
+    position: relative;
+    margin-left: 43px;
+    margin-top: 4px;
+    width: 167px;
+    height: 28px;
+}
+/*-------------------------------*/
+/*GerenteCadastrarCoordenadorView*/
+/*-------------------------------*/
+
+.vpPainelFormularioCadastrarCoordenador{
+	width: 90%;
+    height: 100%;
+    background: white;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.hpPainelLabelCadastrarCoordenador{
+	position: relative;
+    margin-left: 53px;
+    margin-top: 10px;
+    width: 20%;
+}
+
+.hpPainelLabelTipoCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 57px;
+    width: 27%;
+    height: 100%;
+}
+
+.hpPainelLabelInformacoesPessoais{
+    width: 100%;
+    height: 20%;
+    background: #E84A49;
+	
+}
+
+.hpPainelLabeleTextboxNome{
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    height: -1%;
+}
+
+.hpPainelLabeleTextboxRgCpf{
+	position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 96%;
+}
+
+.hpPainelLabelContatosCoordenador{
+	width: 100%;
+	height: 100%;
+	background: #E84A49;
+}
+
+.hpPainelLabeleTextboxTelefone{
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.hpPainelLabeleTextboxEmail{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.hpPainelLabelEnderecoCoordenador{
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    background: #E84A49;
+}
+
+.hpPainelLabeleTexboxEndereco{
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.hpPainelLabeleTexboxNumeroBairro{
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.hpPainelLabeleTexboxCidadeUf{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    /* background: pink; */
+}
+
+.hpPainelLabeleTexboxMatricula{
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.hpPainelBotoesVoltarSalvar{
+	position: relative;
+	margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.hpPainelLabelSalvar{
+	width: 100%;
+	height: 100%;
+    background: #E84A49;
+	
+}
+.vpPainelInformacoesPessoais{
+	position: relative;
+    margin-left: 59px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    
+}
+.vpPainelContatosCoordenador{
+	position: relative;
+	margin-left: 59px;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+	
+}
+
+.vpPainelEnderecoCoordenador{
+	position: relative;
+    margin-left: 59px;
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelSalvarCoordenador{
+	position: relative;
+    /* margin-top: 11px; */
+    margin-left: 59px;
+    margin-bottom: 186px;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid; */
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+.lbAdicionandoCoordenador{
+    position: relative;
+    width: 256px;
+    height: 27px;
+    font-size: 23px;
+    margin-left: 6px;
+    margin-top: 10px;
+}
+
+.lbTipoCoordenador{
+    position: relative;
+    width: 160%;
+    height: 10%;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+.lbInformacoesPessoais{
+    position: relative;
+    margin-left: 7px;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+.lbNomeCompletoCoordenador{
+    position: relative;
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 112px;
+    /* height: 33px; */
+}
+
+.lbRgCoordenador{
+    position: relative;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+
+.lbCpfCoordenador{
+	position: relative;
+    margin-left: 4px;
+    margin-top: 5px;
+
+}
+
+.lbContatosCoordenador{
+    position: relative;
+    margin-left: 9px;
+    margin-top: 2px;
+    font-size: 17px;
+}
+.lbTelefoneCoordenador{
+    position: relative;
+    margin-left: 64px;
+    margin-top: 10px;
+}
+
+.lbEmailCoordenador{
+    position: relative;
+    margin-left: 83px;
+    margin-top: 10px;
+}
+
+.lbEnderecodoCoordenador{
+    position: relative;
+    margin-left: 61px;
+    margin-top: 1px;
+}
+
+.lbEnderecoCadastroCoordenador{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 2%;
+    height: 2%;
+}
+.lbNumerodoCoordenador{
+    position: relative;
+    margin-left: 104px;
+    margin-top: 5px;
+}
+
+.lbBairrodoCoordenador{
+    position: relative;
+    margin-left: 17px;
+    margin-top: 7px;
+}
+
+.lbCidadedoCoordenador{
+    position: relative;
+    margin-left: 75px;
+    margin-top: 6px;
+    width: 45px;
+    height: 20px;
+}
+.lbUfdoCoordenador{
+    position: relative;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.listUf{
+    position: relative;
+    /* margin-left: 7px; */
+    margin-top: 3px;
+    width: 20%;
+    height: 22px;
+}
+.lbMatriculaSiapeCoordenador1{
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.lbPainelSalvar{
+    position: relative;
+    margin-left: 7px;
+    margin-top: 7px;
+    font-size: 16px;
+}
+
+.lbCepCoor{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+.rbServidorCoordenador{
+	position: relative;
+	margin-left: 61px;
+	margin-top: 10px;
+}
+
+.rbOutroCoordenador{
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.tbNomeCompletoCoordenador{
+	position: relative;
+    /* margin-left: 4px; */
+    margin-top: 9px;
+    width: 84%;
+    height: 16px;
+}
+
+.tbRgCoordenador{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 3px;
+    width: 85%;
+    height: 16px;
+}
+
+.tbCpfCoordenador{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 37%;
+    height: 16px;
+}
+
+.tbTelefoneCoordenador{
+    position: relative;
+    margin-top: 7px;
+    margin-left: 4px;
+    width: 14%;
+    height: 16px;
+}
+.tbEmailCoordenador{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 4px;
+    width: 55%;
+    height: 16px;
+}
+.tbEnderecoCoordenador{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+	width: 90%;
+	height: 87%;
+}
+
+.tbEnderecodoCoordenador{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 3px;
+    width: 84%;
+    height: 16px;
+}
+.tbNumerodoCoordenador{
+    position: relative;
+    margin-top: 4px;
+    margin-left: 2px;
+    width: 104%;
+    height: 16px;
+}
+.tbBairrodoCoordenador{
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    width: 90%;
+    height: 16px;
+}
+.tbCidadedoCoordenador{
+    position: relative;
+    margin-top: 3px;
+    margin-left: 0px;
+    width: 90%;
+    height: 16px;
+}
+.tbSiapeMatriculaCoordenador{
+	position: relative;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 20%;
+    height: 16px;
+}
+.tbCepCoor{
+    position: relative;
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 61%;
+    height: 16px;
+}
+.btnVoltarCoordenador2{
+    position: relative;
+    margin-left: 689px;
+    margin-top: 13px;
+    float: right;
+    width: 11%;
+    height: 30px;
+}
+
+
+.btnSalvarCoordenador2{
+	position: relative;
+    margin-left: 14px;
+    margin-top: 13px;
+    width: 61%;
+    height: 30px;
+}
+
+.listUfEvento{
+	position: relative;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-left: 22px;
+    width: 59px;
+    height: 22px;
+}
+
+

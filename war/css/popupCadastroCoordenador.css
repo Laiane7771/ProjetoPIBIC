@@ -1,0 +1,421 @@
+/*-----------Popup Cadastrar Coordenador ------*/
+/*---------------------------------------------*/
+
+.popupCadastroCoordenador{
+	position: relative;
+	width: 100%;
+	height: 142%;
+    background: rgba(0, 0, 0, 0.56);
+}
+.hpPainelTelefoneEmailPopup{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20%;
+    /* background: pink; */
+}
+.hpPainelTituloFormulario{
+	position: relative;
+	width: 100%;
+	height: 10%;
+	
+}
+
+.hpPainelTipodeServidor{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+    width: 20%;
+    height: 10%;
+  
+}
+
+.hpPainelInformacoesPessoaisCoordenador{
+	position: relative;
+	margin-bottom: 10px;
+    width: 100%;
+    height: 10%;
+    background: #CCCCCC;
+}
+
+.hpPainelNomeCoordenadorPopup{
+	position: relative;
+	margin-bottom: 10px;
+    width: 100%;
+    height: 10%;
+
+}
+
+.hpPainelRGeCpfCoordenador{
+	position: relative;
+	margin-bottom:  5px;
+    width: 100%;
+    height: 10%;
+}
+
+.hpPainelMatriculaSiape{
+	position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 10%;
+
+}
+
+.hpPainelContatoseEnderecoCoordenador{
+	position: relative;
+	margin-bottom: 5px;
+    width: 100%;
+    height: 10%;
+    background: #CCCCCC;
+}
+
+.hpPainelEnderecoCoordenador{
+	position: relative;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 10%;
+
+}
+
+.hpPainelNumeroBairro{
+	position: relative;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 10%;
+}
+
+.hpPainelCidadeUf{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 10%;
+    /* background: pink; */
+}
+
+.hpPainelBotoesVoltarCadastrar;{
+	position: relative;
+	margin-bottom: 10px;
+    width: 100%;
+    height: 10%;
+    background: green;
+}
+
+.hpPainelBotoesVoltarCadastrar{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /* background: pink; */
+	
+}
+.vpPainelInformacoesCoordenador{
+    position: relative;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 27px;
+    width: 99%;
+    height: 10%;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(58, 52, 52, 0.3);
+}
+
+.vpPainelContatoseEnderecoCoordenador{
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    width: 99%;
+    height: 10%;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelFormularioCadastroCoordenador{
+    position: relative;
+    margin-top: 112px;
+    margin-left: 251px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+
+.lbTituloPagina{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 100%;
+	height: 2%;
+	font-size: 30px;
+}
+
+
+.lbTipoCoordenadores{
+	position: relative;
+    width: 152%;
+    height: 2%;
+    margin-left: 19px;
+    margin-right: 70px;
+}
+
+.lbInformacoesPessoaisCoordenadores{
+	position: relative;
+    width:  59%;
+    height: 2%;
+}
+
+.lbNomeCoordenadores{
+    position: relative;
+    margin-left: 124px;
+    margin-top: 10px;
+    width: 60%;
+    height: 2%;
+}
+
+.lbRgCoordenadores{
+    position: relative;
+    margin-left: 141px;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.lbCpfCoordenadores{
+	position: relative;
+	margin-left: 10px;
+    margin-top: 10px;
+    width: 2%;
+    height: 2%;
+}
+
+.lbMatriculaSiapeCoordenador{
+    position: relative;
+    margin-left: 52px;
+    margin-top: 4px;
+    width: 40%;
+    height: 2%;
+}
+
+.lbContatosEenderecoCoordenador{
+	position: relative;
+    width: 33%;
+    height: 2%;
+}
+
+.lbEnderecoCoordenador{
+    position: relative;
+    margin-left: 98px;
+    margin-top: 10px;
+    width: 2%;
+    height: 2%;
+
+}
+
+.lbNumeroCoordenador{
+	position: relative;
+    margin-left: 139px;
+    margin-top: 10px;
+    width: 2%;
+    height: 2%;
+}
+
+.lbBairroCoordenador{
+    position: relative;
+    margin-left: 18px;
+    margin-top: 10px;
+    width: 2%;
+    height: 2%;
+}
+
+.lbCidadeCoordenador{
+    position: relative;
+    margin-left: 111px;
+    margin-top: 10px;
+    width: 1%;
+    height: 100%;
+}
+.lbUfCoordenador{
+	position: relative;
+    margin-left: 18px;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.lbServidor{
+	position: relative;
+    margin-left: 1px;
+    margin-top: 0px;
+    width: 2%;
+    height: 2%;
+
+}
+.lbOutro{
+	position: relative;
+    margin-left: 1px;
+    margin-top: 1px;
+    width: 2%;
+    height: 2%;
+}
+
+.lbTelefoneEmailPopup{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	widht: 20px;
+	height: 10px;
+}
+
+.lbEmailCoordenadorPopup{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 24px;
+    width: 49px;
+    height: 10px;
+}
+.lbTelefoneCoordenadorPopup{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 103px;
+    width: 49px;
+    height: 10px;
+}
+
+.radioServidor{
+	position: relative;
+}
+
+.radioOutro{
+	position: relative;
+}
+
+.listUfCoordenador{
+    position: relative;
+    margin-top: 5px;
+    width: 21%;
+    height: 26px;
+}
+
+.btnVoltarCoordenador{
+	position: relative;
+	width: 12%;
+    height: 28px;
+}
+
+.btnCadastrarCoorde{
+    position: relative;
+    margin-left: 3px;
+    margin-top: 20px;
+    width: 101%;
+    height: 28px;
+}
+.btnFecharPopup{
+    position: relative;
+    float: left;
+    top: -7px;
+    left: 917px;
+    width: 25px;
+    z-index: 100;
+    height: 23px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #A59393;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    outline: none;
+    cursor: pointer;
+}
+
+.tbNomeCoordenador{
+	position: relative;
+    margin-top: 7px;
+    margin-left: 4px;
+    width: 62%;
+    height: 16px;	
+	
+}
+
+.tbRgCoordenadorPopup{
+	position: relative;
+    margin-top: 8px;
+    margin-left: 11px;
+    margin-bottom: 10px;
+    width: 68%;
+    height: 16px;
+}
+
+.tbCpfCoordenadorPopup{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 4px;
+    width: 40%;
+    height: 16px;
+}
+
+.tbMatriculaSiape{
+    position: relative;
+    margin-top: 1px;
+    margin-left: 3px;
+    width: 22%;
+    height: 16px;
+}
+
+.tbEnderecoCoordenadorPopup{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 5px;
+    width: 63%;
+    height: 16px;
+}
+
+.tbNumeroCoordenadorPopup{
+	position: relative;
+    margin-top: 7px;
+    width: 100px;
+    height: 16px;
+}
+
+.tbBairroCoordenadorPopup{
+	position: relative;
+    margin-top: 6px;
+    width: 48%;
+    height: 16px;
+}
+
+.tbCidadeCoordenadorPopup{
+	position: relative;
+    margin-top: 7px;
+    margin-left: 0px;
+    width: 100%;
+    height: 16px;
+}
+
+.tbTelefoneCoordenadorPopup{
+    position: relative;
+    margin-top: 7px;
+    /* margin-left: 16px; */
+    width: 90%;
+    height: 71%;
+}
+
+.tbEmailCoordenadorPopup{
+    position: relative;
+    margin-top: 7px;
+    /* margin-left: 0px; */
+    width: 278px;
+    height: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+

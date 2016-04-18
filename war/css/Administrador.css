@@ -1,0 +1,182 @@
+body{
+	margin:0 !important;
+	padding:0 !important;
+}
+
+/*==============================*/
+/*HomeInicialAdministradorView==*/
+/*==============================*/
+#cabecalho{
+	position: relative;
+	margin-top:0;
+	margin-left: 0;
+	width: 100%;
+	height: 20%;
+	background: gray;
+	float: left;
+}
+
+
+#menu{
+	position: relative;
+	width: 20%;
+	height: 100%;
+	background: green;
+	float: left;
+}
+
+#PainelTroca{
+	position: relative;
+    width: 80%;
+    height: 100%;
+    background: green;
+    float: left;
+}
+
+#rodape{
+	position: relative;
+	margin-top: 300px;
+	width: 100%;
+	height: 20%;
+	float: right;
+	background: red;
+	
+}
+
+.hpPainelCabecalhoHomeAdm{
+	position: relative;
+	width: 100%;
+	height: 20%;
+	background: gray;	
+}
+
+.vpPainelRodapeAdm{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background: gray;	
+}
+
+.vpPainelHomeAdm{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: gray;			
+}
+
+
+/*===========================*/
+/*LoginAdministradorPopupView*/
+/*===========================*/
+
+.dialogboxLoginAdm{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+.vpPainelLogineSenha{
+	position: relative;
+	margin-top: 200px;
+	margin-left: 300px;
+	margin-bottom: 200px;
+    width: 125%;
+    height: 111%;
+	background: white;
+	
+}
+
+.btnBotaoLogin{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 114px;
+    width: 9%;
+    height: 100%;
+}
+
+.tbLoginAdm{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 113px;
+    margin-bottom: 10px;
+    width: 59%;
+    height: 82%;
+}
+
+.pssTbSenhaLoginAdm{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 113px;
+    width: 59%;
+    height: 82%;
+    margin-bottom: 10px;
+}
+
+.lbTituloPopupLoginAdm{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 152px;
+}
+
+/*==========================*/
+/*MenuTelaInicialAdmView====*/
+/*==========================*/
+
+.vpPainelMenuTelaInicialAdm{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hpPainelMenuCampusAdm{
+	position: relative;
+	width: 100%; 
+	height: 20%;
+	background: yellow;
+	margin-bottom: 2px;
+}
+
+.hpPainelMenuGerenteAdm{
+	position: relative;
+	width: 100%; 
+	height: 20%;
+	background: yellow;
+	margin-bottom: 2px;
+}
+
+
+.hpPainelMenuSairAdm{
+	position: relative;
+	width: 100%; 
+	height: 20%;
+	background: yellow;
+	margin-bottom: 2px;
+}
+
+.lbMenuCampus{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.lbMenuGerente{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 74px;
+}
+.lbMenuSair{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.iMenuCampus{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20px;	
+}
+.iMenuSair{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+

@@ -1,0 +1,1679 @@
+html{
+    margin: -10px;
+    padding: 0 !important;
+    background: rgb(19, 173, 13);
+}
+body{
+    color: black;
+    margin: 0;
+  	padding:0;
+  	width: 100%;
+  	height: 100%;
+    background: #fff;
+    direction: ltr;
+}
+
+#MenuCoordenadorEsquerdo{
+    position: relative;
+    float: left;
+    width: 19%;
+    height: 100%;
+    background: rgb(19, 173, 13);
+    margin: 0;
+    padding: 0;
+
+}
+#AreaDireita{
+	position: relative;
+	float: right;
+    /* margin-left: 10px; */
+    width: 81%;
+	height: 100%;
+	margin: -10;
+    padding: 0;
+    background: white;
+}
+
+#rodapeCoordenador{
+	position: relative;
+	clean: both;
+	width: 100%;
+	height: 20%;
+	margin: 0;
+    padding: 0;
+}
+
+/*==============================*/
+/*SubMenusTelaInicialCoordenador*/
+/*==============================*/
+
+.hpPainelCadastrarAtividade{
+    position: relative;
+    margin-top: 3px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /*border: 2px #1CEA1C groove;*/
+    cursor: pointer;
+}
+
+.hpPainelImprimirAtividadeComQR{
+    position: relative;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /*border: 2px #17E617 groove;*/
+    cursor: pointer;
+}
+
+
+.hpPainelCadastrarMonitor{
+    position: relative;
+    margin-top: 3px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /* border: 2px #28D628 groove; */
+    cursor: pointer;
+}
+
+.hpPainelCrachas{
+	position: relative;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;
+	background: yellow;	
+	cursor: pointer;
+}
+
+.hpPainelCertificados{
+	position: relative;
+    margin-top: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 82%;
+	background: yellow;	
+	cursor: pointer;
+}
+
+.hpPainelFrequenciaParticipantes{
+     position: relative;
+    margin-top: 3px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /* border: 2px #22E022 groove; */
+    cursor: pointer;
+}
+
+.lbCadastrarAtividade{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 38px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20%;
+    cursor: pointer;	
+}
+
+.lbImprimirAtividadeComQR{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20%;
+	
+}
+
+.lbCadastrarMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 43px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20%;	
+}
+
+.lbCrachas{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 20%;	
+}
+
+
+.lbCertificados{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 20%;	
+}
+
+.lbFrequenciaParticipantes{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20%;	
+}
+
+/*===============================*/
+/*CoordenadorPesquisarMonitorView*/
+/*===============================*/
+
+.hpPainelTituloPesquisarMonitor{
+    position: relative;
+    width: 89%;
+    height: 100%;
+    background: #BAFD7A;
+    /* margin-bottom: 10px; */
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+.hpPainelTituloPesquisarMonitor:hover{
+	background:#333; color:#fff; 
+	-moz-box-shadow:0 3px 10px 0 #CCC; 
+	-webkit-box-shadow:0 3px 10px 0 #ccc; 
+	text-shadow:0px 0px 5px #fff; 
+}
+.hpPainelTabelaMonitores{
+	position: relative;
+	margin-top: 10px;
+    margin-bottom: 13px;
+	width: 96%;
+	height: 100%;
+	/*background: orange;*/
+}
+
+.hpPainelTextBoxButtonMonitor{
+    position: relative;
+    margin-top: 7px;
+    margin-bottom: 13px;
+    margin-left: 60px;
+    width: 87%;
+    height: 100%;
+    background: #C1C1C1;
+}
+.vpPainelPesquisarMonitor{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.lbPesquisarMonitor{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.tbPesquisarMonitor{
+    position: relative;
+    margin-left: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 63%;
+}
+
+.btnPesquisarMonitor{
+    position: relative;
+    margin-top: 7px;
+    margin-left: 29px;
+    margin-bottom: 10px;
+    background: none;
+    border: 1px solid;
+    width: 16%;
+    height: 83%;
+}
+
+.ftTabelaMonitores{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    width: 100%;
+	background: magenta;
+	border: 1px solid;
+}
+
+/*======================================*/
+/*CoordenadorPesquisarAtividadeView*/
+/*======================================*/
+
+.hpPainelTituloPopupAtividadeCoord{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 73px;
+    /* margin-bottom: 10px; */
+    width: 80%;
+    height: 100%;
+    background: #C1C1C1;
+}
+
+.hpPainelTextboxButtonPesquisar{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 86%;
+    height: 70%;
+    background: #F1F1F1;
+}
+
+.hpPainelTabelaAtividadesCoord{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 100%;
+    background: #085405;
+}
+
+
+.vpPainelInscreverAtividades{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid;
+}
+
+.lbTituloPagina{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	
+}
+
+.tbPesquisarAtividadesCoord{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    width: 93%;
+    height: 61%;
+}
+
+.btnPesquisarAtividadeCoord{
+    position: relative;
+    margin-top: 7px;
+    /* margin-left: 10px; */
+    margin-bottom: -1px;
+    width: 41%;
+    height: 81%;
+    background: none;
+    border: 1px solid;
+}
+
+.ftTabelaAtividadesCoord{
+	position: relative;
+	width: 10%;
+	height: 27em;
+	margin: 1px solid;
+	border: 1px solid;
+	margin-bottom: 140px;
+}
+
+/*==================================*/
+/*CoordenadorImprimirCertificadoView*/
+/*==================================*/
+
+.hpPainelTituloPaginaCadastrarMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelInformacoesMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelNomeMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+
+.hpPainelMatriculaMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelRgMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelCpfMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelContatoMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelTelefoneMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelEmailMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelEnderecoMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelEnderecodoMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelNumeroBairroMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.hpPainelCidadeUfMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+
+.vpPainelInformacoesPessoaisMonitor{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+
+.vpPainelContatoMonitor{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+
+.vpPainelEnderecoMonitor{
+	position: relative;
+	width: 10%;
+	height: 100%;
+}
+
+.lbTituloPaginaCadastrarMonitor{
+	position: relative;
+	
+}
+
+.lbInformacoesMonitor{
+	position: relative;
+	
+}
+
+.lbNomeMonitor{
+	position: relative;
+}
+
+.lbMatriculaMonitor{
+	position: relative;
+}
+
+.lbRgMonitor{
+	position: relative;
+}
+
+.lbCpfMonitor{
+	position: relative;
+}
+
+.lbContatoMonitor{
+	position: relative;
+}
+
+.lbTelefoneMonitor{
+	position: relative;
+}
+
+.lbEmailMonitor{
+	position: relative;
+}
+
+
+.lbEnderecoMonitor{
+	position: relative;
+}
+
+.lbEnderecodoMonitor{
+	position: relative;
+}
+
+.lbNumeroMonitor{
+	position: relative;
+}
+
+.lbBairroMonitor{
+	position: relative;
+}
+
+.lbBairroMonitor{
+	position: relative;
+}
+
+.lbCidadeMonitor{
+	position: relative;
+}
+
+.lbEstadoMonitor{
+	position: relative;
+}
+
+.tbNomeMonitor{
+	position: relative;
+}
+
+.tbMatriculaMonitor{
+	position: relative;
+}
+
+.tbRgMonitor{
+	position: relative;
+}
+
+.tbCpfMonitor{
+	position: relative;
+}
+
+.tbTelefoneMonitor{
+	position: relative;
+}
+
+.tbEmailMonitor{
+	position: relative;
+}
+
+.tbEnderecodoMonitor{
+	position: relative;
+}
+
+.tbNumeroMonitor{
+	position: relative;
+}
+
+.tbCidadeMonitor{
+	position: relative;
+}
+
+.listUfMonitor{
+	position: relative;
+}
+
+
+
+/*=================================*/
+/*CoordenadorCadastrarAtividadeView*/
+/*=================================*/
+
+.hpPainelTituloPaginaCadastrarAtividade{
+    position: relative;
+    margin-top: 16px;
+    margin-left: 42px;
+    margin-bottom: 8px;
+    width: 90%;
+    height: 100%;
+    background: #C1C1C1;
+	
+}
+
+
+.hpPainelInformacoesAtividades{
+    position: relative;
+    /* margin-top: -2px; */
+    margin-left: 0px;
+    /* margin-bottom: 10px; */
+    width: 94%;
+    height: 100%;
+    background: #13AD0D;
+}
+
+.hpPainelNomeAtividades{
+    position: relative;
+    margin-top: 10px; 
+    width: 100%;
+    height: 100%;
+    /*background: white;*/
+}
+
+.hpPainelDescricaoAtividades{
+	position:relative;
+    margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+    /*background: white;*/
+}
+
+.hpPainelTipoAtividade{
+	position:relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+   /* background: white;*/
+}
+
+
+.hpPainelMinistranteAtividade{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background: white;*/
+}
+.hpPainelEmailMinistrante{
+	position:relative;
+	width: 100%;
+	height: 100%;
+    /*background: white;*/
+}
+.hpPainelDataAtividade{
+    position: relative;
+    width: 100%;
+    height: 100%;
+   /* background: white;*/
+}
+
+.hpPainelHoraInicioAtividade{
+	position:relative;
+	width: 100%;
+	height: 100%;
+    /*background: white;*/
+}
+
+.hpPainelHoraEncerraAtividade{
+	position:relative;
+	width: 100%;
+	height: 100%;
+    /*background: white;*/
+}
+
+.hpPainelNumeroVagasAtividades{
+	position:relative;
+    margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+    /*background: white;*/
+}
+
+.hpPainelCargaHorariaAtividade{
+	position:relative;
+	width: 100%;
+	height: 100%;
+   /* background: white;*/
+}
+.hpPainelBotoes{
+    position: relative;
+    width: 94%;
+    height: 100%;
+	background: #13AD0D;
+}
+.vpPainelInformacoesAtividades{
+    position: relative;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.vpPainelCadastrarAtividades{
+	position:relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+    background: white;	
+    border: 1px solid;
+}
+
+.lbTituloPaginaAtividades{
+	position:relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 15px;
+	
+}
+
+.lbInformacoesAtividades{
+	position:relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 15px;	
+}
+
+.lbNomeAtividades{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 109px;
+    margin-bottom: 10px;
+}
+
+.lbDescricaoAtividades{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 91px;
+    margin-bottom: 10px;	
+}
+
+.lbTipodeAtividade{
+    position: relative;
+    width: 116%;
+    height: 51%;
+    margin-top: 10px;
+    margin-left: 42px;
+    margin-bottom: 10px;
+}
+
+.lbMinistranteAtividade{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 85px;
+    margin-bottom: 10px;	
+}
+
+.lbDataAtividade{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 121px;
+    margin-bottom: 10px;	
+}
+
+.lbHoraInicioAtividade{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 67px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.lbHoraEncerraAtividade{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 18px;
+    margin-bottom: 10px;	
+}
+
+.lbCargaHorariaAtividade{
+    position: relative;
+    width: 107%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 67px;
+    margin-bottom: 10px;	
+}
+
+.lbNumeroVagasAtividade{
+    position: relative;
+    width: 139%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-bottom: 10px;	
+}
+
+.lbEmailMinistrante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 112px;
+    margin-bottom: 10px;
+}
+.tbEmailMinistrante{
+    position: relative;
+    margin-top: 6px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 63%;
+    height: 76%;	
+}
+.tbNomeAtividade{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    width: 63%;
+    height: 76%;
+}
+
+.tbMinistranteAtividade{
+    position: relative;
+    margin-top: 5px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 63%;
+    height: 76%;
+}
+
+.tbDataAtividade{
+    position: relative;
+    margin-top: 6px;
+   /* margin-left: 10px;*/
+    margin-bottom: 10px;
+    width: 16%;
+    height: 76%;	
+}
+
+.tbHoraInicioAtividade{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 46px;
+    margin-bottom: 9px;
+    width: 15.2%;
+    height: 76%;
+}
+
+.tbHoraEncerraAtividade{
+    position: relative;
+    margin-top: 3px;
+    /* margin-left: 1px; */
+    margin-bottom: 10px;
+    width: 16%;
+    height: 76%	
+}
+
+.tbCargaHorariaAtividade{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 34px;
+    margin-bottom: 10px;
+    width: 15.5%;
+    height: 74%;	
+}
+
+.tbNumeroVagasAtividades{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 56px;
+    margin-bottom: 10px;
+    width: 15%;
+    height: 67%;
+}
+
+.taDescricaoAtividades{
+    position: relative;
+    margin-top: 12px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    margin: 4px 0px 10px;
+    height: 175px;
+    width: 62.8%;
+    max-width: 62.8%;
+    max-height: 175px;
+}
+
+.listTipodeAtividade{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 28px;
+    margin-bottom: 10px;
+    width: 25%;
+    height: 83%;
+}
+
+.btnCadastrarAtividade{
+	position: relative;
+    width: 22%;
+    height: 85%;
+    margin-top: 7px;
+    margin-left: 64px;
+    background: none;
+    border: 1px solid;
+    
+}
+
+.btnVoltarA{
+    position: relative;
+    width: 17%;
+    height: 80%;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 512px;
+    background: none;
+    border: 1px solid;
+}
+/****************************/
+/*MenuTelaInicialCoordenador*/
+/****************************/
+
+.hpPainelLogoSiteCoordenador{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hpPainelNomeCoordenador{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 95px;
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+
+.hpPainelCoordenadorEmAtividades{
+	position: relative;
+	margin-top: 2px;
+	/*margin-bottom: 10px;*/
+	width: 100%;
+	height: 56%;
+    background: #C1C1C1;
+}
+
+.hpPainelCoordenadorEmParticipantes{
+	position: relative;
+	margin-top: 2px;
+	/*margin-bottom: 10px;*/
+	width: 100%;
+	height: 56%;
+    background: #C1C1C1;
+}
+
+.hpPainelCoordenadorEmMonitores{
+	position: relative;
+	margin-top: 2px;
+	/*margin-bottom: 10px;*/
+	width: 100%;
+	height: 56%;
+    background: #C1C1C1;
+}
+
+.hpPainelLogoutCoordenador{
+	position: relative;
+	margin-top: 2px;
+	/*margin-bottom: 10px;*/
+	width: 100%;
+	height: 56%;
+    background: #C1C1C1;
+}
+
+.vpPainelGuardaAtividades{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.vpPainelGuardaParticipantes{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.vpPainelGuardaMonitores{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.vpPainelMenuTelaInicialCoordenador{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.lbNomeCoordenadorHome{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 9px;
+    margin-left: 11px;
+    font-size: 14px;
+
+	
+}
+
+.lbAtividadeCoordenador{
+	position: relative;
+    margin-top: 9px;
+    margin-left: 11px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.lbParticipanteCoordenador{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 9px;
+    margin-left: 11px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+
+.lbMonitoresCoordenador{
+	position: relative;
+    margin-top: 9px;
+    margin-left: 11px;
+	margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.lbLogoutCoordenador{
+	position: relative;
+    margin-top: 9px;
+    margin-left: 11px;
+	margin-bottom: 10px;
+	width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.hpPainelCoordenadorEmAtividades:hover{
+	background: white;
+}
+
+.hpPainelCoordenadorEmParticipantes:hover{
+	background: white;
+}
+
+.hpPainelCoordenadorEmMonitores:hover{
+	background: white;
+}
+
+.hpPainelLogoutCoordenador:hover{
+	background: white;
+}
+
+.iTrocaMenuCoordenador{
+    position: relative;
+    margin-top: 14px;
+    margin-left: 53px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.iLogoSiteCoordenador{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.iAvatarCoordenador{
+	position: relative;
+}
+
+.iAtividadesCoordenador{
+	position: relative;
+}
+
+.iParticipanteCoordenador{
+	position: relative;
+}
+
+.iMonitoresCoordenador{
+	position: relative;
+}
+
+.iLogoutCoordenador{
+	position: relative;
+}
+
+/*===========================================*/
+/*CoordenadorVisualizarPercentualParticipante*/
+/*===========================================*/
+.hpPainelTituloPaginaFrequencia{
+    position: relative;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    background: #CCCCCC;
+    width: 64%;
+    height: 56%;
+}
+
+.hpPainelNomeParticipante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: #CCCCCC;
+    width: 97%;
+    height: 56%;
+}
+
+.hpPainelAtividadeParticipante{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: #CCCCCC;
+    width: 97%;
+    height: 56%;
+}
+
+.hpPainelTabelaFrequenciaParticipante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: pink;
+    width: 91%;
+    height: 56%;		
+}
+
+.hpPainelTextBoxeButton{
+    position: relative;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    /*background: rgba(8, 84, 5, 0.55);*/
+    width: 76%;
+    height: 58%;
+    border: 1px solid;
+}
+
+.vpPainelGuardaInformacoesFrequencia{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 1px dashed;
+    width: 75%;
+    height: 100%;	
+}
+
+.vpPainelVizualizarPercentualParticipante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: white;
+    width: 96%;
+    height: 100%;
+}
+
+.lbTituloPaginaFrequencia{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.lbNomeParticipante{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;	
+}
+
+.lbAtividadeParticipante{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;	
+}
+.tbPesquisarParticipanteFrequencia{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 19px;
+    width: 134%;
+    height: 56%;
+}
+
+.btnPesquisarParticipanteFrequencia{
+    position: relative;
+    margin-top: 7px;
+    margin-left: 161px;
+    margin-bottom: 10px;
+    width: 21%;
+    height: 81%;	
+}
+.ftTabelaFrequenciaParticipantes{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background: pink;
+	font-size: 14px;	
+	width: 90%;
+	height: 90%;
+}
+
+/*================================*/
+/*CoordenadorCadastrarMonitor=====*/
+/*================================*/
+
+.hpPainelTituloPaginaCadastrarMonitor{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background: green;
+	width: 100%;
+	height: 56%;
+}
+
+.hpPainelInformacoesMonitor{
+	position: relative;
+    background: green;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    width: 98%;
+    height: 56%;
+}
+
+.hpPainelNomeMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: white;
+    width: 98%;
+    height: 56%;
+}
+
+.hpPainelMatriculaMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: white;
+    width: 98%;
+    height: 56%;	
+}
+.hpPainelRgMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: white;
+    width: 98%;
+    height: 56%;	
+}
+.hpPainelCpfMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: white;
+    width: 98%;
+    height: 56%;	
+}
+.hpPainelContatoMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: green;
+    width: 98%;
+    height: 56%;
+}
+.hpPainelTelefoneMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: white;
+    width: 98%;
+    height: 56%;	
+}
+.hpPainelEmailMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: white;
+    width: 98%;
+    height: 56%;	
+}
+.hpPainelEnderecoMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: green;
+    width: 98%;
+    height: 56%;
+}
+.hpPainelEnderecodoMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: white;
+    width: 98%;
+    height: 56%;
+}
+.hpPainelNumeroBairroMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: white;
+    width: 98%;
+    height: 56%;	
+}
+.hpPainelCidadeUfMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: white;
+    width: 98%;
+    height: 56%;
+}
+
+
+.hpPainelTituloCadastrarMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: gray;
+    width: 90%;
+    height: 56%;
+
+}
+
+.hpPainelTituloPainelSalvar{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    background: green;
+    width: 98%;
+    height: 56%;	
+}
+
+.hpPainelSalvarMonitor{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+    margin-bottom: 28px;
+    background: white;
+    width: 96%;
+    height: 56%;
+}
+.vpPainelInformacoesPessoaisMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    width: 95%;
+    height: 56%;
+}
+
+.vpPainelContatoMonitor{
+	position: relative;
+	/*margin-top: 10px;*/
+	margin-left: 10px;
+	/*margin-bottom: 10px;*/
+    width: 95%;
+	height: 56%;
+}
+
+.vpPainelSalvarMonitor{
+	position: relative;
+	/*margin-top: 10px;*/
+	margin-left: 10px;
+	/*margin-bottom: 10px;*/
+    width: 95%;
+	height: 56%;	
+}
+
+.vpPainelEnderecoMonitor{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+    width: 95%;
+	height: 56%;	
+}
+
+.vpPainelCadastrarMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: white;
+    width: 95%;
+    height: 56%;	
+}
+
+.lbTituloPaginaCadastrarMonitor{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;
+}
+.lbInformacoesMonitor{
+	position: relative;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+
+.lbNomeMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 222px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbMatriculaMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 204px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbRgMonitor{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 237px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbCpfMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 229px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbContatoMonitor{
+	position: relative;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+
+.lbTelefoneMonitor{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 205px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbEmailMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 221px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbEnderecoMonitor{
+	position: relative;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+
+.lbEnderecodoMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 197px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbNumeroMonitor{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 239px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;	
+}
+
+.lbBairroMonitor{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+
+.lbCidadeMonitor{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 212px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;
+	
+}
+
+.lbEstadoMonitor{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+
+.lbTituloCadastrarMonitor{
+	position: relative;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+
+.lbSalvarMonitor{
+	position: relative;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56%;	
+}
+.tbNomeMonitor{
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 64%;
+    height: 56%;
+}
+
+.tbMatriculaMonitor{
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 19%;
+    height: 56%;	
+}
+
+.tbRgMonitor{
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 19%;
+    height: 56%;
+}
+.tbCpfMonitor{
+	position: relative;
+    margin-top: 8px;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    width: 19%;
+    height: 56%;	
+}
+
+.tbTelefoneMonitor{
+    position: relative;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 19%;
+    height: 56%;	
+}
+
+.tbEmailMonitor{
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 46%;
+    height: 56%;	
+}
+
+.tbEnderecodoMonitor{
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 67%;
+    height: 56%;	
+}
+
+.tbNumeroMonitor{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    width: 74%;
+    height: 56%;
+	
+}
+
+.tbBairroMonitor{
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 57%;
+    height: 56%;	
+}
+.tbCidadeMonitor{
+	position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 99%;
+    height: 56%;
+}
+
+.listUfMonitor{
+	position: relative;
+    margin-top: 8px;
+    /* margin-left: 10px; */
+    margin-bottom: 10px;
+    width: 29%;
+    height: 62%;
+}
+.btnVoltarPesquisarMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 710px;
+    margin-bottom: 10px;
+    background: none;
+    border: 1px solid;
+    width: 13%;
+    height: 100%;
+	
+}
+
+.btnSalvarMonitor{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 73px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    background: none;
+    border: 1px solid;
+    width: 53%;
+    height: 100%;
+}
+
+
+
+
+

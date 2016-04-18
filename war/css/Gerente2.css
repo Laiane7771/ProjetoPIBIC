@@ -1,0 +1,669 @@
+/*-------------------------------*/
+/*----------Menu2 Tela inicial---*/
+/*-------------------------------*/
+
+.vpPainelNovoMenu{
+	position: relative;
+	float: right;
+	width: 15%;
+}
+
+.iMenu2{
+	position: relative;
+	
+}
+
+.iParticipante2{
+	position: relative;
+}
+
+.iCoordenador2{
+	position: relative;
+}
+
+.iEvento2{
+	position: relative;
+}
+
+
+/*---------------------------*/
+/*-----------RodapéView------*/
+/*---------------------------*/
+
+.hpPainelRodape{
+	width: 100%;
+	height: 20%;
+}
+
+.iLogomarcaSite{
+	position: relative;
+    margin-left: 700px;
+}
+
+/*-----------------------------*/
+/*-CadastrarParticipanteView---*/
+/*-----------------------------*/
+
+.hpPainelLabelCadastrarParticipante{
+    position: relative;
+    width: 20%;
+    height: 20%;
+    font-size: 20px;
+    margin-top: 17px;
+    margin-left: 79px;
+}
+
+.hpPainelLabelInformacoesPessoaisParticipante{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: #E84A49;
+    margin-top: 0px;
+}
+
+.hpPainelLabeleTextboxNomeParticipante{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* background: red; */
+    margin-top: 6px;
+}
+
+.hpPainelLabeleTextboxRGCpf{
+	position: relative;
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hpPainelLabelContatosParticipante{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: #E84A49;
+
+}
+
+.hpPainelLabeleTextboxEmailTelefone{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.hpPainelLabelEnderecoParticipante{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: #E84A49;
+    /* margin-top: 10px; */
+}
+
+.hpPainelLabeleTextboxEnderecoParticipante{
+	position: relative;
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+}
+
+.hpPainelLabeleTextboxNumeroBairroParticipante{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin-top: 0px;
+}
+
+.hpPainelLabeleTextboxCepCidadeuf{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* background: red; */
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.hpPainelLabelSalvarParticipante{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: #E84A49;
+    /* margin-top: 10px; */
+}
+
+.hpPainelBotaoSalvarVoltarParticipante{
+	position: relative;
+    width: 100%;
+    height: 20%;
+    background: red;
+    margin-top: 10px;
+}
+
+.vpPainelInformacoesParticipantes{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 80px;
+    width: 82%;
+    height: 20%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelContatosParticipantes{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 80px;
+    width: 82%;
+    height: 20%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelEnderecoParticipantes{
+    position: relative;
+    /* margin-top: 10px; */
+    margin-left: 80px;
+    width: 82%;
+    height: 20%;
+    /* border: 1px solid; */
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.vpPainelSalvarParticipantes{
+    position: relative;
+    margin-left: 80px;
+    width: 82%;
+    height: 20%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    margin-bottom: 200px;
+}
+.vpPainelFormularioCadastroParticipante{
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+}
+
+.lbCadastrarParticipante{
+	position: relative;
+	margin-top: 4px;
+	margin-left: 10px;
+	
+}
+
+.lbInformacoesPessoaisParticipante{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+
+.lbNomeParticipante{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 40px;
+    	
+}
+
+.lbRgParticipante{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 56px;
+    	
+}
+.lbCpfParticipante{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 10px;
+    	
+}
+
+.lbContatosParticipante{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 10px;
+    	
+}
+
+.lbEmailParticipante{
+    position: relative;
+    margin-top: 11px;
+    margin-left: 43px;
+    	
+}
+
+.lbTelefoneParticipante{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 13px;
+    	
+}
+.lbEnderecoParticipante{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 10px;
+    	
+}
+.lbEndereco2Participante{
+    position: relative;
+    margin-top: 3px;
+    margin-left: 16px;
+    	
+}
+
+.lbNumeroParticipante{
+    position: relative;
+    margin-top: 11px;
+    margin-left: 62px;
+    	
+}
+.lbBairroParticipante{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 14px;
+    	
+}
+
+.lbCepParticipante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 49px;
+}
+.lbCidadeParticipante{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 5px;
+    	
+}
+.lbUfParticipante{
+    position: relative;
+    margin-top: 11px;
+    margin-left: 6px;
+
+    	
+}
+.lbSalvarParticipante{
+    position: relative;
+    margin-top: 5px;
+    margin-left: 10px;
+    	
+}
+.tbNomeParticipante{
+    position: relative;
+    margin-left: 3px;
+    margin-top: 1px;
+    width: 80%;
+    height: 16px;
+}
+.tbRgParticipante{
+    position: relative;
+    margin-left: 7px;
+    margin-top: 4px;
+    width: 49%;
+    height: 16px;	
+}
+.tbCpfParticipante{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 4px;
+    width: 36%;
+    height: 16px;	
+}
+
+.tbEmailParticipante{
+    position: relative;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 100%;
+    height: 16px;
+	
+}
+.tbTelefoneParticipante{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 20%;
+    height: 16px;	
+}
+.tbEnderecoParticipante{
+    position: relative;
+    margin-left: 6px;
+    margin-top: 1px;
+    width: 79%;
+    height: 16px;	
+}
+.tbNumeroParticipante{
+    position: relative;
+    margin-left: 3px;
+    margin-top: 10px;
+    width: 35%;
+    height: 16px;
+}
+.tbBairroParticipante{
+    position: relative;
+    margin-left: 3px;
+    margin-top: 10px;
+    width: 70%;
+    height: 16px;
+}
+.tbCepParticipante{
+    position: relative;
+    /* margin-left: 10px; */
+    margin-top: 10px;
+    width: 64%;
+    height: 16px;
+}
+.tbCidadeParticipante{
+    position: relative;
+    margin-left: -2px;
+    margin-top: 8px;
+    width: 100%;
+    height: 16px;
+}
+.listUfParticipante{
+    position: relative;
+    /* margin-left: 10px; */
+    margin-top: 7px;
+    width: 20%;
+    height: 23px;	
+}
+
+.btnBotaoSalvarParticipante{
+    position: relative;
+    margin-left: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 29px;
+}
+
+.btnBotaoVoltarParticipante{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 113%;
+    height: 29px;
+}
+
+/*--------------------------------------*/
+/*--GerenteImprimirCracharCoordenador---*/
+/*--------------------------------------*/
+
+.hpPainelTituloCrachaCoordenador{
+    position: relative;
+    width: 7%;
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 86px;
+    font-size: 20px;
+    /* background: pink; */
+}
+
+.hpPainelPesquisarCoordenadorCracha{
+    position: relative;
+    width: 85%;
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 86px;
+    background: #C7BEBE;
+}
+
+.hpPainelTabelaCoordenadorCracha{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 17px;
+    
+    float: right;
+}
+
+.vpPainelImprimeCrachaCoordenadores{
+    position: relative;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    width: 100%;
+    height: 70%;
+}
+
+.vpPainelAreaTotalCrachaCoordenadores{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.lbTituloCrachasCoordenadores{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.tbPesquisarCoordenadorCracha{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 89px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.btnPesquisarCrachaCoordenador{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 10px;
+    width: 98px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+.btnGerarTodosCrachasCoordenador{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 6px;
+    width: 104px;
+    height: 26px;
+    margin-bottom: 10px;
+}
+
+.ftTabelaCrachasCoordenador{
+    position: relative;
+    width: 85%;
+    height: 29em;
+    margin-top: 10px;
+    margin-left: 86px;
+    border: 0.5px solid white;
+    background: rgb(115, 172, 237);
+    margin-bottom: 155px;
+    outline: none;
+}
+
+
+/*----------------------------------------*/
+/*---GerenteImprimirCertificadoCoordenador*/
+/*----------------------------------------*/
+
+.hpPainelTituloCertificadosCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 85px;
+    width: 82%;
+    height: 20%;
+    background: pink;
+}
+
+.hpPainelPesquisarCertificadoCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 84px;
+    width: 82%;
+    height: 20%;
+    background: pink;   
+}
+
+.hpPainelTabelaCertificadoCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 83px;
+    margin-bottom: 200px;
+    width: 82%;
+    height: 20%;
+    background: pink;
+}
+.vpPainelImprimirCertificadoCoordenador{
+	position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+.vpPainelAreaTotalImprimirCertificadoCoordenador{
+	position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 29%;
+}
+.lbTituloCertificadosCoordenador{
+	position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+.tbPesquisarParticipanteCertificado{
+    position: relative;
+    margin-top: 13px;
+    margin-left: 59px;
+    margin-bottom: 10px;
+    width: 88%;
+    height: 16px;
+}
+.btnPesquisarCoordenadoresCertificado{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 84%;
+    height: 29px;
+}
+.btnGerarTodosCertificadosCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;   
+    margin-bottom: 10px;
+    width: 43%;
+    height: 30px;
+}
+.ftTabelaParticipantesCertificado{
+	position: relative;
+    width: 85%;
+    height: 29em;
+    margin-top: 10px;
+    margin-left: 86px;
+    border: 0.5px solid white;
+    background: rgb(115, 172, 237);
+    margin-bottom: 155px;
+    outline: none;
+}
+
+/*************************************/
+/*GerentePesquisarAtividadesPopupView*/
+/*************************************/
+
+.popupPesquisarAtividade{
+	width: 100%;
+	height: 100%;
+    background: rgba(0, 0, 0, 0.56);
+}
+.hpPainelTituloPagina{
+	position: relative;
+	width: 90%;
+	height: 100%;
+	background: white;
+}
+
+
+.hpPainelPesquisarAtividadeEvento{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hpPainelTabelaAtividadesEvento{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 17px;
+    float: right;
+}
+
+.vpPainelPopupTotal{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-left: 233px;
+    margin-top: 34px;
+	background: white;
+	box-shadow: 1px 1px 1px #CCCCCC;
+
+}
+
+.vpPainelPopupDesenho{
+    position: relative;
+    margin-left: 28px;
+    margin-top: 43px;
+    margin-bottom: 54px;
+    border: 1px none;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    width: 94%;
+    height: 100%;
+}
+
+.lbTituloPagina{
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+
+.tbPesquisarAtividadeEvento{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 4px;
+    width: 97%;
+	
+}
+.btnPesquisarAtividadeEvento{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:  67%;
+    height: 29px;
+    background: none;
+    border: 1px solid;
+}
+.btnFecharPopupAtividades{
+    position: absolute;
+    background: white;
+    border: 1px solid;
+    float: right;
+    /* top: 0px; */
+    left:945px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 1px 1px 1px #CCCCCC;
+	
+}
+
+.ftTabelaAtividadesEvento{
+	position: relative;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+	width: 100%;
+	/*border-collapso: collapso;*/
+}
+
+.ftTabelaAtividadesEvento td{
+	 border-bottom: 1px solid #E2E2E2;
+	 text-align: left;
+	 background-color: #D0E4F6;
+  	 padding-bottom: 6px;
+  	
+}

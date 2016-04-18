@@ -1,0 +1,75 @@
+
+
+.vpPainelGerentePesquisaEvento{
+	width: 60%;
+	height: 100%;
+	
+}
+
+
+
+.hpAreaPrincipal{
+	background: gray;
+	width: 100%;
+	height: 100%;
+}
+
+.hpFooter{
+	background: darkred;
+	width: 100%;
+	height: 20%;
+}
+
+
+
+.hpEspacoLogoMenu{
+	background: darkred;
+}
+
+
+
+/*Paineis tela GerentePesquisarView*/
+
+
+.hpPainelCabecalho{
+	width: 90%;
+	height: 100%;
+}
+.vpGerenteCadastrarEvento{
+	width: 100%;
+	height: 100%;
+}
+.hpTituloPagina{
+	background: purple;
+	width: 70%;
+	height: 40%;
+	margin-left: 20px;
+}
+.vpAreaCadastro{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vpPainelTrocaMenus{
+	width: 100%;
+	height: 100%;
+	background: darkred;
+	padding: 10px;
+}
+.vpTrocaMenus{
+	width: 100%;
+	height: 100%;
+}

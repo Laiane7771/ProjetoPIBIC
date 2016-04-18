@@ -1,0 +1,104 @@
+/*------------------------*/
+/* Home Tela Inicial Teste*/
+/*------------------------*/
+
+body{
+	margin:0;
+	padding:0;
+}
+.hpPainelCabecalhoLogoeLabels{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	
+}
+
+.hpPainelTituloEscolhaModulo{
+	position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 20%;
+}
+
+.hpPainelLabelGerente{
+	position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 20%;
+}
+
+.hpPainelLabelCoordenador{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 20%;	
+}
+
+.hpPainelLabelParticipante{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 20%;	
+    background: darkred;
+}
+
+.vpPainelCabecalho{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: darkred;	
+}
+
+.vpPainelEscolhaModulo{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 20%;	
+}
+
+.vpPainelMae{
+    position: absolute;
+    width: 100%;
+    height: 20%;	
+    background: darkred;
+}
+
+.lbCertificado{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+ 	
+}
+.lbEntrar{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;	
+}
+
+.AComoFunciona{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;	
+}
+
+.AComoFunciona:hover{
+	color: white;
+}
+
+.AcomoFunciona:Link{
+	color: white;
+}
+..AcomoFunciona:visited{
+	color:white;
+}
+
+.iLogoPagina{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;	
+}
