@@ -37,6 +37,7 @@ public class MenuTelaInicialCoordenadorPresenter implements Presenter{
 			}
 		});
 		
+		
 		MenuInicial.getLbParticipanteCoordenador().addClickHandler(new ClickHandler() {
 			
 			@Override

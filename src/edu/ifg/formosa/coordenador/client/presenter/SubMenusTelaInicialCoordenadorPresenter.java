@@ -1,5 +1,6 @@
 package edu.ifg.formosa.coordenador.client.presenter;
 
+import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerManager;
@@ -27,6 +28,7 @@ public class SubMenusTelaInicialCoordenadorPresenter {
 			@Override
 			public void onClick(ClickEvent event) {
 				eventBus.fireEvent(new CadastrarAtividadeEvent());
+				GWT.log("aqui no botao cadastrar Atividade");
 				
 			}
 		});
@@ -36,7 +38,7 @@ public class SubMenusTelaInicialCoordenadorPresenter {
 			@Override
 			public void onClick(ClickEvent event) {
 				eventBus.fireEvent(new CadastrarMonitorEvent());
-				
+				GWT.log("aqui no botao cadastrarMonitor");
 			}
 		});
 		

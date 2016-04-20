@@ -1,5 +1,6 @@
 package edu.ifg.formosa.coordenador.client.view;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -251,9 +252,7 @@ public class CoordenadorCadastrarAtividadesView extends Composite{
 		vpPainelInformacoesAtividades.add(hpPainelNumeroVagasAtividades);//add item
 		vpPainelInformacoesAtividades.add(hpPainelBotoes);//add item
 		
-		//---------------------------------------------------
-
-		
+		//-----------------------------------------------------
 		//-----------------------------------------------------
 		vpPainelCadastrarAtividades = new VerticalPanel();
 		vpPainelCadastrarAtividades.setStyleName("vpPainelCadastrarAtividades");
@@ -262,6 +261,7 @@ public class CoordenadorCadastrarAtividadesView extends Composite{
 		vpPainelCadastrarAtividades.add(vpPainelInformacoesAtividades);//add item
 		
 		initWidget(vpPainelCadastrarAtividades);//inicializa o painel
+		GWT.log("chegou aqui na tela cadastro de atividade");
 		
 	}
 
