@@ -1,8 +1,10 @@
 package edu.ifg.formosa.principal.shared;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
-public class Atividade {
+@SuppressWarnings("serial")
+public class Atividade implements Serializable{
 	
 	private int idAtividade;
 	private String nomeAtividade;

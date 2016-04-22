@@ -63,13 +63,12 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 
 	public AppControllerGerente(HandlerManager eventBus){
 		this.eventBus = eventBus;
-		bind();
 	}
 
 	private void bind(){
 		
-		MenuTelaInicialGerenteView mtig = new MenuTelaInicialGerenteView();
-		MenuTelaInicialGerentePresenter migp = new MenuTelaInicialGerentePresenter(mtig, eventBus);
+		//MenuTelaInicialGerenteView mtig = new MenuTelaInicialGerenteView();
+		//MenuTelaInicialGerentePresenter migp = new MenuTelaInicialGerentePresenter(mtig, eventBus);
 		
 		RodapeView roda = new RodapeView();
 		RodapePresenter rp = new RodapePresenter(roda);

@@ -19,16 +19,21 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 
 	private MenuTelaInicialGerenteView mtig;
 	private final HandlerManager eventBus;
-	private SubMenusGerenteView smgv;
 	private boolean abertoEvento = false;
 	private boolean abertoCoordenador = false;
 	private boolean abertoParticipante = false;
 	private boolean apagamenu = false;
+	private SubMenusGerenteView smgv = new SubMenusGerenteView();
+	private SubMenusGerentePresenter prese = null;
 
 	public MenuTelaInicialGerentePresenter(MenuTelaInicialGerenteView mtig, HandlerManager eventBus){
 		this.mtig =  mtig;
 		this.eventBus = eventBus;
+		
+		prese = new SubMenusGerentePresenter(smgv, eventBus);
+		
 		bind();
+		
 	}
 
 	public void bind(){
@@ -117,12 +122,11 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 		mtig.getHplbCoordenadores().removeStyleName("novolbCoordenadores");
 		mtig.getHplbParticipantes().removeStyleName("novolbParticipantes");
 		mtig.getHplbEvento().addStyleName("novolbEvento");
-
+		
 		if(abertoEvento == false){
 			abertoEvento = true;
 			eventBus.fireEvent(new PesquisarEventoEvent());
-			smgv = new SubMenusGerenteView();
-			new SubMenusGerentePresenter(smgv, eventBus);
+			
 			mtig.getVpAdicionaItensEvento().add(smgv.getVpPainelItemCadastrarEvento());
 		}
 		else{
@@ -143,8 +147,6 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 		if(abertoCoordenador == false){
 			abertoCoordenador = true;
 			eventBus.fireEvent(new PesquisarCoordenadorEvent());
-			smgv = new SubMenusGerenteView();
-			new SubMenusGerentePresenter(smgv, eventBus);
 			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemCadastrarCoordenador());
 			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemCrachaCoordenador());
 			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemCertificadoCoordenador());
@@ -167,8 +169,6 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 		if(abertoParticipante == false){
 			abertoParticipante = true;
 			eventBus.fireEvent(new PesquisarParticipanteEvent());
-			smgv = new SubMenusGerenteView();
-			new SubMenusGerentePresenter(smgv, eventBus);
 			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemCadastrarParticipante());
 			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemCracha());
 			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemCertificado());

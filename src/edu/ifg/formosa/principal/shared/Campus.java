@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Campus {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Campus implements Serializable {
 	
 	private int idCampus;
 	private String nomeCampus;

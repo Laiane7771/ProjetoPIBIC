@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Participante {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Participante implements Serializable{
 	
 	private int Participante;
 	private String matricula;

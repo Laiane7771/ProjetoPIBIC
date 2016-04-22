@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Cidade {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Cidade implements Serializable{
 	
 	private int idCidade;
 	private String nomeCidade;

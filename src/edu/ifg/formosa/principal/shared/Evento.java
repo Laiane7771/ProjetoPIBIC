@@ -1,18 +1,20 @@
 package edu.ifg.formosa.principal.shared;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
-public class Evento {
+@SuppressWarnings("serial")
+public class Evento implements Serializable {
 	
 	private int idEvento;
 	private String nomeEvento;
 	private String descricao;
-	private Calendar dataInicio;
-	private Calendar dataEncerra;
+	private String dataInicio;
+	private String dataEncerra;
 	private String telefoneContato;
 	private String emailContato;
 	private String organizador;
-	private Calendar dataHoraCertificado;
+	private  String dataHoraCertificado;
 	private Gerente idGerente;
 	private Endereco idEndereco;
 	
@@ -42,16 +44,17 @@ public class Evento {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Calendar getDataInicio() {
+	
+	public String getDataInicio() {
 		return dataInicio;
 	}
-	public void setDataInicio(Calendar dataInicio) {
+	public void setDataInicio(String dataInicio) {
 		this.dataInicio = dataInicio;
 	}
-	public Calendar getDataEncerra() {
+	public String getDataEncerra() {
 		return dataEncerra;
 	}
-	public void setDataEncerra(Calendar dataEncerra) {
+	public void setDataEncerra(String dataEncerra) {
 		this.dataEncerra = dataEncerra;
 	}
 	public String getEmailContato() {
@@ -66,10 +69,11 @@ public class Evento {
 	public void setOrganizador(String organizador) {
 		this.organizador = organizador;
 	}
-	public Calendar getDataHoraCertificado() {
+	
+	public String getDataHoraCertificado() {
 		return dataHoraCertificado;
 	}
-	public void setDataHoraCertificado(Calendar dataHoraCertificado) {
+	public void setDataHoraCertificado(String dataHoraCertificado) {
 		this.dataHoraCertificado = dataHoraCertificado;
 	}
 	public Gerente getIdGerente() {

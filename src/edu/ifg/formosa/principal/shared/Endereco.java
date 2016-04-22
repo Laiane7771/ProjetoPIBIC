@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Endereco {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Endereco implements Serializable{
 	
 	private int idEndereco;
 	private String numero;

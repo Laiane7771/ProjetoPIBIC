@@ -11,24 +11,21 @@ import edu.ifg.formosa.principal.client.event.EntrarEvent;
 import edu.ifg.formosa.principal.client.event.EntrarEventHandler;
 import edu.ifg.formosa.principal.client.presenter.EscolhaModuloPresenter;
 import edu.ifg.formosa.principal.client.presenter.HomePresenter;
-import edu.ifg.formosa.principal.client.presenter.HomeTestePresenter;
 import edu.ifg.formosa.principal.client.presenter.PainelEscolhaModuloPresenter;
 import edu.ifg.formosa.principal.client.presenter.Presenter;
-import edu.ifg.formosa.principal.client.presenter.TelaInicialPresenter;
 import edu.ifg.formosa.principal.client.view.EscolhaModuloView;
-import edu.ifg.formosa.principal.client.view.HomeTesteView;
 import edu.ifg.formosa.principal.client.view.HomeView;
-import edu.ifg.formosa.principal.client.view.PainelEscolhaModuloView;
-import edu.ifg.formosa.principal.client.view.TelaInicialView;
 
 public class AppController  implements Presenter, ValueChangeHandler<String>{
 
 	private HasWidgets container;
 	private final HandlerManager eventBus;
+	private final PrincipalServiceAsync rpcService; 
 	private PainelEscolhaModuloPresenter pep;
 	
 
-	public AppController(HandlerManager eventBus){ 
+	public AppController(HandlerManager eventBus, PrincipalServiceAsync rpcService){ 
+		this.rpcService = rpcService;
 		this.eventBus = eventBus;
 		bind();
 	}
@@ -80,7 +77,7 @@ public class AppController  implements Presenter, ValueChangeHandler<String>{
 		Presenter presenter = null;
 
 		HomeView homeView = new HomeView();
-		HomePresenter homePresenter = new HomePresenter(homeView, eventBus);
+		HomePresenter homePresenter = new HomePresenter(homeView, eventBus, rpcService);
 		container.add(homeView.asWidget());
 		
 		if ("".equals(History.getToken())) {

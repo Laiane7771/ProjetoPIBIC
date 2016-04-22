@@ -1,8 +1,10 @@
 package edu.ifg.formosa.principal.shared;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Presenca {
+@SuppressWarnings("serial")
+public class Presenca implements Serializable{
 	
 	private int idPresenca;
 	private Timestamp horaSaida;

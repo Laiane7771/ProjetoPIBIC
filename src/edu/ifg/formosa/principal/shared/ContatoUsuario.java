@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class ContatoUsuario {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class ContatoUsuario implements Serializable{
 	
 	private int idContatoPessoa;
 	private String telefonePessoa;

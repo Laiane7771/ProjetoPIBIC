@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class enderecoUsuario {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class enderecoUsuario implements Serializable{
 	
 	private int idEnderecoPessoa; 
 	private String numero;

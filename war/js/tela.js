@@ -1,13 +1,13 @@
 
 
-var banners = ["Image/1.jpg", "Image/2.jpg", "Image/4.jpg"];
+var banners = ["Image/1.jpg", "Image/2.jpg", "Image/4.jpg", "Image/eduardo.jpg"];
 var bannerAtual = 0;
 
 function trocaBanner() {
-  bannerAtual = (bannerAtual + 1) % 3;
+  bannerAtual = (bannerAtual + 1) % 4;
   document.querySelector('.hpPainelRotativo').style.backgroundImage = "url("+banners[bannerAtual]+")";
 }
 
-setInterval(trocaBanner, 4000);
+setInterval(trocaBanner, 9000);
 
 

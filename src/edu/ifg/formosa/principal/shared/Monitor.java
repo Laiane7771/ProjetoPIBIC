@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Monitor {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Monitor implements Serializable{
 	
 	private int idMonitor;
 	private String matricula;

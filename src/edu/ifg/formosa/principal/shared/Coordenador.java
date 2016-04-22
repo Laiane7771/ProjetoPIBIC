@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Coordenador {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Coordenador implements Serializable{
 	
 	private int idCoordenador;
 	private String matriculaSiape;

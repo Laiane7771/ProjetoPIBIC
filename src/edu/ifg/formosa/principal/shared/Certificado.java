@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Certificado {
+import java.io.Serializable;
+
+@SuppressWarnings("serial") 
+public class Certificado implements Serializable{
 	
 	private int idCodigoCertificado;
 	private Participante idParticipante;

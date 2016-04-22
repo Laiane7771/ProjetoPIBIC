@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Estado {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Estado implements Serializable{
 	
 	private int idEstado;
 	private String nomeEstado;

@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class TipoAtividade {
+import java.io.Serializable;
+
+@SuppressWarnings("serial") 
+public class TipoAtividade implements Serializable{
  
 	private int tipoAtivi;
 	private String tipoAtividade;

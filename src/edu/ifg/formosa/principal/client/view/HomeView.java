@@ -31,7 +31,6 @@ public class HomeView extends Composite  {
 	private VerticalPanel vpPai;
 	private Label lbCertificado;
 	private Label lbEntrar;
-	private Label btnPesquisar;
 	private Label lbEvento;
 	private Label lbData;
 	private Label btnSetaEsq;
@@ -42,6 +41,7 @@ public class HomeView extends Composite  {
 	private FlexTable ftTabelaEvento;
 	private TextBox fieldData;
 	private TextBox fieldEvento;
+	private Button btnPesquisar;
 	private Button btnPause;
 	private Button btnModuloGerente;
 	private Button btnModuloParticipante;
@@ -167,7 +167,8 @@ public class HomeView extends Composite  {
 		hpPainelLabelPesquisarEvento.setStyleName("vpPainelLabelPesquisarEvento");
 	
 		fieldData = new TextBox();
-		fieldData.setStyleName("fieldData");
+		fieldData.setStyleName("fieldset");
+		fieldData.setStyleName("fieldset");
 		
 		fieldEvento = new TextBox();
 		fieldEvento.setStyleName("fieldEvento");
@@ -178,8 +179,9 @@ public class HomeView extends Composite  {
 		lbData = new Label("Data:");
 		lbData.setStyleName("lbData");
 		
-		btnPesquisar = new Label("Pesquisar");
-		btnPesquisar.setStyleName("btnPesquisar");
+		btnPesquisar = new Button("Pesquisar");
+		btnPesquisar.setStyleName("btn-success");
+		//btnPesquisar.setStyleName("btnPesquisar");
 		
 		hpPainelLabelPesquisarEvento.add(lbEvento);
 		hpPainelLabelPesquisarEvento.add(lbData);
@@ -360,12 +362,85 @@ public class HomeView extends Composite  {
 		this.fieldEvento = fieldEvento;
 	}
 
-	public Label getBtnPesquisar() {
+	
+	public HorizontalPanel getHpPainelLabelPesquisarEvento() {
+		return hpPainelLabelPesquisarEvento;
+	}
+
+	public void setHpPainelLabelPesquisarEvento(HorizontalPanel hpPainelLabelPesquisarEvento) {
+		this.hpPainelLabelPesquisarEvento = hpPainelLabelPesquisarEvento;
+	}
+
+	public HorizontalPanel getHpPainelModuloGerente() {
+		return hpPainelModuloGerente;
+	}
+
+	public void setHpPainelModuloGerente(HorizontalPanel hpPainelModuloGerente) {
+		this.hpPainelModuloGerente = hpPainelModuloGerente;
+	}
+
+	public HorizontalPanel getHpPainelModuloParticipante() {
+		return hpPainelModuloParticipante;
+	}
+
+	public void setHpPainelModuloParticipante(HorizontalPanel hpPainelModuloParticipante) {
+		this.hpPainelModuloParticipante = hpPainelModuloParticipante;
+	}
+
+	public HorizontalPanel getHpPainelModuloCoordenador() {
+		return hpPainelModuloCoordenador;
+	}
+
+	public void setHpPainelModuloCoordenador(HorizontalPanel hpPainelModuloCoordenador) {
+		this.hpPainelModuloCoordenador = hpPainelModuloCoordenador;
+	}
+
+	public VerticalPanel getVpPainelAdicionaCabecalhoeEscolheModulo() {
+		return vpPainelAdicionaCabecalhoeEscolheModulo;
+	}
+
+	public void setVpPainelAdicionaCabecalhoeEscolheModulo(VerticalPanel vpPainelAdicionaCabecalhoeEscolheModulo) {
+		this.vpPainelAdicionaCabecalhoeEscolheModulo = vpPainelAdicionaCabecalhoeEscolheModulo;
+	}
+
+	public VerticalPanel getVpPainelAdicionaBotoesModulos() {
+		return vpPainelAdicionaBotoesModulos;
+	}
+
+	public void setVpPainelAdicionaBotoesModulos(VerticalPanel vpPainelAdicionaBotoesModulos) {
+		this.vpPainelAdicionaBotoesModulos = vpPainelAdicionaBotoesModulos;
+	}
+
+	public Button getBtnPesquisar() {
 		return btnPesquisar;
 	}
 
-	public void setBtnPesquisar(Label btnPesquisar) {
+	public void setBtnPesquisar(Button btnPesquisar) {
 		this.btnPesquisar = btnPesquisar;
+	}
+
+	public Button getBtnModuloGerente() {
+		return btnModuloGerente;
+	}
+
+	public void setBtnModuloGerente(Button btnModuloGerente) {
+		this.btnModuloGerente = btnModuloGerente;
+	}
+
+	public Button getBtnModuloParticipante() {
+		return btnModuloParticipante;
+	}
+
+	public void setBtnModuloParticipante(Button btnModuloParticipante) {
+		this.btnModuloParticipante = btnModuloParticipante;
+	}
+
+	public Button getBtnModuloCoordenador() {
+		return btnModuloCoordenador;
+	}
+
+	public void setBtnModuloCoordenador(Button btnModuloCoordenador) {
+		this.btnModuloCoordenador = btnModuloCoordenador;
 	}
 
 	public Button getBtnPause() {

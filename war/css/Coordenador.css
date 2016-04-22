@@ -675,7 +675,7 @@ body{
     width: 100%;
     height: 100%;
     background: white;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .lbTituloPaginaAtividades{
@@ -1356,6 +1356,7 @@ body{
     /* margin-bottom: 10px; */
     width: 95%;
     height: 56%;
+
 }
 
 .vpPainelContatoMonitor{
@@ -1365,6 +1366,7 @@ body{
 	/*margin-bottom: 10px;*/
     width: 95%;
 	height: 56%;
+
 }
 
 .vpPainelSalvarMonitor{
@@ -1425,7 +1427,7 @@ body{
 .lbMatriculaMonitor{
     position: relative;
     margin-top: 10px;
-    margin-left: 204px;
+    margin-left: 198px;
     margin-bottom: 10px;
     width: 100%;
     height: 56%;	

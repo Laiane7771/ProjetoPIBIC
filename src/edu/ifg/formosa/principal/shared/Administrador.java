@@ -1,6 +1,9 @@
 package edu.ifg.formosa.principal.shared;
 
-public class Administrador {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Administrador implements Serializable{
 	
 	private int idAdministrador;
 	private Usuario idUsuario;
