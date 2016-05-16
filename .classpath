@@ -6,7 +6,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="lib" path="gwt-servlet.jar"/>
-	<classpathentry kind="lib" path="lib/gwtext.jar"/>
-	<classpathentry kind="lib" path="lib/bootstrap.jar"/>
+	<classpathentry kind="lib" path="lib/mariadb-java-client-1.4.4.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

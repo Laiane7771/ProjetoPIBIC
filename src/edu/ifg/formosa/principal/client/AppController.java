@@ -60,7 +60,7 @@ public class AppController  implements Presenter, ValueChangeHandler<String>{
 
 			if(token.equals("entrar")){
 				
-				presenter = new EscolhaModuloPresenter(new EscolhaModuloView());
+				presenter = new EscolhaModuloPresenter(new EscolhaModuloView(), rpcService);
 			}
 			
 			if (presenter != null) {

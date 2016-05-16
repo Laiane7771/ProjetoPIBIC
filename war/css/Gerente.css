@@ -241,13 +241,6 @@ body{
     cursor: pointer;
 }
 
-.iMenu2{
-	position: relative;
-    margin-top: 21px;
-    margin-left: 12px;
-    margin-right: 14px;
-    cursor: pointer;
-}
 .hpEspacoNomeGerente{
 	position: relative;
 	background: rgba(0, 0, 0, 0.36); 
@@ -270,6 +263,8 @@ body{
     margin-top: 9px;
     margin-left: 11px;
     font-size: 14px;
+    color: white;
+    
 }
 
 
@@ -286,29 +281,33 @@ body{
     position: relative;
     margin-top: 7px;
     margin-left: 2px;
+    color: white;
 }
 
 .lbSetaCimaC{
     position: relative;
     margin-top: 8px;
     margin-left: 9px;
+    color: white;
 }
 .lbSetaCimaP{
 	position: relative;
     margin-top: 7px;
+    color: white;    
     margin-left: 25px;
 }
 .hplbEvento{
 	width: 100%;
     height: 56%;
     cursor: pointer;
-    background: rgba(156, 138, 142, 0.3);
+    /*background: rgba(156, 138, 142, 0.3);*/
 }
 .novolbEvento{
 	background: white;
 }
 .hplbEvento:hover{
 	background: white;
+	color: darkred;
 }
 .hplbEvento:visited{
 	background: white;
@@ -320,9 +319,8 @@ body{
     margin-left: 15px;
     margin-bottom: 1px;
     margin-right: 10px;
-    color: black;
-    font-size: 14px;
-}
+    color: white;
+    font-size: 14px;}
 
 .iEvento{
     position: relative;
@@ -359,7 +357,7 @@ body{
     height: 56%;
     cursor: pointer;
     margin-left: 7px;
-    background: rgba(156, 138, 142, 0.3);
+     /*background: rgba(156, 138, 142, 0.3);*/
     
 }
 
@@ -368,7 +366,7 @@ body{
 }
 .hplbCoordenadores:hover{
 	background: white;
-	color: black;
+	color: darkred;
 	
 }
 .hplbCoordenadores:visited{
@@ -380,10 +378,11 @@ body{
     margin-top: 8px;
     margin-left: 11px;
     margin-bottom: 2px;
-    color: black;
+    color: white;
     font-size: 14px;
 	
 }
+
 
 .iParticipantes2{
 	position: relative;
@@ -395,7 +394,7 @@ body{
 	width: 100%;
 	height: 56%;
 	cursor: pointer;
-	background: rgba(156, 138, 142, 0.3);
+	 /*background: rgba(156, 138, 142, 0.3);*/
 }
 
 .novolbParticipantes{
@@ -404,16 +403,17 @@ body{
 
 .hplbParticipantes:hover{
 	background: white;
+	color: darkred;
 }
 .hplbParticipantes:visited{
 	background: white;
 }
 .lbSair{
     position: relative;
-    color: black;
     margin-top: 9px;
     margin-left: 4px;
     font-size: 17px;
+    color: white;
 }
 
 .iSair{
@@ -435,20 +435,20 @@ body{
 	position: relative;
 	margin-top: 2px;
 	margin-left: 8px;
-	color: black;
-	background: rgba(156, 138, 142, 0.3);
+	color: white;
+'	 /*background: rgba(156, 138, 142, 0.3);*/
 }
 
 .hplbSair:hover{
 	background: white;
-	color: black;
-	
+	color: darkred;
 }
 .lbEvento:hover{
-	color: black;
+	color: darkred;
 }
 .lbCoordenadores:hover{
-	color: black;
+	color:white;
+	background: white;
 }
 .lbParticipantes:hover{
 	color: black;
@@ -481,11 +481,40 @@ body{
 	cursor: pointer;
 }
 
+
+/**********************************/
+/*************volta Menu***********/
+/**********************************/
+.iMenuReduzido{
+    position: relative;
+    margin-top: 21px;
+    margin-left:  12px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.hplbEventoVoltaMenu{
+	width: 100%;
+    height: 56%;
+    cursor: pointer;
+    background: rgba(156, 138, 142, 0.3);
+}
+.hplbCoordenadoresVoltaMenu{
+	width: 101%;
+    height: 56%;
+    cursor: pointer;
+    margin-left: 7px;
+    background: rgba(156, 138, 142, 0.3);
+}
+.hplbParticipantesVoltaMenu{
+	width: 100%;
+    height: 56%;
+    cursor: pointer;
+    background: rgba(156, 138, 142, 0.3);
+}
 .iEventoVoltaMenu{
     position: relative;
     margin-left: 12px;
     margin-top: 3px;
-    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
     padding: 0 0 0 225;
 }
 
@@ -513,7 +542,6 @@ body{
     margin-left: 11px;
     font-size: 14px;
 }
-
 .lbCoordenadoresVoltaMenu{
 	position: relative;
     margin-top: 9px;
@@ -523,40 +551,29 @@ body{
     color: black;
     font-size: 14px;
 }
-
 .lbParticipantesVoltaMenu{
-    position: relative;
+	position: relative;
     margin-top: 8px;
     margin-left: 11px;
     margin-bottom: 2px;
     color: black;
-    font-size: 14px;	
+    font-size: 14px;
 }
 
 .lbSetaCimaEVoltaMenu{
-    position: relative;
-    margin-top: 8px;
-    margin-left: 84px;
+	position: relative;
+    margin-top: 7px;
+    margin-left: 2px;
 }
-
 .lbSetaCimaCVoltaMenu{
 	position: relative;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 8px;
+    margin-left: 9px;
 }
-
 .lbSetaCimaPVoltaMenu{
-	position: relative;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.hplbCoordenadoresVoltaMenu{
-	width: 101%;
-    height: 56%;
-    cursor: pointer;
-    margin-left: 7px;
-    background: rgba(156, 138, 142, 0.3);
+    position: relative;
+    margin-top: 7px;
+    margin-left: 25px;	
 }
 /*---------------------------------------*/
 /*-Tela SubMenusGerenteView--------------*/
@@ -654,6 +671,72 @@ body{
     border: 2px solid;
     border-color: red;
 }
+
+.vpPainelItemPesquisarEvento{
+	position: relative;
+    margin-left: 39px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;
+}
+.vpPainelItemPesquisarCoordenador{
+    position: relative;
+    margin-left: 47px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%; */
+    border: 2px solid;
+    border-color: red;	
+}
+.vpPainelItemPesquisarParticipante{
+    position: relative;
+    margin-left: 39px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 82%;
+    height: 56%;
+    background: rgba(12, 4, 4, 0.43);
+    /* border-radius: 37% 0% 37% 0%;*/
+    border: 2px solid;
+    border-color: red;	
+}
+
+.lbPesquisarEvento{
+	margin-top: 6px;
+    margin-bottom: 2px;
+    font-size: 17px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lbPesquisarCoordenador{
+	margin-top: 6px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #FAFAFA;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lbPesquisarParticipante{
+	margin-top: 6px !important;
+    margin-bottom: 5px !important;
+    margin-left: 10px !important;
+    font-size: 17px !important;
+    color: #FAFAFA !important;
+    text-align: center !important;
+    cursor: pointer !important;	
+}
 .lbCadastrarEvento{
     margin-top: 6px;
     margin-bottom: 2px;
@@ -720,8 +803,8 @@ body{
 /*-----------------------------------------*/
 .iEventoReduzido{
     position: relative;
-    margin-top: 2px;
-    margin-left: 3px;
+    margin-top: 7px;
+    margin-left: 10px;
     margin-right: 2px;
 	
 }
@@ -736,7 +819,7 @@ body{
 .iParticipanteReduzido{
     position: relative;
     margin-top: 1px;
-    margin-left: 3px;
+    margin-left: 10px;
     margin-right: 2px;
 }
 
@@ -747,12 +830,7 @@ body{
     margin-right: 2px;
 }
 
-.iMenuReduzido{
-    position: relative;
-    margin-top: 13px;
-    margin-left: 14px;
-    margin-right: 2px;
-}
+
 /*-----------------------------------------*/
 /*-Tela GerenteCadastrarEventoView---------*/
 /*-----------------------------------------*/

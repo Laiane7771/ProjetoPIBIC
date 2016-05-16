@@ -9,6 +9,8 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import edu.ifg.formosa.gerente.client.util.FlexTableEventIF;
+
 public class GerentePesquisarParticipanteView extends Composite {
 	
 	private VerticalPanel vpPainelTrocaMenus;
@@ -21,7 +23,7 @@ public class GerentePesquisarParticipanteView extends Composite {
 	private HorizontalPanel hpPainelPesquisarCriar;
 	private VerticalPanel vpGuardaTitulo;
 	private VerticalPanel vpPai;
-	private FlexTable ftTabelaParticipante;
+	private FlexTableEventIF ftTabelaParticipante;
 	private Label lbGerenciarParticipante;
 	private TextBox tbPesquisarParticipante;
 	private Button btnPesquisar;
@@ -67,10 +69,10 @@ public class GerentePesquisarParticipanteView extends Composite {
 		vpPainelTabela.setStyleName("vpPainelTabela");
 		vpPainelTabela.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		
-		ftTabelaParticipante = new FlexTable();
+		ftTabelaParticipante = new FlexTableEventIF();
 		ftTabelaParticipante.setStyleName("ftTabelaEvento");
-		ftTabelaParticipante.getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
-		ftTabelaParticipante.setBorderWidth(1); 
+		ftTabelaParticipante.getFt().getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
+		ftTabelaParticipante.getFt().setBorderWidth(1);
 	    
 		vpPainelTabela.add(ftTabelaParticipante);
 		vpTrocaFuncoes.add(vpGuardaTitulo);
@@ -170,14 +172,11 @@ public class GerentePesquisarParticipanteView extends Composite {
 		this.vpPai = vpPai;
 	}
 
-	
-
-
-	public FlexTable getFtTabelaParticipante() {
+	public FlexTableEventIF getFtTabelaParticipante() {
 		return ftTabelaParticipante;
 	}
 
-	public void setFtTabelaParticipante(FlexTable ftTabelaParticipante) {
+	public void setFtTabelaParticipante(FlexTableEventIF ftTabelaParticipante) {
 		this.ftTabelaParticipante = ftTabelaParticipante;
 	}
 

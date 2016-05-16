@@ -22,6 +22,8 @@ public class MenuTelaInicialParticipanteView extends Composite{
 	private Label lbNomeParticipanteMenu;
 	private Label lbEventoParticipante;
 	private Label lbLogoutParticipante;
+	private Label lbSetaParticipante;
+	
 	
 	public MenuTelaInicialParticipanteView(){
 		
@@ -30,7 +32,7 @@ public class MenuTelaInicialParticipanteView extends Composite{
 		hpPainelLogoSiteParticipante.setStyleName("hpPainelLogoSiteParticipante");
 		
 		iLogoSiteParticipante = new Image();
-		iLogoSiteParticipante.setUrl("../Image/logo.png");
+		iLogoSiteParticipante.setUrl("../Image/logo2.png");
 		iLogoSiteParticipante.setStyleName("iLogoSiteParticipante");
 		
 		iMudaMenuParticipante = new Image();
@@ -38,7 +40,9 @@ public class MenuTelaInicialParticipanteView extends Composite{
 		iMudaMenuParticipante.setStyleName("iMudaMenuParticipante");
 		
 		hpPainelLogoSiteParticipante.add(iLogoSiteParticipante); //add item
+		hpPainelLogoSiteParticipante.setCellWidth(iLogoSiteParticipante, "10%");
 		hpPainelLogoSiteParticipante.add(iMudaMenuParticipante); //add item
+		hpPainelLogoSiteParticipante.setCellWidth(iMudaMenuParticipante, "10%");
 		//---------------------------------------------
 		hpPainelEspacoNome = new HorizontalPanel();
 		hpPainelEspacoNome.setStyleName("hpPainelEspacoNome");
@@ -59,8 +63,15 @@ public class MenuTelaInicialParticipanteView extends Composite{
 		lbEventoParticipante = new Label("Evento");
 		lbEventoParticipante.setStyleName("lbEventoParticipante");
 		
+		lbSetaParticipante = new Label(">");
+		lbSetaParticipante.setStyleName("lbSetaParticipante");
+		
 		hpPainelEventoParticipante.add(iEventoParticipante);//add item
+		hpPainelEventoParticipante.setCellWidth(iEventoParticipante, "10%");
 		hpPainelEventoParticipante.add(lbEventoParticipante); //add item
+		hpPainelEventoParticipante.setCellWidth(lbEventoParticipante, "10%");
+		hpPainelEventoParticipante.add(lbSetaParticipante);//add item
+		hpPainelEventoParticipante.setCellWidth(lbSetaParticipante, "10%");
 		//----------------------------------------------
 		hpPainelLogoutParticipante = new HorizontalPanel();
 		hpPainelLogoutParticipante.setStyleName("hpPainelLogoutParticipante");
@@ -73,7 +84,9 @@ public class MenuTelaInicialParticipanteView extends Composite{
 		lbLogoutParticipante.setStyleName("lbLogoutParticipante");
 		
 		hpPainelLogoutParticipante.add(iLogoutParticipante);//add item
+		hpPainelLogoutParticipante.setCellWidth(iLogoutParticipante, "10%");
 		hpPainelLogoutParticipante.add(lbLogoutParticipante); //add item
+		hpPainelLogoutParticipante.setCellWidth(lbLogoutParticipante, "10%");
 		//----------------------------------------------
 		vpPainelEventoParticipante = new VerticalPanel();
 		vpPainelEventoParticipante.setStyleName("vpPainelEventoParticipante");

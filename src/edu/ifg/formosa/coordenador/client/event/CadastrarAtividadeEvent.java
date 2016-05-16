@@ -4,7 +4,7 @@ import com.google.gwt.event.shared.GwtEvent;
 
 public class CadastrarAtividadeEvent extends GwtEvent<CadastrarAtividadeEventHandler> {
 
-	public final static Type<CadastrarAtividadeEventHandler> TYPE = new Type<CadastrarAtividadeEventHandler>();
+	public static Type<CadastrarAtividadeEventHandler> TYPE = new Type<CadastrarAtividadeEventHandler>();
 
 	public Type<CadastrarAtividadeEventHandler> getAssociatedType(){
 		return TYPE;

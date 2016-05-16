@@ -8,6 +8,8 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import edu.ifg.formosa.participante.client.util.FlexTableEventIF;
+
 public class HomeTelaInicialParticipanteView extends Composite{
 	
 	private HorizontalPanel hpPainelTituloHome;
@@ -18,7 +20,7 @@ public class HomeTelaInicialParticipanteView extends Composite{
 	private Label lbTituloPaginaPesquisar;
 	private Button btnPesquisarEventoParticipante;
 	private TextBox tbPesquisarEvento;
-	private FlexTable ftTabelaEventoTelaParticipante;
+	private FlexTableEventIF ftTabelaEventoTelaParticipante;
 	
 	public HomeTelaInicialParticipanteView(){
 		//Painel Titulo---------------
@@ -51,7 +53,7 @@ public class HomeTelaInicialParticipanteView extends Composite{
 		hpPainelTabelaEventos = new HorizontalPanel();
 		hpPainelTabelaEventos.setStyleName("hpPainelTabelaEventos");
 		
-		ftTabelaEventoTelaParticipante = new FlexTable();
+		ftTabelaEventoTelaParticipante = new FlexTableEventIF();
 		ftTabelaEventoTelaParticipante.setStyleName("ftTabelaEventoTelaParticipante");
 		
 		hpPainelTabelaEventos.add(ftTabelaEventoTelaParticipante); //add item
@@ -144,13 +146,13 @@ public class HomeTelaInicialParticipanteView extends Composite{
 		this.tbPesquisarEvento = tbPesquisarEvento;
 	}
 
-	public FlexTable getFtTabelaEventoTelaParticipante() {
+	public FlexTableEventIF getFtTabelaEventoTelaParticipante() {
 		return ftTabelaEventoTelaParticipante;
 	}
 
-	public void setFtTabelaEventoTelaParticipante(
-			FlexTable ftTabelaEventoTelaParticipante) {
+	public void setFtTabelaEventoTelaParticipante(FlexTableEventIF ftTabelaEventoTelaParticipante) {
 		this.ftTabelaEventoTelaParticipante = ftTabelaEventoTelaParticipante;
 	}
 
+	
 }

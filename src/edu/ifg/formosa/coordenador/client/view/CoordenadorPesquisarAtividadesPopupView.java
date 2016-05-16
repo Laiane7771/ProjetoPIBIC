@@ -26,7 +26,7 @@ public class CoordenadorPesquisarAtividadesPopupView extends DialogBox {
 		hpPainelTituloPopupAtividadeCoord = new HorizontalPanel();
 		hpPainelTituloPopupAtividadeCoord.setStyleName("hpPainelTituloPopupAtividadeCoord");
 		
-		lbTituloPagina = new Label("Inscrever Atividades");
+		lbTituloPagina = new Label("Cadastrar Atividades");
 		lbTituloPagina.setStyleName("lbTituloPagina");
 		
 		hpPainelTituloPopupAtividadeCoord.add(lbTituloPagina); //add item

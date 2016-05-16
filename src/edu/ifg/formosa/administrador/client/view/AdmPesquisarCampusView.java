@@ -2,11 +2,13 @@ package edu.ifg.formosa.administrador.client.view;
 
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.ifg.formosa.administrador.client.util.FlexTableEventIF;
 
 public class AdmPesquisarCampusView extends Composite{
 	
@@ -19,7 +21,7 @@ public class AdmPesquisarCampusView extends Composite{
 	private Button btnPesquisarCampus;
 	private Button btnAdicionarCampus;
 	private Button btnExcluirCampus;
-	private FlexTable ftTabelaCampus;
+	private FlexTableEventIF ftTabelaCampus;
 	
 	
 	public AdmPesquisarCampusView(){
@@ -47,15 +49,21 @@ public class AdmPesquisarCampusView extends Composite{
 		btnExcluirCampus.setStyleName("btnExcluirCampus");
 		
 		hpPainelPesquisarAdicionarExcluirCampus.add(tbPesquisarCampus);//add item
+		hpPainelPesquisarAdicionarExcluirCampus.setCellWidth(tbPesquisarCampus, "30%");
 		hpPainelPesquisarAdicionarExcluirCampus.add(btnPesquisarCampus);//add item
+		hpPainelPesquisarAdicionarExcluirCampus.setCellWidth(btnPesquisarCampus, "5%");
 		hpPainelPesquisarAdicionarExcluirCampus.add(btnAdicionarCampus);//add item
+		hpPainelPesquisarAdicionarExcluirCampus.setCellWidth(btnAdicionarCampus, "5%");
 		hpPainelPesquisarAdicionarExcluirCampus.add(btnExcluirCampus);//add item
+		hpPainelPesquisarAdicionarExcluirCampus.setCellWidth(btnExcluirCampus, "30%");
 		
 		vpPainelTabelaCampus = new VerticalPanel();
 		vpPainelTabelaCampus.setStyleName("vpPainelTabelaCampus");
 		
-		ftTabelaCampus = new FlexTable();
+		ftTabelaCampus = new FlexTableEventIF();
 		ftTabelaCampus.setStyleName("ftTabelaCampus");
+		ftTabelaCampus.getFt().getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
+		ftTabelaCampus.getFt().setBorderWidth(1);
 		
 		vpPainelTabelaCampus.add(ftTabelaCampus);//add item
 		
@@ -160,13 +168,16 @@ public class AdmPesquisarCampusView extends Composite{
 	}
 
 
-	public FlexTable getFtTabelaCampus() {
+	public FlexTableEventIF getFtTabelaCampus() {
 		return ftTabelaCampus;
 	}
 
 
-	public void setFtTabelaCampus(FlexTable ftTabelaCampus) {
+	public void setFtTabelaCampus(FlexTableEventIF ftTabelaCampus) {
 		this.ftTabelaCampus = ftTabelaCampus;
 	}
+
+
+	
 
 }

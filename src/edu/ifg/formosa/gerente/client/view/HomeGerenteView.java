@@ -5,12 +5,13 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockPanel;
-import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.ifg.formosa.gerente.client.util.FlexTableEventIF;
+
 
 public class HomeGerenteView extends Composite {
 	
@@ -23,7 +24,7 @@ public class HomeGerenteView extends Composite {
 	private HorizontalPanel hpPainelTitulo;
 	private HorizontalPanel hpGuardaPainel;
 	private HorizontalPanel hpPainelPesquisarCriar;
-	private FlexTable ftTabelaEvento;
+	private FlexTableEventIF ftTabelaEvento;
 	private Label lbGerenciarEvento;
 	private TextBox tbPesquisarEvento;
 	private Button btnPesquisar;
@@ -78,20 +79,11 @@ public class HomeGerenteView extends Composite {
 		vpPainelTabela.setStyleName("vpPainelTabela");
 		vpPainelTabela.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		
-		ftTabelaEvento = new FlexTable();
+		ftTabelaEvento = new FlexTableEventIF();
 		ftTabelaEvento.setStyleName("ftTabelaEvento");
+		ftTabelaEvento.getFt().getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
+		ftTabelaEvento.getFt().setBorderWidth(1);
 		
-		for(int x=0; x<8; x++){
-		ftTabelaEvento.getFlexCellFormatter().setVerticalAlignment(0, x, DockPanel.ALIGN_TOP);
-		
-		}
-		for(int y=0; y<8; y++){
-		ftTabelaEvento.getCellFormatter().setHeight(0, y, "10px");
-		}
-		
-		ftTabelaEvento.getCellFormatter().setWidth(0, 1, "200px");
-		
-	
 		//--------------------------------------------------------
 		checkTabelaEvento = new CheckBox();
 		checkTabelaEvento.setStyleName("checkTabelaEvento");
@@ -141,37 +133,10 @@ public class HomeGerenteView extends Composite {
 		vpPai.add(vpTrocaFuncoes);
 		initWidget(vpPai);
 		
-		criaCabecalhoTabela();
-		teste();
+		
 	}
 	
-	public void criaCabecalhoTabela(){
-		
-		ftTabelaEvento.setWidget(0, 0, checkTabelaEvento);
-		ftTabelaEvento.setWidget(0, 1, lbNomeTitulo);
-		ftTabelaEvento.setWidget(0, 2, lbDataInicioTitulo);
-		ftTabelaEvento.setWidget(0, 3, lbDataEncerraTitulo);
-		ftTabelaEvento.setWidget(0, 4, lbCoordenadorTitulo);
-		ftTabelaEvento.setWidget(0, 5, lbDataCertificadoTitulo);
-		ftTabelaEvento.setWidget(0, 6, lbAtividadeTitulo);
-		ftTabelaEvento.setWidget(0, 7, lbLocalEventoTitulo);
-		
-		ftTabelaEvento.setWidget(1, 6, btnListarAtividadesEvento);
-	}
 	
-	public void teste(){
-		ftTabelaEvento.setText(1, 0, "aaaaaaa");
-		ftTabelaEvento.setText(1, 1, "aaaaaaa");
-		ftTabelaEvento.setText(1, 2, "aaaaaaa");
-		ftTabelaEvento.setText(1, 3, "aaaaaaa");
-		ftTabelaEvento.setText(1, 4, "aaaaaaa");
-		ftTabelaEvento.setText(1, 5, "aaaaaaa");
-		ftTabelaEvento.setText(1, 7, "aaaaaaa");
-		
-		for(int y=0; y<8; y++){
-			ftTabelaEvento.getCellFormatter().setHeight(1, y, "10px");
-			}
-	}
 
 	public void addNovoEstilo(){
 		vpPai.removeStyleName("vpPai");
@@ -253,13 +218,19 @@ public class HomeGerenteView extends Composite {
 		this.vpPai = vpPai;
 	}
 
-	public FlexTable getFtTabelaEvento() {
+	
+
+	public FlexTableEventIF getFtTabelaEvento() {
 		return ftTabelaEvento;
 	}
 
-	public void setFtTabelaEvento(FlexTable ftTabelaEvento) {
+
+
+	public void setFtTabelaEvento(FlexTableEventIF ftTabelaEvento) {
 		this.ftTabelaEvento = ftTabelaEvento;
 	}
+
+
 
 	public Label getLbGerenciarEvento() {
 		return lbGerenciarEvento;

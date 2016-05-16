@@ -1,7 +1,7 @@
 html{
     margin: 0 !important;
     padding: 0 !important;
-    background: rgb(0, 128, 0);
+    background: darkred;: #116B11;
 }
 body{
     color: black;
@@ -13,15 +13,14 @@ body{
     direction: ltr;
 }
 
-#MenuCoordenadorEsquerdo{
+#MenuCoordenadorEsquerdo {
     position: relative;
     float: left;
     width: 19%;
     height: 100%;
-    background: rgb(0, 128, 0);
+    background: darkred;
     margin: 0;
     padding: 0;
-
 }
 #AreaDireita{
 	position: relative;
@@ -36,11 +35,12 @@ body{
 
 #rodapeCoordenador{
 	position: relative;
-	clean: both;
 	width: 100%;
 	height: 20%;
 	margin: 0;
     padding: 0;
+   float: right;
+    
 }
 
 /*==============================*/
@@ -116,13 +116,51 @@ body{
     cursor: pointer;
 }
 
+.hpPainelPesquisarAtividade{
+	position: relative;
+    margin-top: 3px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /* border: 2px #22E022 groove; */
+    cursor: pointer;
+}
+
+.hpPainelPesquisarMonitor{
+    position: relative;
+    margin-top: 3px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /* border: 2px #22E022 groove; */
+    cursor: pointer;	
+}
+
+.hpPainelPesquisarParticipantes{
+    position: relative;
+    margin-top: 3px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    margin-left: 44px;
+    width: 82%;
+    height: 56%;
+    background: #FFFFFF;
+    /* border: 2px #22E022 groove; */
+    cursor: pointer;	
+}
+
 .lbCadastrarAtividade{
     position: relative;
     margin-top: 10px;
     margin-left: 38px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 20%;
+	font-size: 14px;
     cursor: pointer;	
 }
 
@@ -131,8 +169,7 @@ body{
     margin-top: 10px;
     margin-left: 6px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 20%;
+   	font-size: 14px;
 	
 }
 
@@ -141,8 +178,7 @@ body{
     margin-top: 10px;
     margin-left: 43px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 20%;	
+	font-size: 14px;		
 }
 
 .lbCrachas{
@@ -150,8 +186,7 @@ body{
 	margin-top: 10px;
 	margin-left: 0px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 20%;	
+	font-size: 14px;		
 }
 
 
@@ -160,8 +195,7 @@ body{
 	margin-top: 10px;
 	margin-left: 0px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 20%;	
+	font-size: 14px;	
 }
 
 .lbFrequenciaParticipantes{
@@ -169,10 +203,32 @@ body{
     margin-top: 10px;
     margin-left: 16px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 20%;	
+	font-size: 14px;	
 }
 
+.lbPesquisarMonitor{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.lbPesquisarAtividade{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 38px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.lbPesquisarParticipante{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 32px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 /*===============================*/
 /*CoordenadorPesquisarMonitorView*/
 /*===============================*/
@@ -220,12 +276,12 @@ body{
 }
 
 .lbPesquisarMonitor{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 46px;
+    margin-bottom: 10px;
 }
 
 .tbPesquisarMonitor{
@@ -283,13 +339,15 @@ body{
 }
 
 .hpPainelTabelaAtividadesCoord{
+
     position: relative;
     margin-top: 10px;
     margin-left: 10px;
-    margin-bottom: 10px;
-    width: 95%;
+    margin-bottom: 456px;
+    width: 98%;
     height: 100%;
-    background: #085405;
+    background: #F1F1F1;
+
 }
 
 
@@ -332,12 +390,13 @@ body{
 }
 
 .ftTabelaAtividadesCoord{
-	position: relative;
-	width: 10%;
-	height: 27em;
-	margin: 1px solid;
-	border: 1px solid;
-	margin-bottom: 140px;
+    background: rgba(0, 0, 0, 0.02);
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 27em;
+    border-bottom: 1px solid #E2E2E2;
 }
 
 /*==================================*/
@@ -576,7 +635,7 @@ body{
     /* margin-bottom: 10px; */
     width: 94%;
     height: 100%;
-    background: #13AD0D;
+    background: #8B0000;
 }
 
 .hpPainelNomeAtividades{
@@ -655,7 +714,7 @@ body{
     position: relative;
     width: 94%;
     height: 100%;
-	background: #13AD0D;
+    background: #8B0000;
 }
 .vpPainelInformacoesAtividades{
     position: relative;
@@ -698,14 +757,14 @@ body{
 .lbNomeAtividades{
     position: relative;
     margin-top: 10px;
-    margin-left: 109px;
+    margin-left: 159px;
     margin-bottom: 10px;
 }
 
 .lbDescricaoAtividades{
     position: relative;
     margin-top: 10px;
-    margin-left: 91px;
+    margin-left: 137px;
     margin-bottom: 10px;	
 }
 
@@ -714,37 +773,37 @@ body{
     width: 116%;
     height: 51%;
     margin-top: 10px;
-    margin-left: 42px;
+    margin-left: 80px;
     margin-bottom: 10px;
 }
 
 .lbMinistranteAtividade{
     position: relative;
     margin-top: 10px;
-    margin-left: 85px;
+    margin-left: 125px;
     margin-bottom: 10px;	
 }
 
 .lbDataAtividade{
     position: relative;
     margin-top: 10px;
-    margin-left: 121px;
+    margin-left: 168px;
     margin-bottom: 10px;	
 }
 
 .lbHoraInicioAtividade{
     position: relative;
     margin-top: 10px;
-    margin-left: 67px;
+    margin-left: 109px;
     margin-bottom: 10px;
     width: 100%;
     height: 100%;
 }
 
-.lbHoraEncerraAtividade{
+.lbHoraEncerraAtividade {
     position: relative;
     margin-top: 10px;
-    margin-left: 18px;
+    margin-left: 50px;
     margin-bottom: 10px;	
 }
 
@@ -753,7 +812,7 @@ body{
     width: 107%;
     height: 100%;
     margin-top: 10px;
-    margin-left: 67px;
+    margin-left: 107px;
     margin-bottom: 10px;	
 }
 
@@ -762,14 +821,14 @@ body{
     width: 139%;
     height: 100%;
     margin-top: 10px;
-    margin-left: 45px;
+    margin-left: 86px;
     margin-bottom: 10px;	
 }
 
 .lbEmailMinistrante{
     position: relative;
     margin-top: 10px;
-    margin-left: 112px;
+    margin-left: 157px;
     margin-bottom: 10px;
 }
 .tbEmailMinistrante{
@@ -858,7 +917,7 @@ body{
 .listTipodeAtividade{
     position: relative;
     margin-top: 5px;
-    margin-left: 28px;
+    margin-left: 33px;
     margin-bottom: 10px;
     width: 25%;
     height: 83%;
@@ -910,7 +969,7 @@ body{
 	/*margin-bottom: 10px;*/
 	width: 100%;
 	height: 56%;
-    background: #C1C1C1;
+    /*background: #C1C1C1;*/
 }
 
 .hpPainelCoordenadorEmParticipantes{
@@ -919,7 +978,7 @@ body{
 	/*margin-bottom: 10px;*/
 	width: 100%;
 	height: 56%;
-    background: #C1C1C1;
+    /*background: #C1C1C1;*/
 }
 
 .hpPainelCoordenadorEmMonitores{
@@ -928,7 +987,7 @@ body{
 	/*margin-bottom: 10px;*/
 	width: 100%;
 	height: 56%;
-    background: #C1C1C1;
+    /*background: #C1C1C1;*/
 }
 
 .hpPainelLogoutCoordenador{
@@ -937,7 +996,7 @@ body{
 	/*margin-bottom: 10px;*/
 	width: 100%;
 	height: 56%;
-    background: #C1C1C1;
+    /*background: #C1C1C1;*/
 }
 
 .vpPainelGuardaAtividades{
@@ -984,6 +1043,8 @@ body{
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
+	font-size: 14px;
+	color: white;
 }
 
 .lbParticipanteCoordenador{
@@ -994,6 +1055,8 @@ body{
     margin-left: 11px;
 	margin-bottom: 10px;
 	cursor: pointer;
+	font-size: 14px;
+	color: white;
 }
 
 
@@ -1005,6 +1068,8 @@ body{
     width: 100%;
     height: 100%;
     cursor: pointer;
+    font-size: 14px;
+	color: white;
 }
 
 .lbLogoutCoordenador{
@@ -1015,27 +1080,34 @@ body{
 	width: 100%;
     height: 100%;
     cursor: pointer;
+    font-size: 14px;
+	color: white;
 }
 
 .hpPainelCoordenadorEmAtividades:hover{
 	background: white;
+	color: darkred;
+	font-color: darkred;
 }
 
 .hpPainelCoordenadorEmParticipantes:hover{
 	background: white;
+	color: darkred;
 }
 
 .hpPainelCoordenadorEmMonitores:hover{
 	background: white;
+	color: darkred;
 }
 
 .hpPainelLogoutCoordenador:hover{
 	background: white;
+	color: darkred;
 }
 
 .iTrocaMenuCoordenador{
     position: relative;
-    margin-top: 14px;
+    margin-top: 23px;
     margin-left: 53px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -1054,20 +1126,48 @@ body{
 
 .iAtividadesCoordenador{
 	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .iParticipanteCoordenador{
 	position: relative;
+
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .iMonitoresCoordenador{
 	position: relative;
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
 .iLogoutCoordenador{
-	position: relative;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 6px;
 }
 
+.lbSetaAtividade{
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: white;
+}
+.lbSetaParticipante{
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: white;
+}
+.lbSetaMonitor{
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: white;
+}
 /*===========================================*/
 /*CoordenadorVisualizarPercentualParticipante*/
 /*===========================================*/
@@ -1202,14 +1302,14 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	background: green;
+ 	background: darkred;
 	width: 100%;
 	height: 56%;
 }
 
 .hpPainelInformacoesMonitor{
-	position: relative;
-    background: green;
+    position: relative;
+    background: darkred;
     /* margin-top: 10px; */
     margin-left: 10px;
     /* margin-bottom: 10px; */
@@ -1259,7 +1359,7 @@ body{
     margin-top: 10px;
     margin-left: 10px;
     /* margin-bottom: 10px; */
-    background: green;
+    background: darkred;
     width: 98%;
     height: 56%;
 }
@@ -1286,7 +1386,7 @@ body{
     margin-top: 10px;
     margin-left: 10px;
     /* margin-bottom: 10px; */
-    background: green;
+    background: darkred;
     width: 98%;
     height: 56%;
 }
@@ -1335,7 +1435,7 @@ body{
     margin-top: 10px;
     margin-left: 10px;
     /* margin-bottom: 10px; */
-    background: green;
+    background: darkred;
     width: 98%;
     height: 56%;	
 }
@@ -1402,8 +1502,8 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;
+	font-size: 14px;
+	color: white;
 }
 .lbInformacoesMonitor{
 	position: relative;
@@ -1411,8 +1511,8 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+	font-size: 14px;	
+	color: white;
 }
 
 .lbNomeMonitor{
@@ -1420,8 +1520,7 @@ body{
     margin-top: 10px;
     margin-left: 222px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+   	font-size: 14px;	
 }
 
 .lbMatriculaMonitor{
@@ -1429,8 +1528,7 @@ body{
     margin-top: 10px;
     margin-left: 198px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+   	font-size: 14px;	
 }
 
 .lbRgMonitor{
@@ -1438,8 +1536,7 @@ body{
     margin-top: 10px;
     margin-left: 237px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+    font-size: 14px;	
 }
 
 .lbCpfMonitor{
@@ -1447,8 +1544,7 @@ body{
     margin-top: 10px;
     margin-left: 229px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+    font-size: 14px;	
 }
 
 .lbContatoMonitor{
@@ -1457,8 +1553,8 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+	font-size: 14px;
+	color: white;	
 }
 
 .lbTelefoneMonitor{
@@ -1466,8 +1562,7 @@ body{
     margin-top: 12px;
     margin-left: 205px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+   	font-size: 14px;	
 }
 
 .lbEmailMonitor{
@@ -1475,8 +1570,7 @@ body{
     margin-top: 10px;
     margin-left: 221px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+    font-size: 14px;	
 }
 
 .lbEnderecoMonitor{
@@ -1485,8 +1579,8 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+	font-size: 14px;	
+	color: white;
 }
 
 .lbEnderecodoMonitor{
@@ -1494,8 +1588,7 @@ body{
     margin-top: 10px;
     margin-left: 197px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+   	font-size: 14px;	
 }
 
 .lbNumeroMonitor{
@@ -1503,8 +1596,7 @@ body{
     margin-top: 10px;
     margin-left: 239px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;	
+    font-size: 14px;	
 }
 
 .lbBairroMonitor{
@@ -1512,8 +1604,7 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+	font-size: 14px;	
 }
 
 .lbCidadeMonitor{
@@ -1521,8 +1612,7 @@ body{
     margin-top: 10px;
     margin-left: 212px;
     margin-bottom: 10px;
-    width: 100%;
-    height: 56%;
+    font-size: 14px;
 	
 }
 
@@ -1531,8 +1621,7 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+	font-size: 14px;	
 }
 
 .lbTituloCadastrarMonitor{
@@ -1541,8 +1630,8 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+    font-size: 19px;
+	color: white;
 }
 
 .lbSalvarMonitor{
@@ -1551,8 +1640,8 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
+	font-size: 14px;	
+	color: white;
 }
 .tbNomeMonitor{
     position: relative;

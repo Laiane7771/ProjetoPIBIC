@@ -1,36 +1,29 @@
 body{
 	margin:0 !important;
 	padding:0 !important;
+	background: url (../Image/fundoImage.png);
+	background-repeat: repeat-x;
+	background-color: black;
 }
-
-/*==============================*/
-/*HomeInicialAdministradorView==*/
-/*==============================*/
-#cabecalho{
-	position: relative;
-	margin-top:0;
-	margin-left: 0;
-	width: 100%;
-	height: 20%;
-	background: gray;
-	float: left;
-}
-
 
 #menu{
-	position: relative;
-	width: 20%;
-	height: 100%;
-	background: green;
-	float: left;
+    position: relative;
+    width: 17%;
+    height: 100%;
+    background: black;
+    float: left;
+
 }
 
 #PainelTroca{
-	position: relative;
-    width: 80%;
+    position: relative;
+    width: 81%;
     height: 100%;
-    background: green;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: #F1F1F1;
     float: left;
+    border: 1px solid;
 }
 
 #rodape{
@@ -42,12 +35,23 @@ body{
 	background: red;
 	
 }
-
-.hpPainelCabecalhoHomeAdm{
+#cabecalho{
 	position: relative;
+	margin-top:0;
+	margin-left: 0;
 	width: 100%;
 	height: 20%;
-	background: gray;	
+	background: gray;
+	float: left;
+}
+/*==============================*/
+/*HomeInicialAdministradorView==*/
+/*==============================*/
+.hpPainelCabecalhoHomeAdm{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: #F1F1F1;
 }
 
 .vpPainelRodapeAdm{
@@ -64,7 +68,40 @@ body{
 	background: gray;			
 }
 
+.iLogoAdm{
+	position: relative;
+    margin-left: 76px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+.iLogorodapeAdm{
+	
+}
+.lbTituloPagina{
+    position: relative;
+    margin-left: 27px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.lbNomeAdm{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    color: black;
+}
+.ftTabelaCampus{
+background: rgba(0, 0, 0, 0.02);
+    margin-top: 13px;
+    margin-left: 10px;
+    margin-bottom: 60px;
+    width: 98%;
+    height: 27em;
+    border-bottom: 1px solid #E2E2E2;
+}
 /*===========================*/
 /*LoginAdministradorPopupView*/
 /*===========================*/
@@ -123,25 +160,33 @@ body{
 /*==========================*/
 
 .vpPainelMenuTelaInicialAdm{
-	position: relative;
-	width: 100%;
-	height: 100%;
+    position: relative;
+    margin-top: 169px;
+    /* margin-left: 10px; */
+    border-radius: 1px 1px 1px 1px;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
 }
 
 .hpPainelMenuCampusAdm{
-	position: relative;
-	width: 100%; 
-	height: 20%;
-	background: yellow;
-	margin-bottom: 2px;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: black;
+    margin-bottom: 2px;
+    border: 1px solid;
+    border-color: white;
 }
 
 .hpPainelMenuGerenteAdm{
 	position: relative;
 	width: 100%; 
 	height: 20%;
-	background: yellow;
+	background: black;
 	margin-bottom: 2px;
+	border: 1px solid;
+    border-color: white;
 }
 
 
@@ -149,25 +194,33 @@ body{
 	position: relative;
 	width: 100%; 
 	height: 20%;
-	background: yellow;
+	background: black;
 	margin-bottom: 2px;
+	border: 1px solid;
+    border-color: white;
 }
 
 .lbMenuCampus{
-	position: relative;
-	margin-top: 20px;
-	margin-left: 20px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 38px;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .lbMenuGerente{
     position: relative;
-    margin-top: 20px;
-    margin-left: 74px;
+    margin-top: 10px;
+    margin-left: 78px;
+    margin-bottom: 10px;
+    color: white;
 }
 .lbMenuSair{
-	position: relative;
-	margin-top: 20px;
-	margin-left: 20px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    color: white;
 }
 .iMenuCampus{
 	position: relative;
@@ -179,4 +232,104 @@ body{
 	margin-top: 20px;
 	margin-left: 20px;
 }
+
+
+/*===============================*/
+/*=AdmPesquisarCampusView========*/
+/*===============================*/
+.hpPainelTituloPaginaPesquisarCampus{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	background: white;
+}
+
+.hpPainelPesquisarAdicionarExcluirCampus{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	background: white;	
+}
+
+.vpPainelTabelaCampus{
+    position: relative;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    width: 100%;
+    height: 100%;
+    background: white;	
+}
+
+.vpPainelPesquisarAdicionarCampus{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: white;	
+}
+
+.lbTituloPaginaPesquisarCampus{
+	position: relative;
+    background: white;
+    font-size: 27px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.tbPesquisarCampus{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 86%;
+    background: white;
+    border: 1px solid;
+}
+
+.btnPesquisarCampus{
+    position: relative;
+    margin-left: 29px;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid;
+    width: 62%;
+    height: 100%;
+}
+
+.btnAdicionarCampus{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid;
+    width: 73%;
+    height: 100%;
+}
+
+.btnExcluirCampus{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid;
+    width: 19%;
+    height: 100%;	
+}
+
+.ftTabelaCampus{
+	position: relative;
+	
+	background: white;	
+}
+
+
+
+
+
+
+
+
+
+
+
 

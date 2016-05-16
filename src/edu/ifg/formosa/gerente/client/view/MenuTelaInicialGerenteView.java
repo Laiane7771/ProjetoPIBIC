@@ -1,11 +1,14 @@
 package edu.ifg.formosa.gerente.client.view;
 
 
+import com.google.gwt.core.shared.GWT;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.ifg.formosa.gerente.client.presenter.SubMenusGerentePresenter;
 
 public class MenuTelaInicialGerenteView extends Composite {
 	
@@ -87,7 +90,7 @@ public class MenuTelaInicialGerenteView extends Composite {
 		hplbEvento.add(iEvento);
 		hplbEvento.setCellWidth(iEvento, "10%");
 		hplbEvento.add(lbEvento);
-		hplbEvento.setCellWidth(lbEvento, "50%%");
+		hplbEvento.setCellWidth(lbEvento, "50%");
 		hplbEvento.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
 		hplbEvento.add(lbSetaCimaE);
 		hplbEvento.setCellWidth(lbSetaCimaE, "10%");
@@ -193,103 +196,131 @@ public class MenuTelaInicialGerenteView extends Composite {
 
 	public void apagaLabelMenus(){
 		
-		getHpEspacoLogoMenu().remove(getiLogo());
-		getHpEspacoLogoMenu().setWidth("50%");
+		vpMenu.clear();
 		getVpMenu().setWidth("2%");
+		hpEspacoLogoMenu.clear();
+		hpEspacoLogoMenu.add(iMenu);
 		
-		getHplbEvento().remove(getLbEvento());
-		getHplbEvento().remove(getLbSetaCimaE());
-		getHplbEvento().setWidth("50%");
+		hplbEvento.clear();
+		hplbEvento.removeStyleName("hplbEvento");
+		hplbEvento.removeStyleName("hplbEventoVoltaMenu");
+		hplbEvento.add(iEvento);
 		
-		getHplbCoordenadores().remove(getLbCoordenadores());
-		getHplbCoordenadores().remove(getLbSetaCimaC());
-		getHplbCoordenadores().setWidth("50%");
-	
-		getHplbParticipantes().remove(getLbParticipantes());
-		getHplbParticipantes().remove(getLbSetaCimaP());
-		getHplbParticipantes().setWidth("50%");
+		vpAdicionaItensEvento.removeStyleName("vpAdicionaItensEvento");
+		vpAdicionaItensEvento.add(hplbEvento);
 		
-		getHplbSair().remove(getLbSair());
-		getHplbSair().setWidth("50%");
+		hplbCoordenadores.clear();
 		
-		getHplbEvento().removeStyleName("hplbEvento");
-		getHplbCoordenadores().removeStyleName("hplbCoordenadores");
-		getHplbParticipantes().removeStyleName("hplbParticipantes");
-		getHplbSair().removeStyleName("hplbSair");
+		hplbCoordenadores.removeStyleName("hplbCoordenadores");
+		hplbCoordenadores.removeStyleName("hplbCoordenadoresVoltaMenu");
+		hplbCoordenadores.add(iCoordenador);
 		
-		getiMenu().removeStyleName("iMenu");
-		getiMenu().setStyleName("iMenuReduzido");
+		vpAdicionaItensCoordenador.removeStyleName("vpAdicionaItensCoordenador");
+		vpAdicionaItensCoordenador.add(hplbCoordenadores);
 		
-		getiEvento().removeStyleName("iEvento");
-		getiCoordenador().removeStyleName("iCoordenador");
-		getiParticipantes().removeStyleName("iParticipantes");
-		getiSair().removeStyleName("iSair");
+		hplbParticipantes.clear();
+		hplbParticipantes.removeStyleName("hplbParticipantes");
+		hplbParticipantes.removeStyleName("hplbParticipantesVoltaMenu");
+		hplbParticipantes.add(iParticipantes);
 		
-		getiEvento().setStyleName("iEventoReduzido");
-		getiCoordenador().setStyleName("iCoordenadorReduzido");
-		getiParticipantes().setStyleName("iParticipanteReduzido");
-		getiSair().setStyleName("iSairReduzido");
+		vpAdicionaItensParticipante.removeStyleName("vpAdicionaItensParticipante");
+		vpAdicionaItensParticipante.add(hplbParticipantes);
 		
-	    HomeGerenteView hgv = new HomeGerenteView();
-	    hgv.getVpPai().setStyleName("vpPaiAumentado");
-		hgv.addNovoEstilo();
+		hplbSair.clear();
+		hplbSair.removeStyleName("hplbSair");
+		hplbSair.add(iSair);
+		
+		getiMenu().addStyleName("iMenuReduzido");
+		getiEvento().addStyleName("iEventoReduzido");
+		getiCoordenador().addStyleName("iCoordenadorReduzido");
+		getiParticipantes().addStyleName("iParticipanteReduzido");
+		getiSair().addStyleName("iSairReduzido");
+		
+		vpMenu.add(hpEspacoLogoMenu);
+		vpMenu.add(vpAdicionaItensEvento);
+		vpMenu.add(vpAdicionaItensCoordenador);
+		vpMenu.add(vpAdicionaItensParticipante);
+		vpMenu.add(hplbSair);
+		
 		
 	}
 	
 	public void voltaMenu(){
 		
-		getHpEspacoLogoMenu().remove(getiMenu());
-		getHpEspacoLogoMenu().add(getiLogo());
-		getHpEspacoLogoMenu().add(getiMenu());
-		getiMenu().setStyleName("iMenu2");
-		getHpEspacoLogoMenu().setWidth("100%");
-		getVpMenu().setWidth("100%");
+		vpAdicionaItensEvento.clear();
+		vpAdicionaItensCoordenador.clear();
+		vpAdicionaItensParticipante.clear();
+		vpMenu.clear();
+		vpMenu.setWidth("15%");
 		
-		getHplbEvento().setStyleName("hplbEvento");
-		getHplbCoordenadores().setStyleName("hplbCoordenadores");
-		getHplbParticipantes().setStyleName("hplbParticipantes");
-		getHplbSair().setStyleName("hplbSair");
 		
-		getHplbEvento().add(getiEvento());
-		getHplbEvento().add(getLbEvento());
-		getHplbEvento().add(getLbSetaCimaE());
-		getHplbEvento().setWidth("100%");
 		
-		getHplbCoordenadores().add(getiCoordenador());
-		getHplbCoordenadores().add(getLbCoordenadores());
-		getHplbCoordenadores().add(getLbSetaCimaC());
-		getHplbCoordenadores().setWidth("100%");
+		vpAdicionaItensEvento.addStyleName("vpAdicionaItensEvento");
+		vpAdicionaItensCoordenador.addStyleName("vpAdicionaItensCoordenador");
+		vpAdicionaItensParticipante.addStyleName("vpAdicionaItensParticipante");
 		
-		getHplbParticipantes().add(getiParticipantes());
-		getHplbParticipantes().add(getLbParticipantes());
-		getHplbParticipantes().add(getLbSetaCimaP());
-		getHplbParticipantes().setWidth("100%");
+		hpEspacoLogoMenu.add(iLogo);
+		hpEspacoLogoMenu.add(iMenu);
 		
-		getHplbSair().add(getLbSair());
-		getHplbSair().setWidth("100%");
+		hplbEvento.addStyleName("hplbEventoVoltaMenu");
+		hplbCoordenadores.addStyleName("hplbCoordenadoresVoltaMenu");
+		hplbParticipantes.addStyleName("hplbParticipantesVoltaMenu");
 		
-		getLbEvento().removeStyleName("lbEvento");
-		getLbCoordenadores().removeStyleName("lbCoordenadores");
-		getLbParticipantes().removeStyleName("lbParticipantes");
+		lbEvento.addStyleName("lbEventoVoltaMenu");
+		lbCoordenadores.addStyleName("lbCoordenadoresVoltaMenu");
+		lbParticipantes.addStyleName("lbParticipantesVoltaMenu");
 		
-		getiEvento().removeStyleName("iEvento");
-		getiCoordenador().removeStyleName("iCoordenador");
-		getiParticipantes().removeStyleName("iParticipantes");
+		iEvento.addStyleName("iEventoVoltaMenu");
+		iCoordenador.addStyleName("iCoordenadorVoltaMenu");
+		iParticipantes.addStyleName("iParticipantesVoltaMenu");
 		
-		getHplbCoordenadores().setStyleName("hplbCoordenadoresVoltaMenu");
+		lbSetaCimaE.addStyleName("lbSetaCimaEVoltaMenu");
+		lbSetaCimaC.addStyleName("lbSetaCimaCVoltaMenu");
+		lbSetaCimaP.addStyleName("lbSetaCimaPVoltaMenu");
 		
-		getiEvento().setStyleName("iEventoVoltaMenu");
-		getiCoordenador().setStyleName("iCoordenadoresVoltaMenu");
-		getiParticipantes().setStyleName("iParticipantesVoltaMenu");
+		hplbEvento.add(iEvento);
+		hplbEvento.setCellWidth(iEvento, "10%");
+		hplbEvento.add(lbEvento);
+		hplbEvento.setCellWidth(lbEvento, "50%");
+		hplbEvento.add(lbSetaCimaE);
+		hplbEvento.setCellWidth(lbSetaCimaE, "10%");
 		
-		getLbEvento().setStyleName("lbEventoVoltaMenu");
-		getLbCoordenadores().setStyleName("lbCoordenadoresVoltaMenu");
-		getLbParticipantes().setStyleName("lbParticipantesVoltaMenu");
+		vpAdicionaItensEvento.add(hplbEvento);
 		
-		getLbSetaCimaE().setStyleName("lbSetaCimaEVoltaMenu");
-		getLbSetaCimaC().setStyleName("lbSetaCimaCVoltaMenu");
-		getLbSetaCimaP().setStyleName("lbSetaCimaPVoltaMenu");
-	
+		hplbCoordenadores.add(iCoordenador);
+		hplbCoordenadores.setCellWidth(iCoordenador, "10%");
+		hplbCoordenadores.add(lbCoordenadores);
+		hplbCoordenadores.setCellWidth(lbCoordenadores, "30%");
+		hplbCoordenadores.add(lbSetaCimaC);
+		hplbCoordenadores.setCellWidth(lbSetaCimaC, "10%");
+		
+		vpAdicionaItensCoordenador.add(hplbCoordenadores);
+		
+		hplbParticipantes.add(iParticipantes);
+		hplbParticipantes.setCellWidth(iParticipantes, "10%");
+		hplbParticipantes.add(lbParticipantes);
+		hplbParticipantes.setCellWidth(lbParticipantes, "30%");
+		hplbParticipantes.add(lbSetaCimaP);
+		hplbParticipantes.setCellWidth(lbSetaCimaP, "10%");
+		
+		vpAdicionaItensParticipante.add(hplbParticipantes);
+		hplbSair.add(iSair);
+		hplbSair.setCellWidth(iSair, "10%");
+		hplbSair.add(lbSair);
+		hplbSair.setCellWidth(lbSair, "45%");
+		
+		hplbEvento.addStyleName("hplbEvento");
+		hplbCoordenadores.addStyleName("hplbCoordenadores");
+		hplbParticipantes.addStyleName("hplbParticipantes");
+		hplbSair.addStyleName("hplbSair");
+		
+		vpMenu.add(hpEspacoLogoMenu);
+		vpMenu.add(vpAdicionaItensEvento);
+		vpMenu.add(vpAdicionaItensCoordenador);
+		vpMenu.add(vpAdicionaItensParticipante);
+		vpMenu.add(hplbSair);
+		
+		
 	}
 
 	public VerticalPanel getVpMenu() {

@@ -188,9 +188,9 @@ public class CoordenadorCadastrarAtividadesView extends Composite{
 		tbHoraEncerraAtividade.setStyleName("tbHoraEncerraAtividade");
 		
 		hpPainelHoraEncerraAtividade.add(lbHoraEncerraAtividade); //add item
-		hpPainelHoraEncerraAtividade.setCellWidth(lbHoraEncerraAtividade, "2%");
+		hpPainelHoraEncerraAtividade.setCellWidth(lbHoraEncerraAtividade, "7%");
 		hpPainelHoraEncerraAtividade.add(tbHoraEncerraAtividade); //add item
-		hpPainelHoraEncerraAtividade.setCellWidth(tbHoraEncerraAtividade, "23%");
+		hpPainelHoraEncerraAtividade.setCellWidth(tbHoraEncerraAtividade, "43%");
 		//---------------------------------------------------
 		//----------------------------------------------------------
 		hpPainelCargaHorariaAtividade = new HorizontalPanel();

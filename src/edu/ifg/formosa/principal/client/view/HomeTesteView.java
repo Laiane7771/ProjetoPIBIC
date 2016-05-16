@@ -1,6 +1,7 @@
 package edu.ifg.formosa.principal.client.view;
 
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
@@ -23,6 +24,7 @@ public class HomeTesteView extends Composite{
 	private Image iLogoPagina;
 	
 	
+	
 	public HomeTesteView(){
 		
 		//Painel Cabecalho----------------------------------
@@ -30,6 +32,7 @@ public class HomeTesteView extends Composite{
 		hpPainelCabecalhoLogoeLabels = new HorizontalPanel();
 		hpPainelCabecalhoLogoeLabels.setStyleName("hpPainelCabecalhoLogoeLabels");
 		
+	
 		iLogoPagina = new Image();
 		iLogoPagina.setUrl("../Image/logo.png");
 		iLogoPagina.setStyleName("iLogoPagina");

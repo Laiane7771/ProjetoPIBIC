@@ -11,7 +11,7 @@ public class Eventif implements EntryPoint {
 	
 	public void onModuleLoad() {
 		HandlerManager eventBus = new HandlerManager(null);
-		PrincipalServiceAsync rpcService = GWT.create(PrincipalService.class);
+		PrincipalServiceAsync rpcService = (PrincipalServiceAsync)GWT.create(PrincipalService.class);
 		AppController ac = new AppController(eventBus, rpcService);
 		ac.go(RootPanel.get("cabecalho"), RootPanel.get("corpo"));
 	}

@@ -172,7 +172,7 @@ public class GerenteCadastrarCoordenadorView extends Composite{
 		hpPainelLabeleTexboxMatricula.setStyleName("hpPainelLabeleTexboxMatricula");
 		
 		lbMatriculaSiapeCoordenador = new Label("Matricula/SIAPE:");
-		lbMatriculaSiapeCoordenador.setStyleName("lbMatriculaSiapeCoordenador");
+		lbMatriculaSiapeCoordenador.setStyleName("lbMatriculaSiapeCoordenador1");
 		
 		tbSiapeMatriculaCoordenador = new TextBox();
 		tbSiapeMatriculaCoordenador.setStyleName("tbSiapeMatriculaCoordenador");

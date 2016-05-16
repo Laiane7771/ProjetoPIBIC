@@ -60,15 +60,14 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 	private HasWidgets containerDireita;
 	private HasWidgets containerTres;
 	private final HandlerManager eventBus;
+	private final GerenteServiceAsync rpcService;
 
-	public AppControllerGerente(HandlerManager eventBus){
+	public AppControllerGerente(HandlerManager eventBus, GerenteServiceAsync rpcService){
 		this.eventBus = eventBus;
+		this.rpcService = rpcService;
 	}
 
 	private void bind(){
-		
-		//MenuTelaInicialGerenteView mtig = new MenuTelaInicialGerenteView();
-		//MenuTelaInicialGerentePresenter migp = new MenuTelaInicialGerentePresenter(mtig, eventBus);
 		
 		RodapeView roda = new RodapeView();
 		RodapePresenter rp = new RodapePresenter(roda);
@@ -130,6 +129,9 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 				else if("ImprimirCrachaCoordenador".equals(History.getToken())){
 					History.newItem("home");
 				}
+				else if("ImprimindoCertificadoCoordenador".equals(History.getToken())){
+					History.newItem("home");
+				}
 				
 				else{
 					History.fireCurrentHistoryState();
@@ -170,6 +172,9 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 				else if("CadastrarCoordenador".equals(History.getToken())){
 					History.newItem("PesquisarParticipante");
 				}
+				else if("ImprimindoCertificadoCoordenador".equals(History.getToken())){
+					History.newItem("PesquisarParticipante");
+				}
 				else {
 					History.fireCurrentHistoryState();
 					
@@ -204,7 +209,13 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 				else if("CadastrarParticipante".equals(History.getToken())){
 					History.newItem("PesquisarCoordenador");
 				}
-				
+				else if("ImprimirCertificadoParticipante".equals(History.getToken())){
+					History.newItem("PesquisarCoordenador");
+				}
+				else {
+					History.fireCurrentHistoryState();
+					
+				}
 			}
 			
 		});
@@ -397,6 +408,9 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 				else if("CadastrarCoordenador".equals(History.getToken())){
 					History.newItem("ImprimindoCertificadoCoordenador");
 				}
+				else if("ImprimirCertificadoParticipante".equals(History.getToken())){
+					History.newItem("ImprimindoCertificadoCoordenador");
+				}
 				else {
 					History.fireCurrentHistoryState();
 					
@@ -463,7 +477,7 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 			}
 			if(token.equals("home")){
 				HomeGerenteView hgv = new HomeGerenteView();
-				new HomeGerentePresenter(hgv, eventBus);
+				new HomeGerentePresenter(hgv, eventBus, rpcService);
 				containerDireita.clear();
 				containerDireita.add(hgv.asWidget());
 			}
@@ -475,7 +489,7 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 			}
 			if(token.equals("PesquisarCoordenador")){
 				GerentePesquisarCoordenadorView gpc = new GerentePesquisarCoordenadorView();
-				new GerentePesquisarCoordenadorPresenter(gpc, eventBus);
+				new GerentePesquisarCoordenadorPresenter(gpc,  eventBus, rpcService);
 				containerDireita.clear();
 				containerDireita.add(gpc.asWidget());
 			}
@@ -515,6 +529,14 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 				containerDireita.clear();
 				containerDireita.add(certificadoParticipante.asWidget());
 			}
+			if(token.equals("PesquisarEvento")){
+				HomeGerenteView hgv = new HomeGerenteView();
+				new HomeGerentePresenter(hgv, eventBus, rpcService);
+				containerDireita.clear();
+				containerDireita.add(hgv.asWidget());
+				containerDireita.clear();
+				containerDireita.add(hgv.asWidget());
+			}
 		}
 	}
 	public void go(HasWidgets containerEsquerda, HasWidgets containerDireita, HasWidgets containerTres) {
@@ -529,7 +551,7 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 		containerEsquerda.add(mtigv.asWidget());
 		
 		HomeGerenteView hgv = new HomeGerenteView();
-		HomeGerentePresenter hgp = new HomeGerentePresenter(hgv, eventBus);
+		HomeGerentePresenter hgp = new HomeGerentePresenter(hgv, eventBus, rpcService);
 		containerDireita.add(hgv.asWidget());
 		
 		RodapeView roda = new RodapeView();

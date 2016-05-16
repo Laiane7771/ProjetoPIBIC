@@ -7,19 +7,25 @@ import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HasWidgets;
 
+import edu.ifg.formosa.coordenador.client.event.CadastrarMonitorEvent;
 import edu.ifg.formosa.coordenador.client.event.PesquisarAtividadeEvent;
 import edu.ifg.formosa.coordenador.client.event.PesquisarMonitorEvent;
 import edu.ifg.formosa.coordenador.client.view.MenuTelaInicialCoordenadorView;
 import edu.ifg.formosa.coordenador.client.view.SubMenusTelaInicialCoordenadorView;
-import edu.ifg.formosa.gerente.client.event.PesquisarParticipanteEvent;
+
+
 
 public class MenuTelaInicialCoordenadorPresenter implements Presenter{
 	
 	private MenuTelaInicialCoordenadorView MenuInicial;
 	private final HandlerManager eventBus;
-	private SubMenusTelaInicialCoordenadorView subMenuView;
-	private SubMenusTelaInicialCoordenadorPresenter subMenuPresenter;
-
+	private SubMenusTelaInicialCoordenadorView subMenuView = new SubMenusTelaInicialCoordenadorView();
+	private SubMenusTelaInicialCoordenadorPresenter subMenuPresenter = null;
+	private boolean abertoAtividade = false;
+	private boolean abertoMonitor = false;
+	private boolean abertoParticipante = false;
+	private boolean apagamenu = false;
+	
 	public MenuTelaInicialCoordenadorPresenter(MenuTelaInicialCoordenadorView MenuInicial, HandlerManager eventBus){
 		this.MenuInicial = MenuInicial;
 		this.eventBus = eventBus;
@@ -42,7 +48,7 @@ public class MenuTelaInicialCoordenadorPresenter implements Presenter{
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				//MenuInicial.fireEvent(new VisualizarFrequenciaEvent() );
+				
 				adicionaItensParticipantes();
 				
 			}
@@ -81,25 +87,69 @@ public class MenuTelaInicialCoordenadorPresenter implements Presenter{
 		
 	}
 	
+	
 	public void adicionaItensAtividade(){
-		SubMenusTelaInicialCoordenadorView subMenu = new SubMenusTelaInicialCoordenadorView();
-		new SubMenusTelaInicialCoordenadorPresenter(subMenu, eventBus);
-		MenuInicial.getVpPainelGuardaAtividades().add(subMenu.getHpPainelCadastrarAtividade());
-		MenuInicial.getVpPainelGuardaAtividades().add(subMenu.getHpPainelImprimirAtividadeComQR());
+		
+		MenuInicial.getHpPainelCoordenadorEmAtividades().removeStyleName("novoPainelCoordenadorAtividade");
+		MenuInicial.getHpPainelCoordenadorEmMonitores().removeStyleName("novoPainelCoordenadorMonitor");
+		MenuInicial.getHpPainelCoordenadorEmParticipantes().removeStyleName("novoPainelCoordenadorParticipantes");
+		MenuInicial.getHpPainelCoordenadorEmAtividades().addStyleName("novoPainelAtividades");
+		
+		if(abertoAtividade == false){
+			abertoAtividade = true;
+			MenuInicial.getVpPainelGuardaAtividades().add(subMenuView.getHpPainelPesquisarAtividade());
+			MenuInicial.getVpPainelGuardaAtividades().add(subMenuView.getHpPainelCadastrarAtividade());
+			MenuInicial.getVpPainelGuardaAtividades().add(subMenuView.getHpPainelImprimirAtividadeComQR());
+			
+			
+		}
+		else{
+			MenuInicial.getVpPainelGuardaAtividades().remove(subMenuView.getHpPainelPesquisarAtividade());
+			MenuInicial.getVpPainelGuardaAtividades().remove(subMenuView.getHpPainelCadastrarAtividade());
+			MenuInicial.getVpPainelGuardaAtividades().remove(subMenuView.getHpPainelImprimirAtividadeComQR());
+			abertoAtividade = false;
+		}
 		
 	}
 	
 	public void adicionaItensMonitor(){
-		SubMenusTelaInicialCoordenadorView subMenu = new SubMenusTelaInicialCoordenadorView();
-		new SubMenusTelaInicialCoordenadorPresenter(subMenu, eventBus);
-		MenuInicial.getVpPainelGuardaMonitores().add(subMenu.getHpPainelCadastrarMonitor());
+		MenuInicial.getHpPainelCoordenadorEmMonitores().removeStyleName("novoPainelCoordenadorMonitor");
+		MenuInicial.getHpPainelCoordenadorEmAtividades().removeStyleName("novoPainelCoordenadorAtividade");
+		MenuInicial.getHpPainelCoordenadorEmParticipantes().removeStyleName("novoPainelCoordenadorParticipante");
+		
+		if(abertoMonitor == false){
+			abertoMonitor = true;
+			MenuInicial.getVpPainelGuardaMonitores().add(subMenuView.getHpPainelPesquisarMonitor());
+			MenuInicial.getVpPainelGuardaMonitores().add(subMenuView.getHpPainelCadastrarMonitor());
+			
+			
+		}
+		else{
+			MenuInicial.getVpPainelGuardaMonitores().remove(subMenuView.getHpPainelPesquisarMonitor());
+			MenuInicial.getVpPainelGuardaMonitores().remove(subMenuView.getHpPainelCadastrarMonitor());
+			abertoMonitor = false;
+		}
+		
+		
 		
 	}
 	
 	public void adicionaItensParticipantes(){
-		SubMenusTelaInicialCoordenadorView subMenu = new SubMenusTelaInicialCoordenadorView();
-		new SubMenusTelaInicialCoordenadorPresenter(subMenu, eventBus);
-		MenuInicial.getVpPainelGuardaParticipantes().add(subMenu.getHpPainelFrequenciaParticipantes());
+		MenuInicial.getHpPainelCoordenadorEmAtividades().removeStyleName("hpPainelCoordenadorEmAtividades");
+		MenuInicial.getHpPainelCoordenadorEmMonitores().removeStyleName("hpPainelCoordenadorEmMonitores");
+		MenuInicial.getHpPainelCoordenadorEmParticipantes().removeStyleName("hpPainelCoordenadorEmParticipantes");
+		
+		if(abertoParticipante==false){
+			abertoParticipante=true;
+			MenuInicial.getVpPainelGuardaParticipantes().add(subMenuView.getHpPainelPesquisarParticipantes());
+			MenuInicial.getVpPainelGuardaParticipantes().add(subMenuView.getHpPainelFrequenciaParticipantes());
+			
+		}
+		else{
+			MenuInicial.getVpPainelGuardaParticipantes().remove(subMenuView.getHpPainelPesquisarParticipantes());
+			MenuInicial.getVpPainelGuardaParticipantes().remove(subMenuView.getHpPainelFrequenciaParticipantes());
+			abertoParticipante = false;
+		}
 	}
 	
 	

@@ -6,12 +6,18 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 public class SubMenusGerenteView {
 
 	private VerticalPanel vpPainelItemCadastrarEvento;
+	private VerticalPanel vpPainelItemPesquisarEvento;
+	private VerticalPanel vpPainelItemPesquisarCoordenador;
 	private VerticalPanel vpPainelItemCadastrarCoordenador;
+	private VerticalPanel vpPainelItemPesquisarParticipante;
 	private VerticalPanel vpPainelItemCadastrarParticipante;
 	private VerticalPanel vpPainelItemCracha;
 	private VerticalPanel vpPainelItemCertificado;
 	private VerticalPanel vpPainelItemCrachaCoordenador;
 	private VerticalPanel vpPainelItemCertificadoCoordenador;
+	private Label lbPesquisarEvento;
+	private Label lbPesquisarCoordenador;
+	private Label lbPesquisarParticipante;
 	private Label lbCadastrarEvento;
 	private Label lbCadastrarCoordenador;
 	private Label lbCadastrarParticipante;
@@ -19,12 +25,21 @@ public class SubMenusGerenteView {
 	private Label lbCertificadoParticipante;
 	private Label lbCertificadoCoordenador;
 	private Label lbCrachaCoordenador;
-
+	
 
 
 	public SubMenusGerenteView(){
 
 		// ------------------Sub Menus Evento----------------------------------------
+		
+		vpPainelItemPesquisarEvento = new VerticalPanel();
+		vpPainelItemPesquisarEvento.setStyleName("vpPainelItemPesquisarEvento");
+		
+		lbPesquisarEvento = new Label("Pesquisar Evento");
+		lbPesquisarEvento.setStyleName("lbPesquisarEvento");
+		
+		vpPainelItemPesquisarEvento.add(lbPesquisarEvento);
+		
 		vpPainelItemCadastrarEvento = new VerticalPanel();
 		vpPainelItemCadastrarEvento.setStyleName("vpPainelItemCadastrarEvento");
 
@@ -35,6 +50,14 @@ public class SubMenusGerenteView {
 
 		//-------------Sub Menus Coordenador--------------------------------------------------------
 
+		vpPainelItemPesquisarCoordenador = new VerticalPanel();
+		vpPainelItemPesquisarCoordenador.setStyleName("vpPainelItemPesquisarCoordenador");
+		
+		lbPesquisarCoordenador = new Label("Pesquisar Coordenador");
+		lbPesquisarCoordenador.setStyleName("lbPesquisarCoordenador");
+		
+		vpPainelItemPesquisarCoordenador.add(lbPesquisarCoordenador);//add 
+		
 		lbCadastrarCoordenador = new Label("Cadastrar Coordenador");
 		lbCadastrarCoordenador.setStyleName("lbCadastrarCoordenador");
 
@@ -59,6 +82,14 @@ public class SubMenusGerenteView {
 
 		//-------------------SubMenus Participante--------------------------------------------------
 
+		vpPainelItemPesquisarParticipante = new VerticalPanel();
+		vpPainelItemPesquisarParticipante.setStyleName("vpPainelItemPesquisarParticipante");
+		
+		lbPesquisarParticipante = new Label("Pesquisar Participante");
+		lbPesquisarParticipante.setStyleName("lbPesquisarParticipante");
+		
+		vpPainelItemPesquisarParticipante.add(lbPesquisarParticipante);//add item
+		
 		vpPainelItemCadastrarParticipante = new VerticalPanel();
 		vpPainelItemCadastrarParticipante.setStyleName("vpPainelItemCadastrarParticipante");
 
@@ -66,7 +97,6 @@ public class SubMenusGerenteView {
 		lbCadastrarParticipante.setStyleName("lbCadastrarParticipante");
 
 		vpPainelItemCadastrarParticipante.add(lbCadastrarParticipante); //adiciona label
-
 
 		vpPainelItemCracha = new VerticalPanel();
 		vpPainelItemCracha.setStyleName("vpPainelItemCracha");
@@ -225,6 +255,54 @@ public class SubMenusGerenteView {
 	public void setVpPainelItemCertificadoCoordenador(
 			VerticalPanel vpPainelItemCertificadoCoordenador) {
 		this.vpPainelItemCertificadoCoordenador = vpPainelItemCertificadoCoordenador;
+	}
+
+	public VerticalPanel getVpPainelItemPesquisarEvento() {
+		return vpPainelItemPesquisarEvento;
+	}
+
+	public void setVpPainelItemPesquisarEvento(VerticalPanel vpPainelItemPesquisarEvento) {
+		this.vpPainelItemPesquisarEvento = vpPainelItemPesquisarEvento;
+	}
+
+	public VerticalPanel getVpPainelItemPesquisarCoordenador() {
+		return vpPainelItemPesquisarCoordenador;
+	}
+
+	public void setVpPainelItemPesquisarCoordenador(VerticalPanel vpPainelItemPesquisarCoordenador) {
+		this.vpPainelItemPesquisarCoordenador = vpPainelItemPesquisarCoordenador;
+	}
+
+	public VerticalPanel getVpPainelItemPesquisarParticipante() {
+		return vpPainelItemPesquisarParticipante;
+	}
+
+	public void setVpPainelItemPesquisarParticipante(VerticalPanel vpPainelItemPesquisarParticipante) {
+		this.vpPainelItemPesquisarParticipante = vpPainelItemPesquisarParticipante;
+	}
+
+	public Label getLbPesquisarEvento() {
+		return lbPesquisarEvento;
+	}
+
+	public void setLbPesquisarEvento(Label lbPesquisarEvento) {
+		this.lbPesquisarEvento = lbPesquisarEvento;
+	}
+
+	public Label getLbPesquisarCoordenador() {
+		return lbPesquisarCoordenador;
+	}
+
+	public void setLbPesquisarCoordenador(Label lbPesquisarCoordenador) {
+		this.lbPesquisarCoordenador = lbPesquisarCoordenador;
+	}
+
+	public Label getLbPesquisarParticipante() {
+		return lbPesquisarParticipante;
+	}
+
+	public void setLbPesquisarParticipante(Label lbPesquisarParticipante) {
+		this.lbPesquisarParticipante = lbPesquisarParticipante;
 	}
 
 }

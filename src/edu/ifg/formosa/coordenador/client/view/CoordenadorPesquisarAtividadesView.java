@@ -2,12 +2,12 @@ package edu.ifg.formosa.coordenador.client.view;
 
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.ifg.formosa.coordenador.client.util.FlexTableEventIF;
 
 public class CoordenadorPesquisarAtividadesView extends Composite {
 	
@@ -18,7 +18,7 @@ public class CoordenadorPesquisarAtividadesView extends Composite {
 	private Label lbTituloPagina;
 	private TextBox tbPesquisarAtividadesCoord;
 	private Button btnPesquisarAtividadeCoord;
-	private FlexTable ftTabelaAtividadesCoord;
+	private FlexTableEventIF ftTabelaAtividadesCoord;
 
 	public CoordenadorPesquisarAtividadesView(){
 		
@@ -47,15 +47,9 @@ public class CoordenadorPesquisarAtividadesView extends Composite {
 		hpPainelTabelaAtividadesCoord = new HorizontalPanel();
 		hpPainelTabelaAtividadesCoord.setStyleName("hpPainelTabelaAtividadesCoord");
 		
-		ftTabelaAtividadesCoord = new FlexTable();
+		ftTabelaAtividadesCoord = new FlexTableEventIF();
 		ftTabelaAtividadesCoord.setStyleName("ftTabelaAtividadesCoord");
-		for(int x=0; x<20; x++){
-			for (int y=0; y<20; y++){
-				ftTabelaAtividadesCoord.setText(x, y, "nome");
-			}
-		}
-		
-		
+	
 		hpPainelTabelaAtividadesCoord.add(ftTabelaAtividadesCoord); //add item
 		//----------------------------------------------------------
 		vpPainelInscreverAtividades = new VerticalPanel();
@@ -132,12 +126,14 @@ public class CoordenadorPesquisarAtividadesView extends Composite {
 		this.btnPesquisarAtividadeCoord = btnPesquisarAtividadeCoord;
 	}
 
-	public FlexTable getFtTabelaAtividadesCoord() {
+	public FlexTableEventIF getFtTabelaAtividadesCoord() {
 		return ftTabelaAtividadesCoord;
 	}
 
-	public void setFtTabelaAtividadesCoord(FlexTable ftTabelaAtividadesCoord) {
+	public void setFtTabelaAtividadesCoord(FlexTableEventIF ftTabelaAtividadesCoord) {
 		this.ftTabelaAtividadesCoord = ftTabelaAtividadesCoord;
 	}
+
+	
 	
 }

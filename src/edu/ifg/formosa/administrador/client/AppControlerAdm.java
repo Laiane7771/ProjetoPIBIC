@@ -6,6 +6,7 @@ import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.HasWidgets;
 
+import edu.ifg.formosa.administrador.client.event.PesquisarEventoEvent;
 import edu.ifg.formosa.administrador.client.presenter.AdmPesquisarCampusPresenter;
 import edu.ifg.formosa.administrador.client.presenter.HomeInicialAdministradorPresenter;
 import edu.ifg.formosa.administrador.client.presenter.LoginAdministradorPopupPresenter;
@@ -31,6 +32,7 @@ public class AppControlerAdm implements Presenter, ValueChangeHandler<String>{
 	
 	public void bind(){
 		History.addValueChangeHandler(this);	
+	
 	}
 	
 	@Override

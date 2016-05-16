@@ -1,11 +1,13 @@
 package edu.ifg.formosa.gerente.client.presenter;
 
 
+import com.google.gwt.core.shared.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.user.client.ui.HasWidgets;
 
+import edu.ifg.formosa.coordenador.client.event.PesquisarAtividadeEvent;
 import edu.ifg.formosa.gerente.client.event.CadastraEventoEvent;
 import edu.ifg.formosa.gerente.client.event.CadastraParticipanteEvent;
 import edu.ifg.formosa.gerente.client.event.CadastrarCoordenadorEvent;
@@ -13,6 +15,9 @@ import edu.ifg.formosa.gerente.client.event.ImprimirCertificadoCoordenadorEvent;
 import edu.ifg.formosa.gerente.client.event.ImprimirCertificadoParticipanteEvent;
 import edu.ifg.formosa.gerente.client.event.ImprimirCrachaCoordenadorEvent;
 import edu.ifg.formosa.gerente.client.event.ImprimirCrachaParticipanteEvent;
+import edu.ifg.formosa.gerente.client.event.PesquisarCoordenadorEvent;
+import edu.ifg.formosa.gerente.client.event.PesquisarEventoEvent;
+import edu.ifg.formosa.gerente.client.event.PesquisarParticipanteEvent;
 import edu.ifg.formosa.gerente.client.view.SubMenusGerenteView;
 
 public class SubMenusGerentePresenter implements Presenter{
@@ -27,6 +32,30 @@ public class SubMenusGerentePresenter implements Presenter{
 	}
 
 	public void bind(){
+		subMenu.getLbPesquisarEvento().addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				GWT.log("aqui no botao pesquisar evento");
+				eventBus.fireEvent(new PesquisarEventoEvent());				
+			}
+		});
+		subMenu.getLbPesquisarCoordenador().addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				eventBus.fireEvent(new PesquisarCoordenadorEvent());
+				
+			}
+		});
+		subMenu.getLbPesquisarParticipante().addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				eventBus.fireEvent(new PesquisarParticipanteEvent());
+				
+			}
+		});
 		subMenu.getLbCadastrarEvento().addClickHandler(new ClickHandler() {
 			
 			public void onClick(ClickEvent event) {

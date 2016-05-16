@@ -5,12 +5,14 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.HasWidgets;
 
+import edu.ifg.formosa.principal.client.PrincipalServiceAsync;
 import edu.ifg.formosa.principal.client.view.EscolhaModuloView;
 import edu.ifg.formosa.principal.client.view.LoginGerenteView;
 
 public class LoginGerentePresenter implements Presenter{
 	
 	private LoginGerenteView loginView;
+	private PrincipalServiceAsync rpcService;
 	
 	public LoginGerentePresenter(LoginGerenteView loginView){
 		this.loginView = loginView;
@@ -23,7 +25,7 @@ public class LoginGerentePresenter implements Presenter{
 			public void onClick(ClickEvent event) {
 				loginView.hide(); 
 				EscolhaModuloView emv = new EscolhaModuloView();
-				EscolhaModuloPresenter emp = new EscolhaModuloPresenter(emv);				
+				EscolhaModuloPresenter emp = new EscolhaModuloPresenter(emv, rpcService);				
 				emp.go(null, null);
 			}
 		});

@@ -9,6 +9,8 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import edu.ifg.formosa.gerente.client.util.FlexTableEventIF;
+
 public class GerentePesquisarCoordenadorView extends Composite {
 	
 	private VerticalPanel vpPainelTrocaMenus;
@@ -21,7 +23,7 @@ public class GerentePesquisarCoordenadorView extends Composite {
 	private HorizontalPanel hpPainelPesquisarCriar;
 	private VerticalPanel vpGuardaTitulo;
 	private VerticalPanel vpPai;
-	private FlexTable ftTabelaCoordenador;
+	private FlexTableEventIF ftTabelaCoordenador;
 	private Label lbGerenciarCoordenador;
 	private Label lbNomeTituloTabelaCoor;
 	private Label lbEventoCoordenado;
@@ -71,10 +73,10 @@ public class GerentePesquisarCoordenadorView extends Composite {
 		vpPainelTabela.setStyleName("vpPainelTabela");
 		vpPainelTabela.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		
-		ftTabelaCoordenador = new FlexTable();
+		ftTabelaCoordenador = new FlexTableEventIF();
 		ftTabelaCoordenador.setStyleName("ftTabelaEvento");
-		ftTabelaCoordenador.getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
-		ftTabelaCoordenador.setBorderWidth(1); 
+		ftTabelaCoordenador.getFt().getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
+		ftTabelaCoordenador.getFt().setBorderWidth(1);
 		
 		lbNomeTituloTabelaCoor = new Label("Nome");
 		lbNomeTituloTabelaCoor.setStyleName("lbNomeTituloTabelaCoor");
@@ -105,13 +107,7 @@ public class GerentePesquisarCoordenadorView extends Composite {
 		
 	}
 	
-	public void criarTituloTabela(){
-		ftTabelaCoordenador.setWidget(0, 0, lbNomeTituloTabelaCoor);
-		ftTabelaCoordenador.setWidget(0, 1, lbEventoCoordenado);
-		ftTabelaCoordenador.setWidget(0, 2, lbQtdHoras);
-		
-		
-	}
+	
 
 	public VerticalPanel getVpPainelTrocaMenus() {
 		return vpPainelTrocaMenus;
@@ -193,17 +189,6 @@ public class GerentePesquisarCoordenadorView extends Composite {
 		this.vpPai = vpPai;
 	}
 
-	
-
-
-	public FlexTable getFtTabelaParticipante() {
-		return ftTabelaCoordenador;
-	}
-
-	public void setFtTabelaParticipante(FlexTable ftTabelaParticipante) {
-		this.ftTabelaCoordenador = ftTabelaParticipante;
-	}
-
 	public Label getLbGerenciarParticipante() {
 		return lbGerenciarCoordenador;
 	}
@@ -234,6 +219,78 @@ public class GerentePesquisarCoordenadorView extends Composite {
 
 	public void setBtnExcluirSelecionados(Button btnExcluirSelecionados) {
 		this.btnExcluirSelecionados = btnExcluirSelecionados;
+	}
+
+
+
+	public FlexTableEventIF getFtTabelaCoordenador() {
+		return ftTabelaCoordenador;
+	}
+
+
+
+	public void setFtTabelaCoordenador(FlexTableEventIF ftTabelaCoordenador) {
+		this.ftTabelaCoordenador = ftTabelaCoordenador;
+	}
+
+
+
+	public Label getLbGerenciarCoordenador() {
+		return lbGerenciarCoordenador;
+	}
+
+
+
+	public void setLbGerenciarCoordenador(Label lbGerenciarCoordenador) {
+		this.lbGerenciarCoordenador = lbGerenciarCoordenador;
+	}
+
+
+
+	public Label getLbNomeTituloTabelaCoor() {
+		return lbNomeTituloTabelaCoor;
+	}
+
+
+
+	public void setLbNomeTituloTabelaCoor(Label lbNomeTituloTabelaCoor) {
+		this.lbNomeTituloTabelaCoor = lbNomeTituloTabelaCoor;
+	}
+
+
+
+	public Label getLbEventoCoordenado() {
+		return lbEventoCoordenado;
+	}
+
+
+
+	public void setLbEventoCoordenado(Label lbEventoCoordenado) {
+		this.lbEventoCoordenado = lbEventoCoordenado;
+	}
+
+
+
+	public Label getLbQtdHoras() {
+		return lbQtdHoras;
+	}
+
+
+
+	public void setLbQtdHoras(Label lbQtdHoras) {
+		this.lbQtdHoras = lbQtdHoras;
+	}
+
+
+
+	public TextBox getTbPesquisarCoordenador() {
+		return tbPesquisarCoordenador;
+	}
+
+
+
+	public void setTbPesquisarCoordenador(TextBox tbPesquisarCoordenador) {
+		this.tbPesquisarCoordenador = tbPesquisarCoordenador;
 	}
 
 }

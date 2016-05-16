@@ -31,6 +31,9 @@ public class MenuTelaInicialCoordenadorView extends Composite{
 	private Image iParticipanteCoordenador;
 	private Image iMonitoresCoordenador;
 	private Image iLogoutCoordenador;
+	private Label lbSetaAtividade;
+	private Label lbSetaParticipante;
+	private Label lbSetaMonitor;
 	
 
 	public MenuTelaInicialCoordenadorView(){
@@ -42,7 +45,7 @@ public class MenuTelaInicialCoordenadorView extends Composite{
 		iLogoSiteCoordenador.setUrl("../Image/logo2.png");
 		
 		iTrocaMenuCoordenador = new Image();
-		iTrocaMenuCoordenador.setUrl("../Image/Menu.png");
+		iTrocaMenuCoordenador.setUrl("../Image/trocaMenu.jpg");
 		iTrocaMenuCoordenador.setStyleName("iTrocaMenuCoordenador");
 
 		hpPainelLogoSiteCoordenador.add(iLogoSiteCoordenador);//add item
@@ -59,57 +62,84 @@ public class MenuTelaInicialCoordenadorView extends Composite{
 		lbNomeCoordenadorHome.setStyleName("lbNomeCoordenadorHome");
 		
 		hpPainelNomeCoordenador.add(iAvatarCoordenador);//add item
+		hpPainelNomeCoordenador.setCellWidth(iAvatarCoordenador, "10%");
 		hpPainelNomeCoordenador.add(lbNomeCoordenadorHome);//add item
-		
+		hpPainelNomeCoordenador.setCellWidth(lbNomeCoordenadorHome, "10%");
 		///-------------------------------------------------------
 
 		hpPainelCoordenadorEmAtividades = new HorizontalPanel();
 		hpPainelCoordenadorEmAtividades.setStyleName("hpPainelCoordenadorEmAtividades");
 		
 		iAtividadesCoordenador = new Image();
+		iAtividadesCoordenador.setUrl("../Image/atividade.png");
 		iAtividadesCoordenador.setStyleName("iAtividadesCoordenador");
 		
 		lbAtividadeCoordenador = new Label("ATIVIDADES");
 		lbAtividadeCoordenador.setStyleName("lbAtividadeCoordenador");
 		
-		hpPainelCoordenadorEmAtividades.add(iAtividadesCoordenador);//add item
-		hpPainelCoordenadorEmAtividades.add(lbAtividadeCoordenador);//add item
+		lbSetaAtividade = new Label(">");
+		lbSetaAtividade.setStyleName("lbSetaAtividade"); 
 		
+		hpPainelCoordenadorEmAtividades.add(iAtividadesCoordenador);//add item
+		hpPainelCoordenadorEmAtividades.setCellWidth(iAtividadesCoordenador, "10%");
+		hpPainelCoordenadorEmAtividades.add(lbAtividadeCoordenador);//add item
+		hpPainelCoordenadorEmAtividades.setCellWidth(lbAtividadeCoordenador, "10%");
+		hpPainelCoordenadorEmAtividades.add(lbSetaAtividade);//add item
+		hpPainelCoordenadorEmAtividades.setCellWidth(lbSetaAtividade, "10%");
 		//--------------------------------------------------------------
 		hpPainelCoordenadorEmParticipantes = new HorizontalPanel();
 		hpPainelCoordenadorEmParticipantes.setStyleName("hpPainelCoordenadorEmParticipantes");
 		
 		iParticipanteCoordenador = new Image();
+		iParticipanteCoordenador.setUrl("../Image/participante2.png");
 		iParticipanteCoordenador.setStyleName("iParticipanteCoordenador");
 
-		lbParticipanteCoordenador = new Label("PARTICIPANTE");
+		lbParticipanteCoordenador = new Label("PARTICIPANTES");
 		lbParticipanteCoordenador.setStyleName("lbParticipanteCoordenador");
 		
+		lbSetaParticipante = new Label(">");
+		lbSetaParticipante.setStyleName("lbSetaParticipante");
+		
 		hpPainelCoordenadorEmParticipantes.add(iParticipanteCoordenador);//add item
+		hpPainelCoordenadorEmParticipantes.setCellWidth(iParticipanteCoordenador, "10%");
 		hpPainelCoordenadorEmParticipantes.add(lbParticipanteCoordenador);//add item
+		hpPainelCoordenadorEmParticipantes.setCellWidth(lbParticipanteCoordenador, "10%");
+		hpPainelCoordenadorEmParticipantes.add(lbSetaParticipante);//add item
+		hpPainelCoordenadorEmParticipantes.setCellWidth(lbSetaParticipante, "10%");
 		//---------------------------------------------------------------
 		hpPainelCoordenadorEmMonitores = new HorizontalPanel();
 		hpPainelCoordenadorEmMonitores.setStyleName("hpPainelCoordenadorEmMonitores");
 		
 		iMonitoresCoordenador = new Image();
+		iMonitoresCoordenador.setUrl("../Image/coordenador2.png");
 		iMonitoresCoordenador.setStyleName("iMonitoresCoordenador");
 		
 		lbMonitoresCoordenador = new Label("MONITORES");
 		lbMonitoresCoordenador.setStyleName("lbMonitoresCoordenador");
 		
+		lbSetaMonitor = new Label(">");
+		lbSetaMonitor.setStyleName("lbSetaMonitor");
+		
 		hpPainelCoordenadorEmMonitores.add(iMonitoresCoordenador);//add item
+		hpPainelCoordenadorEmMonitores.setCellWidth(iMonitoresCoordenador, "10%");
 		hpPainelCoordenadorEmMonitores.add(lbMonitoresCoordenador);//add item
+		hpPainelCoordenadorEmMonitores.setCellWidth(lbMonitoresCoordenador, "10%");
+		hpPainelCoordenadorEmMonitores.add(lbSetaMonitor);//add item
+		hpPainelCoordenadorEmMonitores.setCellWidth(lbSetaMonitor, "10%");
 		
 		//-------------------------------------------------------------
 		hpPainelLogoutCoordenador = new HorizontalPanel();
 		hpPainelLogoutCoordenador.setStyleName("hpPainelLogoutCoordenador");
 
 		iLogoutCoordenador = new Image();
+		iLogoutCoordenador.setUrl("../Image/sair2.png");
 		iLogoutCoordenador.setStyleName("iLogoutCoordenador");
 		
 		lbLogoutCoordenador = new Label("Logout");
 		lbLogoutCoordenador.setStyleName("lbLogoutCoordenador");
 		
+		
+		hpPainelLogoutCoordenador.add(iLogoutCoordenador);
 		hpPainelLogoutCoordenador.add(lbLogoutCoordenador); //add item
 		
 		//-----------------------------------------------------------

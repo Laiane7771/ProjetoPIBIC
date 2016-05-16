@@ -4,15 +4,18 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 
+import edu.ifg.formosa.principal.client.PrincipalServiceAsync;
 import edu.ifg.formosa.principal.client.view.EscolhaModuloView;
 import edu.ifg.formosa.principal.client.view.LoginCoordenadorView;
 
 public class LoginCoordenadorPresenter {
 	
 	private LoginCoordenadorView lcv;
+	private PrincipalServiceAsync rpcService;
 	
-	public LoginCoordenadorPresenter(LoginCoordenadorView lcv){
+	public LoginCoordenadorPresenter(LoginCoordenadorView lcv, PrincipalServiceAsync rpcService){
 		this.lcv = lcv;
+		this.rpcService = rpcService;
 		bind();
 	}
 	
@@ -36,7 +39,7 @@ public class LoginCoordenadorPresenter {
 			public void onClick(ClickEvent event) {
 				lcv.hide(); 
 				EscolhaModuloView emv = new EscolhaModuloView();
-				EscolhaModuloPresenter emp = new EscolhaModuloPresenter(emv);				
+				EscolhaModuloPresenter emp = new EscolhaModuloPresenter(emv, rpcService);				
 				emp.go(null, null);
 				
 			}

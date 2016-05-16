@@ -7,6 +7,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.user.client.ui.HasWidgets;
 
+import edu.ifg.formosa.gerente.client.GerenteServiceAsync;
 import edu.ifg.formosa.gerente.client.view.GerentePesquisarAtividadesPopupView;
 import edu.ifg.formosa.gerente.client.view.HomeGerenteView;
 
@@ -14,11 +15,12 @@ public class HomeGerentePresenter  implements Presenter{
 
 	private HomeGerenteView hvg;
 	private final HandlerManager eventBus;
-	
+	private final GerenteServiceAsync rpcService;
 
-	public HomeGerentePresenter( HomeGerenteView hvg, HandlerManager eventBus){
+	public HomeGerentePresenter( HomeGerenteView hvg, HandlerManager eventBus, GerenteServiceAsync rpcService){
 		this.hvg = hvg;
 		this.eventBus = eventBus;
+		this.rpcService = rpcService;
 		bind();
 	}
 	

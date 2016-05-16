@@ -4,15 +4,15 @@ body{
     margin: 0;
     width: 100%;
     height: 100%;
-    background: rgba(128, 128, 128, 0.61);
+    background: darkred;
 }
 #PainelMenuEsquerdo{
-	position: relative;
-	width: 20%;
-	height: 100%;
-	background: green;
-	float: left;
-	clean: both;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background: darkred;
+    float: left;
+   
 }
 
 #painelDireito{
@@ -27,17 +27,16 @@ body{
 	position: relative;
 	width: 100%;
 	height: 20%;
+	float: left;
 }
 
 .hpPainelLogoSiteParticipante{
-	position: relative;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;
-	background: white;
-	
-	
+    position: relative;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;
+    /* background: white; */
 }
 
 .hpPainelEspacoNome{
@@ -50,21 +49,23 @@ body{
 }
 
 .hpPainelEventoParticipante{
-	position: relative;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;
-	background: white;	
+    position: relative;
+    margin-top: 84px;
+    margin-bottom: 3px;
+    width: 100%;
+    height: 56%;
+    cursor: pointer;
+    background: white;
 }
 
 .hpPainelLogoutParticipante{
-	position: relative;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;
-	height: 56%;	
-	background: white;
+    position: relative;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56%;
+    /*background: white;*/
+    cursor: pointer;
 }
 
 .hpPainelCertificadoParticipante{
@@ -73,7 +74,7 @@ body{
 	margin-bottom: 10px;
 	width: 100%;
 	height: 56%;
-	background: white;
+	/*background: white;*/
 }
 .vpPainelMenuTelaInicialParticipante{
 	position: relative;
@@ -94,18 +95,25 @@ body{
 }
 
 .iEventoParticipante{
-	position: relative;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 7px;
 	
 }
 
 .iLogoutParticipante{
 	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
 	
 }
 
 .iMudaMenuParticipante{
 	position: relative;
 	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 10px;
+	
 }
 
 .lbNomeParticipanteMenu{
@@ -113,14 +121,15 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	
+	color: white;
 }
 
 .lbEventoParticipante{
-	position: relative;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #AEFF5F;
 	
 }
 
@@ -130,6 +139,7 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	color: white;
 	
 }
 .lbCertificadoParticipante{
@@ -137,6 +147,14 @@ body{
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	color: white;
+}
+.lbSetaParticipante{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	color: white;
 }
 /*********************************/
 /*HomeTelaInicialParticipanteView*/
@@ -167,27 +185,42 @@ body{
 	position: relative;
 	width: 100%;
 	height: 100%;	
+	background: white;
+	border: 1px solid;
 }
 .lbTituloPaginaPesquisar{
-	position: relative;
-	width: 100%;
-	height: 100%;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .btnPesquisarEventoParticipante{
-	position: relative;
-	width: 27%;
-	height: 200%;
+    position: relative;
+    margin-top: 8px;
+    /* margin-left: -68px; */
+    width: 15%;
+    height: 127%;
+    background: none;
+
 	
 }
 .tbPesquisarEvento{
 	position: relative;
 	width: 76%;
 	height: 100%;	
+	margin-top: 10px;
+	margin-left: 10px;
+	
 }
 .ftTabelaEventoTelaParticipante{
-	position: relative;
-	width: 100%;
-	height: 100%;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin-top: 10px;
+    border: 0.5px solid white;
+    background: rgb(115, 172, 237);
+    margin-bottom: 30px;
+    outline: none;
 }
 
 /******************************************/
@@ -276,4 +309,20 @@ body{
 	height: 100%;	
 }
 
+/*******************************/
+/*****Rodape Participante*******/
+/*******************************/
+.vpPainelRodapeParticipante{
+	position:relative;
+	width:100%;
+	height: 100%;
+	background: white;
+}
+
+.iLogoParticipanteRodape{
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: right;
+}
 

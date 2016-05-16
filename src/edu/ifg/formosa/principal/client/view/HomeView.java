@@ -3,16 +3,17 @@ package edu.ifg.formosa.principal.client.view;
 
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockPanel;
-import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.ifg.formosa.principal.client.util.FlexTableEventIF;
 
 public class HomeView extends Composite  {
 	
@@ -32,14 +33,12 @@ public class HomeView extends Composite  {
 	private Label lbCertificado;
 	private Label lbEntrar;
 	private Label lbEvento;
-	private Label lbData;
 	private Label btnSetaEsq;
 	private Label btnSetaDir;
 	private Image iLogo;
 	private Image iLogoCentro;
 	private Image iFotoPainel;
-	private FlexTable ftTabelaEvento;
-	private TextBox fieldData;
+	private FlexTableEventIF ftTabelaEvento;
 	private TextBox fieldEvento;
 	private Button btnPesquisar;
 	private Button btnPause;
@@ -165,10 +164,6 @@ public class HomeView extends Composite  {
 		
 		hpPainelLabelPesquisarEvento = new HorizontalPanel();
 		hpPainelLabelPesquisarEvento.setStyleName("vpPainelLabelPesquisarEvento");
-	
-		fieldData = new TextBox();
-		fieldData.setStyleName("fieldset");
-		fieldData.setStyleName("fieldset");
 		
 		fieldEvento = new TextBox();
 		fieldEvento.setStyleName("fieldEvento");
@@ -176,17 +171,14 @@ public class HomeView extends Composite  {
 		lbEvento = new Label("Evento:");
 		lbEvento.setStyleName("lbEvento");
 		
-		lbData = new Label("Data:");
-		lbData.setStyleName("lbData");
-		
 		btnPesquisar = new Button("Pesquisar");
-		btnPesquisar.setStyleName("btn-success");
-		//btnPesquisar.setStyleName("btnPesquisar");
+		//btnPesquisar.setStyleName("btn-success");
+		btnPesquisar.setStyleName("btnPesquisar");
 		
 		hpPainelLabelPesquisarEvento.add(lbEvento);
-		hpPainelLabelPesquisarEvento.add(lbData);
-		hpPainelLabelPesquisarEvento.add(fieldData);
+		hpPainelLabelPesquisarEvento.setCellWidth(lbEvento, "10%");
 		hpPainelLabelPesquisarEvento.add(fieldEvento);
+		hpPainelLabelPesquisarEvento.setCellWidth(fieldEvento, "10%");
 		hpPainelLabelPesquisarEvento.add(btnPesquisar);
 		vpPesquisarEvento.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		
@@ -194,11 +186,11 @@ public class HomeView extends Composite  {
 		lbPesquisaEvento.setStyleName("lbPesquisaEvento");
 		vpPesquisarEvento.add(lbPesquisaEvento);
 		
-		ftTabelaEvento = new FlexTable();
+		ftTabelaEvento = new FlexTableEventIF();
 		ftTabelaEvento.setStyleName("ftTabelaEvento");
-		ftTabelaEvento.getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
-		ftTabelaEvento.setBorderWidth(1);
-	
+		ftTabelaEvento.getFt().getFlexCellFormatter().setVerticalAlignment(0, 0, DockPanel.ALIGN_TOP);
+		ftTabelaEvento.getFt().setBorderWidth(1);
+		
 		vpPesquisarEvento.add(hpPainelLabelPesquisarEvento);
 		vpPesquisarEvento.add(ftTabelaEvento);
 		
@@ -329,11 +321,11 @@ public class HomeView extends Composite  {
 	}
 
 
-	public FlexTable getFtTabelaEvento() {
+	public FlexTableEventIF getFtTabelaEvento() {
 		return ftTabelaEvento;
 	}
 
-	public void setFtTabelaEvento(FlexTable ftTabelaEvento) {
+	public void setFtTabelaEvento(FlexTableEventIF ftTabelaEvento) {
 		this.ftTabelaEvento = ftTabelaEvento;
 	}
 
@@ -346,13 +338,7 @@ public class HomeView extends Composite  {
 		this.hpPainelLabelPesquisarEvento = vpPainelLabelPesquisarEvento;
 	}
 
-	public TextBox getFieldData() {
-		return fieldData;
-	}
-
-	public void setFieldData(TextBox fieldData) {
-		this.fieldData = fieldData;
-	}
+	
 
 	public TextBox getFieldEvento() {
 		return fieldEvento;
@@ -490,16 +476,6 @@ public class HomeView extends Composite  {
 	public void setLbEvento(Label lbEvento) {
 		this.lbEvento = lbEvento;
 	}
-
-
-	public Label getLbData() {
-		return lbData;
-	}
-
-	public void setLbData(Label lbData) {
-		this.lbData = lbData;
-	}
-
 
 	public Anchor getLinkComoFunciona() {
 		return linkComoFunciona;

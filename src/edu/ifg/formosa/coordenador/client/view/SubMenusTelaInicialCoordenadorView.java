@@ -6,7 +6,10 @@ import com.google.gwt.user.client.ui.Label;
 public class SubMenusTelaInicialCoordenadorView {
 
 	private HorizontalPanel hpPainelCadastrarAtividade;
+	private HorizontalPanel hpPainelPesquisarAtividade;
 	private HorizontalPanel hpPainelImprimirAtividadeComQR;
+	private HorizontalPanel hpPainelPesquisarMonitor;
+	private HorizontalPanel hpPainelPesquisarParticipantes;
 	private HorizontalPanel hpPainelCadastrarMonitor;
 	private HorizontalPanel hpPainelCrachas;
 	private HorizontalPanel hpPainelCertificados;
@@ -17,6 +20,9 @@ public class SubMenusTelaInicialCoordenadorView {
 	private Label lbCrachas;
 	private Label lbCertificados;
 	private Label lbFrequenciaParticipantes;
+	private Label lbPesquisarMonitor;
+	private Label lbPesquisarAtividade;
+	private Label lbPesquisarParticipante;
 	
 	public SubMenusTelaInicialCoordenadorView(){
 		
@@ -28,6 +34,17 @@ public class SubMenusTelaInicialCoordenadorView {
 		
 		hpPainelCadastrarAtividade.add(lbCadastrarAtividade);//add item
 		
+		//=================================================================
+		
+		hpPainelPesquisarAtividade = new HorizontalPanel();
+		hpPainelPesquisarAtividade.setStyleName("hpPainelPesquisarAtividade");
+		
+		lbPesquisarAtividade = new Label("Pesquisar Atividades");
+		lbPesquisarAtividade.setStyleName("lbPesquisarAtividade");
+		
+		hpPainelPesquisarAtividade.add(lbPesquisarAtividade);//add item
+		
+		//=================================================================
 		hpPainelImprimirAtividadeComQR = new HorizontalPanel();
 		hpPainelImprimirAtividadeComQR.setStyleName("hpPainelImprimirAtividadeComQR");
 		
@@ -35,6 +52,7 @@ public class SubMenusTelaInicialCoordenadorView {
 		lbImprimirAtividadeComQR.setStyleName("lbImprimirAtividadeComQR");
 		
 		hpPainelImprimirAtividadeComQR.add(lbImprimirAtividadeComQR);//add item
+		//====================================================================
 		
 		hpPainelCadastrarMonitor = new HorizontalPanel();
 		hpPainelCadastrarMonitor.setStyleName("hpPainelCadastrarMonitor");
@@ -43,6 +61,16 @@ public class SubMenusTelaInicialCoordenadorView {
 		lbCadastrarMonitor.setStyleName("lbCadastrarMonitor");
 		
 		hpPainelCadastrarMonitor.add(lbCadastrarMonitor);//add item
+		//=====================================================================
+		
+		hpPainelPesquisarMonitor = new HorizontalPanel();
+		hpPainelPesquisarMonitor.setStyleName("hpPainelPesquisarMonitor");
+		
+		lbPesquisarMonitor = new Label("Pesquisar Monitor");
+		lbPesquisarMonitor.setStyleName("lbPesquisarMonitor");
+		
+		hpPainelPesquisarMonitor.add(lbPesquisarMonitor);//add item
+		//=====================================================================
 		
 		hpPainelCrachas = new HorizontalPanel();
 		hpPainelCrachas.setStyleName("hpPainelCrachas");
@@ -51,7 +79,16 @@ public class SubMenusTelaInicialCoordenadorView {
 		lbCrachas.setStyleName("lbCrachas");
 		
 		hpPainelCrachas.add(lbCrachas);//add item
+		//=====================================================================
 		
+		hpPainelPesquisarParticipantes = new HorizontalPanel();
+		hpPainelPesquisarParticipantes.setStyleName("hpPainelPesquisarParticipantes");
+		
+		lbPesquisarParticipante  = new Label("Pesquisar Participante");
+		lbPesquisarParticipante.setStyleName("lbPesquisarParticipante");
+	
+		hpPainelPesquisarParticipantes.add(lbPesquisarParticipante);//add item
+		//=====================================================================
 		hpPainelCertificados = new HorizontalPanel();
 		hpPainelCertificados.setStyleName("hpPainelCertificados");
 		
@@ -59,6 +96,7 @@ public class SubMenusTelaInicialCoordenadorView {
 		lbCertificados.setStyleName("lbCertificados");
 		
 		hpPainelCertificados.add(lbCertificados);//add item
+		//====================================================================
 		
 		hpPainelFrequenciaParticipantes = new HorizontalPanel();
 		hpPainelFrequenciaParticipantes.setStyleName("hpPainelFrequenciaParticipantes");
@@ -167,6 +205,54 @@ public class SubMenusTelaInicialCoordenadorView {
 
 	public void setLbFrequenciaParticipantes(Label lbFrequenciaParticipantes) {
 		this.lbFrequenciaParticipantes = lbFrequenciaParticipantes;
+	}
+
+	public HorizontalPanel getHpPainelPesquisarAtividade() {
+		return hpPainelPesquisarAtividade;
+	}
+
+	public void setHpPainelPesquisarAtividade(HorizontalPanel hpPainelPesquisarAtividade) {
+		this.hpPainelPesquisarAtividade = hpPainelPesquisarAtividade;
+	}
+
+	public HorizontalPanel getHpPainelPesquisarMonitor() {
+		return hpPainelPesquisarMonitor;
+	}
+
+	public void setHpPainelPesquisarMonitor(HorizontalPanel hpPainelPesquisarMonitor) {
+		this.hpPainelPesquisarMonitor = hpPainelPesquisarMonitor;
+	}
+
+	public HorizontalPanel getHpPainelPesquisarParticipantes() {
+		return hpPainelPesquisarParticipantes;
+	}
+
+	public void setHpPainelPesquisarParticipantes(HorizontalPanel hpPainelPesquisarParticipantes) {
+		this.hpPainelPesquisarParticipantes = hpPainelPesquisarParticipantes;
+	}
+
+	public Label getLbPesquisarMonitor() {
+		return lbPesquisarMonitor;
+	}
+
+	public void setLbPesquisarMonitor(Label lbPesquisarMonitor) {
+		this.lbPesquisarMonitor = lbPesquisarMonitor;
+	}
+
+	public Label getLbPesquisarAtividade() {
+		return lbPesquisarAtividade;
+	}
+
+	public void setLbPesquisarAtividade(Label lbPesquisarAtividade) {
+		this.lbPesquisarAtividade = lbPesquisarAtividade;
+	}
+
+	public Label getLbPesquisarParticipante() {
+		return lbPesquisarParticipante;
+	}
+
+	public void setLbPesquisarParticipante(Label lbPesquisarParticipante) {
+		this.lbPesquisarParticipante = lbPesquisarParticipante;
 	}
 	
 }

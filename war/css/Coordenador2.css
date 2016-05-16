@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+/*========================*/
+/*=======Rodape===========*/
+/*========================*/
+
+.vpPainelRodapeCoordenador{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: darkred;
+}
+
+.iLogoRodapeCoordenador{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: right;
+}

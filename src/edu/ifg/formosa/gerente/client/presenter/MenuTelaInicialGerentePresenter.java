@@ -1,6 +1,7 @@
 package edu.ifg.formosa.gerente.client.presenter;
 
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -29,11 +30,9 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 	public MenuTelaInicialGerentePresenter(MenuTelaInicialGerenteView mtig, HandlerManager eventBus){
 		this.mtig =  mtig;
 		this.eventBus = eventBus;
-		
-		prese = new SubMenusGerentePresenter(smgv, eventBus);
-		
 		bind();
-		
+		prese = new SubMenusGerentePresenter(smgv, eventBus);
+	
 	}
 
 	public void bind(){
@@ -64,9 +63,22 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 				if(apagamenu == false){
 					apagamenu = true;
 					mtig.apagaLabelMenus();
+					SubMenusGerenteView sub = new SubMenusGerenteView();
+					
+					mtig.getVpAdicionaItensEvento().remove(sub.getVpPainelItemCadastrarEvento());
+					mtig.getVpAdicionaItensCoordenador().remove(sub.getVpPainelItemCadastrarCoordenador());
+					mtig.getVpAdicionaItensCoordenador().remove(sub.getVpPainelItemCrachaCoordenador());
+					mtig.getVpAdicionaItensCoordenador().remove(sub.getVpPainelItemCertificadoCoordenador());
+					
+					mtig.getVpAdicionaItensParticipante().remove(sub.getVpPainelItemCadastrarParticipante());
+					mtig.getVpAdicionaItensParticipante().remove(sub.getVpPainelItemCracha());
+					mtig.getVpAdicionaItensParticipante().remove(sub.getVpPainelItemCertificado());
+					GWT.log("removeu os paineis");
+					
 					RootPanel.get("painelDireito").getElement().getStyle().setWidth(95, Unit.PCT);
 				}
 				else{
+					apagamenu = false;
 					mtig.voltaMenu();
 					RootPanel.get("painelDireito").getElement().getStyle().setWidth(80.9, Unit.PCT);
 					
@@ -118,23 +130,23 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 
 	public void adicionaItemMenuEvento(){
 		
-		eventBus.fireEvent(new PesquisarEventoEvent());
+		//eventBus.fireEvent(new PesquisarEventoEvent());
 		mtig.getHplbCoordenadores().removeStyleName("novolbCoordenadores");
 		mtig.getHplbParticipantes().removeStyleName("novolbParticipantes");
 		mtig.getHplbEvento().addStyleName("novolbEvento");
 		
 		if(abertoEvento == false){
 			abertoEvento = true;
-			eventBus.fireEvent(new PesquisarEventoEvent());
+			//eventBus.fireEvent(new PesquisarEventoEvent());
 			
+			mtig.getVpAdicionaItensEvento().add(smgv.getVpPainelItemPesquisarEvento());
 			mtig.getVpAdicionaItensEvento().add(smgv.getVpPainelItemCadastrarEvento());
 		}
 		else{
+			mtig.getVpAdicionaItensEvento().remove(smgv.getVpPainelItemPesquisarEvento());
 			mtig.getVpAdicionaItensEvento().remove(smgv.getVpPainelItemCadastrarEvento());
 			abertoEvento = false;
-
 		}
-
 	}
 
 	public void adicionaItemMenuCoordenador(){
@@ -142,16 +154,18 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 		mtig.getHplbEvento().removeStyleName("novolbEvento");
 		mtig.getHplbParticipantes().removeStyleName("novolbParticipantes");
 		mtig.getHplbCoordenadores().addStyleName("novolbCoordenadores");
-		eventBus.fireEvent(new PesquisarCoordenadorEvent());
+		//eventBus.fireEvent(new PesquisarCoordenadorEvent());
 
 		if(abertoCoordenador == false){
 			abertoCoordenador = true;
-			eventBus.fireEvent(new PesquisarCoordenadorEvent());
+			//eventBus.fireEvent(new PesquisarCoordenadorEvent());
+			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemPesquisarCoordenador());
 			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemCadastrarCoordenador());
 			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemCrachaCoordenador());
 			mtig.getVpAdicionaItensCoordenador().add(smgv.getVpPainelItemCertificadoCoordenador());
 		}
 		else{
+			mtig.getVpAdicionaItensCoordenador().remove(smgv.getVpPainelItemPesquisarCoordenador());
 			mtig.getVpAdicionaItensCoordenador().remove(smgv.getVpPainelItemCadastrarCoordenador());
 			mtig.getVpAdicionaItensCoordenador().remove(smgv.getVpPainelItemCrachaCoordenador());
 			mtig.getVpAdicionaItensCoordenador().remove(smgv.getVpPainelItemCertificadoCoordenador());
@@ -161,19 +175,21 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 	}
 	public void adicionaItemMenuParticipantes(){
 
-		eventBus.fireEvent(new PesquisarParticipanteEvent());
+		//eventBus.fireEvent(new PesquisarParticipanteEvent());
 		mtig.getHplbEvento().removeStyleName("novolbEvento");
 		mtig.getHplbCoordenadores().removeStyleName("novolbCoordenadores");
 		mtig.getHplbParticipantes().addStyleName("novolbParticipantes");
 
 		if(abertoParticipante == false){
 			abertoParticipante = true;
-			eventBus.fireEvent(new PesquisarParticipanteEvent());
+			//eventBus.fireEvent(new PesquisarParticipanteEvent());
+			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemPesquisarParticipante());
 			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemCadastrarParticipante());
 			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemCracha());
 			mtig.getVpAdicionaItensParticipante().add(smgv.getVpPainelItemCertificado());
 		}
 		else{
+			mtig.getVpAdicionaItensParticipante().remove(smgv.getVpPainelItemPesquisarParticipante());
 			mtig.getVpAdicionaItensParticipante().remove(smgv.getVpPainelItemCadastrarParticipante());
 			mtig.getVpAdicionaItensParticipante().remove(smgv.getVpPainelItemCracha());
 			mtig.getVpAdicionaItensParticipante().remove(smgv.getVpPainelItemCertificado());
@@ -193,8 +209,7 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 	public void go(HasWidgets container, HasWidgets containerDois,
 			HasWidgets containerTres) {
 
-		bind();
-
+		
 	}
 
 }

@@ -14,7 +14,7 @@ public class Evento implements Serializable {
 	private String telefoneContato;
 	private String emailContato;
 	private String organizador;
-	private  String dataHoraCertificado;
+	private String dataHoraCertificado;
 	private Gerente idGerente;
 	private Endereco idEndereco;
 	

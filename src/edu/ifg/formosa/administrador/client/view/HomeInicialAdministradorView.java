@@ -6,6 +6,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+
 public class HomeInicialAdministradorView extends Composite{
 	
 	private HorizontalPanel hpPainelCabecalhoHomeAdm;
@@ -33,8 +34,11 @@ public class HomeInicialAdministradorView extends Composite{
 		lbNomeAdm.setStyleName("lbNomeAdm");
 		
 		hpPainelCabecalhoHomeAdm.add(iLogoAdm);//add item
+		hpPainelCabecalhoHomeAdm.setCellWidth(iLogoAdm, "10%");
 		hpPainelCabecalhoHomeAdm.add(lbTituloPagina);//add item
+		hpPainelCabecalhoHomeAdm.setCellWidth(lbTituloPagina, "15%");
 		hpPainelCabecalhoHomeAdm.add(lbNomeAdm);//add item
+		hpPainelCabecalhoHomeAdm.setCellWidth(lbNomeAdm, "60%");
 		
 		vpPainelRodapeAdm = new VerticalPanel();
 		vpPainelRodapeAdm.setStyleName("vpPainelRodapeAdm");

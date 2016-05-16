@@ -55,7 +55,7 @@ public class MenuTelaInicialAdmView extends Composite{
 		iMenuSair = new Image();
 		iMenuSair.setStyleName("iMenuSair");
 		
-		lbMenuSair = new Label("Sair");
+		lbMenuSair = new Label("Logout");
 		lbMenuSair.setStyleName("lbMenuSair");
 		
 		hpPainelMenuSairAdm.add(iMenuSair);//add item
