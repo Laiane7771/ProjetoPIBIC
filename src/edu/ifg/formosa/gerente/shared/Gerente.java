@@ -8,6 +8,8 @@ public class Gerente  implements Serializable{
 	private int idGerente;
 	private String matriculaSiape;
 	private Usuario usuario;
+	
+	
 	public int getIdGerente() {
 		return idGerente;
 	}
@@ -26,7 +28,8 @@ public class Gerente  implements Serializable{
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-
+	
+	
 	
 
 }

@@ -14,7 +14,7 @@ import edu.ifg.formosa.principal.shared.Evento;
 
 public class EventoDAO {
 
-	public ArrayList<Evento> buscaEventoNome(Evento evento){
+	public static ArrayList<Evento> buscaEventoNome(Evento evento){
 		try{
 			ArrayList<Evento> eventos = new ArrayList<Evento>();
 			PreparedStatement stmt = new ConnectionFactory().getConnection().

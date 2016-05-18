@@ -46,6 +46,7 @@ public class HomePresenter implements Presenter{
 		HTML dataInicio = new HTML("Data Inicio");
 		HTML dataFim = new HTML("Data de Encerramento");
 		HTML inscreva = new HTML("Inscreva-se");
+		HTML detalhes = new HTML("Detalhes");
 
 		colunas.add(nomeColuna);
 		colunas.add(dataInicio);
@@ -74,9 +75,9 @@ public class HomePresenter implements Presenter{
 					linhaTabelaEventos.add(nomeEvento);
 					linhaTabelaEventos.add(dataEventoInicio);
 					linhaTabelaEventos.add(dataEventoFim);
+					
 
 					dadosTabelaEventos.add(linhaTabelaEventos);
-					//criar botao
 
 				}
 				homeView.getFtTabelaEvento().preencheTabela(dadosTabelaEventos);
@@ -112,8 +113,7 @@ public class HomePresenter implements Presenter{
 
 			@Override
 			public void onClick(ClickEvent event) {
-				
-				
+					
 				Evento evento = new Evento();
 				evento.setNomeEvento(homeView.getFieldEvento().getText());
 				
@@ -163,7 +163,6 @@ public class HomePresenter implements Presenter{
 						GWT.log("Aqui no botao erro");
 					}
 				});
-
 			}
 		});
 

@@ -69,8 +69,8 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 
 	private void bind(){
 		
-		RodapeView roda = new RodapeView();
-		RodapePresenter rp = new RodapePresenter(roda);
+		//RodapeView roda = new RodapeView();
+		//RodapePresenter rp = new RodapePresenter(roda);
 		
 		History.addValueChangeHandler(this);
 		
@@ -79,6 +79,9 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 			public void cadastrarEvento(CadastraEventoEvent event) {
 				if("".equals(History.getToken())){
 					History.newItem("home");
+				}
+				else if("ImprimindoCertificadoCoordenador".equals(History.getToken())){
+					History.newItem("AdicionandoEvento");
 				}
 				else if("home".equals(History.getToken())){
 					History.newItem("AdicionandoEvento");
@@ -93,6 +96,9 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 					History.newItem("AdicionandoEvento");
 				}
 				else if("ImprimirCrachaCoordenador".equals(History.getToken())){
+					History.newItem("AdicionandoEvento");
+				}
+				else if("CadastrarCoordenador".equals(History.getToken())){
 					History.newItem("AdicionandoEvento");
 				}
 				else{
@@ -495,7 +501,7 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 			}
 			if(token.equals("CadastrarCoordenador")){
 				GerenteCadastrarCoordenadorView gccv = new GerenteCadastrarCoordenadorView();
-				new GerenteCadastrarCoordenadorPresenter(gccv, eventBus);
+				new GerenteCadastrarCoordenadorPresenter(gccv, eventBus, rpcService);
 				containerDireita.clear();
 				containerDireita.add(gccv.asWidget());
 			}
@@ -547,7 +553,7 @@ public class AppControllerGerente  implements Presenter, ValueChangeHandler<Stri
 		this.containerTres = containerTres;
 		
 		MenuTelaInicialGerenteView mtigv = new MenuTelaInicialGerenteView();
-		MenuTelaInicialGerentePresenter mtigp = new MenuTelaInicialGerentePresenter(mtigv, eventBus);
+		MenuTelaInicialGerentePresenter mtigp = new MenuTelaInicialGerentePresenter(mtigv, eventBus,rpcService);
 		containerEsquerda.add(mtigv.asWidget());
 		
 		HomeGerenteView hgv = new HomeGerenteView();

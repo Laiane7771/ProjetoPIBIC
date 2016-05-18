@@ -1,73 +1,51 @@
 package edu.ifg.formosa.gerente.server;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
 import edu.ifg.formosa.gerente.client.GerenteService;
+import edu.ifg.formosa.gerente.server.bd.CoordenadorDao;
+import edu.ifg.formosa.gerente.server.bd.EventoDao;
+import edu.ifg.formosa.gerente.server.bd.GerenteDao;
 import edu.ifg.formosa.gerente.shared.Coordenador;
 import edu.ifg.formosa.gerente.shared.Evento;
-import edu.ifg.formosa.gerente.shared.Participante;
+import edu.ifg.formosa.gerente.shared.Gerente;
+
 
 @SuppressWarnings("serial")
 public class GerenteServiceImpl extends RemoteServiceServlet implements GerenteService{
 
 	@Override
-	public ArrayList<Evento> buscaEventosPorNome(String nome) {
-				return null;
+	public boolean adicionaCoordenador(Coordenador coordenador) {
+		CoordenadorDao.inserir(coordenador);
+		return true;
 	}
 
 	@Override
-	public ArrayList<Coordenador> buscaCoordenadorPorNome(String nome) {
-		
-		ArrayList<Coordenador> lista = new ArrayList<Coordenador>();
-		Coordenador coordenador = new Coordenador();
-		coordenador.getUsuario().setNome("Laiane");
-		coordenador.setMatriculaSiape("20141070130020");
-		return lista;
-	}
-
-	@Override
-	public ArrayList<Coordenador> buscaCrachaCoordenador(String nome) {
-		// TODO Auto-generated method stub
+	public ArrayList<Evento> buscarEventos(Evento nome) {
+		if(nome!=null){
+		EventoDao eventoDao = new EventoDao();
+			//return eventoDao.buscaEventoNome(nome);
+		}
+		else{
+			//chama metodo buscar todos eventos;
+		}
 		return null;
 	}
 
 	@Override
-	public ArrayList<Coordenador> buscaCertificadoCoordenador(String nome) {
-		// TODO Auto-generated method stub
+	public ArrayList<String> buscaNomeGerente(Gerente id) {
+		GerenteDao gerenteDao = new GerenteDao();
+		try {
+			return gerenteDao.buscaNomeGerente(id);
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 		return null;
 	}
 
-	@Override
-	public ArrayList<Participante> buscaCertificadoParticipante(String nome) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Participante> buscaCrachaParticipante(String nome) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Participante> adicionaParticipante(Participante participante) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Evento> adicionaEvento(Evento evento) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Coordenador> adicionaCoordenador(Coordenador coordenador) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 
 }

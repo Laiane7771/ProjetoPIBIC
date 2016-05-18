@@ -16,8 +16,8 @@ PrincipalService {
 	@Override
 	public ArrayList<Evento> buscarEventos(Evento nome) {
 		if(nome!=null){
-		EventoDAO eventoDao = new EventoDAO();
-		return eventoDao.buscaEventoNome(nome);
+		//EventoDAO eventoDao = new EventoDAO();
+		return EventoDAO.buscaEventoNome(nome);
 		}
 		else{
 			//chama metodo buscar todos eventos;

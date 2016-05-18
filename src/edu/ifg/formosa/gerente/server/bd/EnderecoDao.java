@@ -5,11 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import edu.ifg.formosa.gerente.shared.Endereco;
+
 
 
 public class EnderecoDao {
 	
-	public int inserir(edu.ifg.formosa.gerente.shared.Endereco endereco){
+	public int inserir( Endereco endereco){
 		
 		Connection con = null;
 		int idEndereco = 0;

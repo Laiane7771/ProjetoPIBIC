@@ -6,6 +6,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
+  
   <servlet>
     <servlet-name>PrincipalServiceServlet</servlet-name>
     <servlet-class>edu.ifg.formosa.principal.server.PrincipalServiceImpl</servlet-class>
@@ -15,8 +16,17 @@
     <servlet-name>PrincipalServiceServlet</servlet-name>
     <url-pattern>/eventif/principalservice</url-pattern>
   </servlet-mapping>
+   
+   <servlet>
+    <servlet-name>GerenteServiceServlet</servlet-name>
+    <servlet-class>edu.ifg.formosa.gerente.server.GerenteServiceImpl</servlet-class>
+  </servlet>
   
-  <!-- Default page to serve -->
+  <servlet-mapping>
+    <servlet-name>GerenteServiceServlet</servlet-name>
+    <url-pattern>/gerente/gerenteservice</url-pattern>
+  </servlet-mapping> 
+  
   <welcome-file-list>
     <welcome-file>Eventif.html</welcome-file>
   </welcome-file-list>

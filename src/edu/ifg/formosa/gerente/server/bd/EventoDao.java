@@ -8,13 +8,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Vector;
 
 import edu.ifg.formosa.gerente.shared.Endereco;
 import edu.ifg.formosa.gerente.shared.Evento;
-
-
 
 
 public class EventoDao {
@@ -140,9 +139,9 @@ public class EventoDao {
 		}
 	}
 
-	public Vector<Vector<String>> buscaEventoNome(Evento event){
+	public ArrayList<ArrayList<String>> buscaEventoNome(Evento event){
 		try{
-			Vector<Vector<String>> eventos = new Vector<Vector<String>>();
+			ArrayList<ArrayList<String>> eventos = new ArrayList<ArrayList<String>>();
 			PreparedStatement stmt = new ConnectionFactory().getConnection().
 					prepareStatement("Select idEvento, nomeEvento, organizador, descricao, dataInicio from evento " +
 							"where nomeEvento like '%"+event.getNomeEvento()+"%'");
@@ -162,7 +161,7 @@ public class EventoDao {
 				data.setTime(rs.getDate("dataInicio"));
 				evento.setDataInicio(data);*/
 
-				Vector<String> colunas = new Vector<String>();
+				ArrayList<String> colunas = new ArrayList<String>();
 				colunas.add(""+evento.getIdEvento());
 				colunas.add(evento.getNomeEvento());
 				colunas.add(evento.getOrganizador());

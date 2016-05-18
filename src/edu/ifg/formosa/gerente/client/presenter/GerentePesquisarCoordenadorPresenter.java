@@ -42,44 +42,7 @@ public class GerentePesquisarCoordenadorPresenter implements Presenter{
 		colunas.add(nomeColuna);
 		colunas.add(evento);
 
-		rpcServiceGerente.buscaCoordenadorPorNome("", new AsyncCallback<ArrayList<Coordenador>>() {
-
-			public void onSuccess(java.util.ArrayList<Coordenador> result) {
-				Window.alert("sucesso");
-
-				Iterator<Coordenador> coordenadores = result.iterator();
-
-				ArrayList<ArrayList<Widget>> dadosTabelaEventos = 
-						new ArrayList<ArrayList<Widget>>();
-				while(coordenadores.hasNext()){
-					Coordenador e = coordenadores.next();
-
-					HTML nomeCoordenador = new HTML(e.getUsuario().getNome());
-					HTML matricula = new HTML(e.getMatriculaSiape());
-
-
-					ArrayList<Widget> linhaTabelaEventos = new ArrayList<Widget>();
-					linhaTabelaEventos.add(nomeCoordenador);
-					linhaTabelaEventos.add(matricula);
-
-
-					dadosTabelaEventos.add(linhaTabelaEventos);
-					
-				}
-				gpcv.getFtTabelaCoordenador().preencheTabela(dadosTabelaEventos);
-				
-			};
-			
-			public void onFailure(Throwable caught) {
-				Window.alert("erro");
-				GWT.log("Aqui no botao erro");
-			};
-		});
-
-
-
-		/*
-		 */
+	
 
 		gpcv.getBtnExcluirSelecionados().addClickHandler(new ClickHandler() {
 

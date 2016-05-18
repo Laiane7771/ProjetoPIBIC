@@ -1,19 +1,25 @@
 package edu.ifg.formosa.gerente.client.presenter;
 
 
+import java.util.ArrayList;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerManager;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.RootPanel;
+
+import edu.ifg.formosa.gerente.client.GerenteServiceAsync;
 import edu.ifg.formosa.gerente.client.event.PesquisarCoordenadorEvent;
 import edu.ifg.formosa.gerente.client.event.PesquisarEventoEvent;
 import edu.ifg.formosa.gerente.client.event.PesquisarParticipanteEvent;
 import edu.ifg.formosa.gerente.client.view.MenuTelaInicialGerenteView;
 import edu.ifg.formosa.gerente.client.view.SubMenusGerenteView;
+import edu.ifg.formosa.gerente.shared.Gerente;
 
 
 public class MenuTelaInicialGerentePresenter implements Presenter{
@@ -26,13 +32,15 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 	private boolean apagamenu = false;
 	private SubMenusGerenteView smgv = new SubMenusGerenteView();
 	private SubMenusGerentePresenter prese = null;
+	private GerenteServiceAsync rpcService;
 
-	public MenuTelaInicialGerentePresenter(MenuTelaInicialGerenteView mtig, HandlerManager eventBus){
+	public MenuTelaInicialGerentePresenter(MenuTelaInicialGerenteView mtig, HandlerManager eventBus, GerenteServiceAsync rpcService){
 		this.mtig =  mtig;
 		this.eventBus = eventBus;
+		this.rpcService = rpcService;
 		bind();
 		prese = new SubMenusGerentePresenter(smgv, eventBus);
-	
+		//exibeNomeGerente();
 	}
 
 	public void bind(){
@@ -127,7 +135,29 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 		});
 	}
 
-
+	public void exibeNomeGerente(){
+		Gerente gerente = new Gerente();
+		gerente.getUsuario().setIdUsuario(6);
+		rpcService.buscaNomeGerente(gerente, new AsyncCallback<ArrayList<String>>() {
+			
+			@Override
+			public void onSuccess(ArrayList<String> result) {
+				if(result!=null){
+					String nome = result.get(0);
+					Window.alert(nome);
+				}
+				
+			}
+			
+			@Override
+			public void onFailure(Throwable caught) {
+				Window.alert("erro");
+				GWT.log(caught.getMessage());
+				
+			}
+		});
+		
+	}
 	public void adicionaItemMenuEvento(){
 		
 		//eventBus.fireEvent(new PesquisarEventoEvent());

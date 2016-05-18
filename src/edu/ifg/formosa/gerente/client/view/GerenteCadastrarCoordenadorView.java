@@ -1,6 +1,9 @@
 package edu.ifg.formosa.gerente.client.view;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
@@ -10,6 +13,7 @@ import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+
 
 public class GerenteCadastrarCoordenadorView extends Composite{
 	
@@ -69,7 +73,7 @@ public class GerenteCadastrarCoordenadorView extends Composite{
 	private Button btnVoltarCoordenador;
 	private Button btnSalvarCoordenador;
 	private ListBox listUf;
-
+	
 	
 	public GerenteCadastrarCoordenadorView(){
 	
@@ -307,6 +311,13 @@ public class GerenteCadastrarCoordenadorView extends Composite{
 		listUf = new ListBox();
 		listUf.setStyleName("listUf");
 		listUf.setTitle("UF");
+	
+		HashMap<Integer, String> estados = new HashMap<Integer, String>();
+	    for (HashMap.Entry<Integer, String> entry : estados.entrySet()) {
+	      Integer key = entry.getKey();
+	      String value = entry.getValue();
+	      listUf.addItem(value);
+	    }
 		
 		hpPainelLabeleTexboxCidadeUf = new HorizontalPanel();
 		hpPainelLabeleTexboxCidadeUf.setStyleName("hpPainelLabeleTexboxCidadeUf");

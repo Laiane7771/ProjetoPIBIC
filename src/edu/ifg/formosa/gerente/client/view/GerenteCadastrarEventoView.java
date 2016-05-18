@@ -1,6 +1,11 @@
 package edu.ifg.formosa.gerente.client.view;
 
 
+import java.util.Date;
+
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -9,6 +14,7 @@ import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.datepicker.client.DatePicker;
 
 
 public class GerenteCadastrarEventoView extends Composite{
@@ -81,6 +87,7 @@ public class GerenteCadastrarEventoView extends Composite{
 	private Button btnCadastrarCoordenador;
 	private ListBox listboxNomeCoordenador;
 	private ListBox listUfEvento;
+
 	
 
 	public GerenteCadastrarEventoView(){
@@ -163,6 +170,7 @@ public class GerenteCadastrarEventoView extends Composite{
 		hpPainelLabelETextboxDataInicioEncerramento = new HorizontalPanel();
 		hpPainelLabelETextboxDataInicioEncerramento.setStyleName("hpPainelLabelETexboxDataInicioEncerramento"); //painel para data 
 		
+
 		lbDataInicio = new Label("Data de Início:"); //label data inicio
 		lbDataInicio.setStyleName("lbDataInicio");
 		

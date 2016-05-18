@@ -7,7 +7,7 @@ public class Gerente  implements Serializable{
 	
 	private int idGerente;
 	private String matriculaSiape;
-	private Usuario idUsuario;
+	private Usuario usuario;
 	public int getIdGerente() {
 		return idGerente;
 	}
@@ -20,12 +20,13 @@ public class Gerente  implements Serializable{
 	public void setMatriculaSiape(String matriculaSiape) {
 		this.matriculaSiape = matriculaSiape;
 	}
-	public Usuario getIdUsuario() {
-		return idUsuario;
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
+	
 	
 
 }

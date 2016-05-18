@@ -11,17 +11,9 @@ public class Usuario implements Serializable{
 	private String cpf;
 	private String rg;
 	private String senha;
-	private Endereco endereco;
+	private EnderecoUsuario enderecoUsuario;
 	private ContatoUsuario contatoPessoa;
 	
-	
-	
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	public int getIdUsuario() {
 		return idUsuario;
 	}
@@ -33,6 +25,12 @@ public class Usuario implements Serializable{
 	}
 	public void setTipoUsuario(String tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public String getCpf() {
 		return cpf;
@@ -52,11 +50,11 @@ public class Usuario implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public Endereco getEndereco() {
-		return endereco;
+	public EnderecoUsuario getEnderecoUsuario() {
+		return enderecoUsuario;
 	}
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	public void setEnderecoUsuario(EnderecoUsuario enderecoUsuario) {
+		this.enderecoUsuario = enderecoUsuario;
 	}
 	public ContatoUsuario getContatoPessoa() {
 		return contatoPessoa;
@@ -64,5 +62,6 @@ public class Usuario implements Serializable{
 	public void setContatoPessoa(ContatoUsuario contatoPessoa) {
 		this.contatoPessoa = contatoPessoa;
 	}
+	
 	
 }
