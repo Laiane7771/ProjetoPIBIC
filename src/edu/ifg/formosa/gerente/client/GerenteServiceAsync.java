@@ -13,5 +13,8 @@ public interface GerenteServiceAsync {
 	public void adicionaCoordenador(Coordenador coordenador, AsyncCallback<Boolean> callback);
 	public void buscarEventos(Evento nome, AsyncCallback<ArrayList<Evento>> callback);
 	public void buscaNomeGerente(Gerente id, AsyncCallback<ArrayList<String>>callback);
+	public void buscaCoordenadoresdeEventoPorNome(Coordenador nome, AsyncCallback<ArrayList<Coordenador>>callback);
+
 }
+
 

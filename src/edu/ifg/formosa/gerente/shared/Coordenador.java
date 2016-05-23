@@ -3,13 +3,12 @@ package edu.ifg.formosa.gerente.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Coordenador implements Serializable{
+public class Coordenador extends Usuario implements Serializable{
 	
 	private int idCoordenador;
 	private String matriculaSiape;
-	private Usuario usuario;
 	
-	
+
 	public int getIdCoordenador() {
 		return idCoordenador;
 	}
@@ -22,14 +21,6 @@ public class Coordenador implements Serializable{
 	public void setMatriculaSiape(String matriculaSiape) {
 		this.matriculaSiape = matriculaSiape;
 	}
-	public Usuario getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
 	
 	
-	
-
 }

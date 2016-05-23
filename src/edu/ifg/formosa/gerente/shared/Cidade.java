@@ -3,13 +3,12 @@ package edu.ifg.formosa.gerente.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Cidade implements Serializable{
+public class Cidade extends Estado implements Serializable{
 	
 	private int idCidade;
 	private String nomeCidade;
-	private Estado estado;
 	
-	
+
 	public int getIdCidade() {
 		return idCidade;
 	}
@@ -22,14 +21,7 @@ public class Cidade implements Serializable{
 	public void setNomeCidade(String nomeCidade) {
 		this.nomeCidade = nomeCidade;
 	}
-	public Estado getEstado() {
-		return estado;
-	}
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
 
-	
 	
 	
 

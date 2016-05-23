@@ -5,8 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Vector;
+import java.util.ArrayList;
+
 import edu.ifg.formosa.gerente.shared.Coordenador;
+import edu.ifg.formosa.gerente.shared.Evento;
+import edu.ifg.formosa.gerente.shared.Usuario;
+
 
 public class CoordenadorDao {
 
@@ -14,13 +18,13 @@ public class CoordenadorDao {
 	public static void inserir(Coordenador coordenador){
 
 		Connection con = null;
-
 		try{
-			String sql = "insert into estado(nomeestado) values (?)";
+			String sql = "insert into estado(nomeEstado) values (?)";
 			con = new ConnectionFactory().getConnection();
 			PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			System.out.println(""+ stmt);
 
-			stmt.setString(1,coordenador.getUsuario().getEnderecoUsuario().getCidade().getEstado().getNomeEstado());
+			stmt.setString(1,coordenador.getNomeEstado());
 			stmt.executeUpdate();
 
 			ResultSet rs = stmt.getGeneratedKeys();
@@ -30,10 +34,9 @@ public class CoordenadorDao {
 			}
 			System.out.println(idEstado);
 
-
-			String sql1 = "insert into Cidade(nomeCidade,idEstado) values(?,?)";
+			String sql1 = "insert into cidade(nomeCidade,idEstado) values(?,?)";
 			stmt = con.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
-			stmt.setString(1, coordenador.getUsuario().getEnderecoUsuario().getCidade().getNomeCidade());
+			stmt.setString(1, coordenador.getNomeCidade());
 			stmt.setInt(2,idEstado);
 			stmt.executeUpdate();
 
@@ -44,14 +47,15 @@ public class CoordenadorDao {
 			}
 			System.out.println(idCidade);
 
-			String sql2 = "insert into EnderecoUsuario"
-					+"(numero,bairro,cep,idCidade) values (?,?,?,?)";
+			String sql2 = "insert into enderecoUsuario"
+					+"(numero,bairro,cep,endereco, idCidade) values (?,?,?,?,?)";
 			stmt = con.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
 
-			stmt.setString(1, coordenador.getUsuario().getEnderecoUsuario().getNumero());
-			stmt.setString(2, coordenador.getUsuario().getEnderecoUsuario().getBairro());
-			stmt.setString(3, coordenador.getUsuario().getEnderecoUsuario().getCep());
-			stmt.setInt(4, idCidade);
+			stmt.setString(1, coordenador.getNumero());
+			stmt.setString(2, coordenador.getBairro());
+			stmt.setString(3, coordenador.getCep());
+			stmt.setString(4, coordenador.getEndereco());
+			stmt.setInt(5, idCidade);
 
 			stmt.executeUpdate();
 
@@ -62,32 +66,32 @@ public class CoordenadorDao {
 			}
 			System.out.println(idEnderecoPessoa);
 
-			String sql3 = "insert into ContatoUsuario"
+			String sql3 = "insert into contatoUsuario"
 					+"(email,telefonePessoa) values (?,?)";
 
 			stmt = con.prepareStatement(sql3, Statement.RETURN_GENERATED_KEYS);
 
-			stmt.setString(1, coordenador.getUsuario().getContatoPessoa().getEmail());
-			stmt.setString(2, coordenador.getUsuario().getContatoPessoa().getTelefonePessoa());
+			stmt.setString(1, coordenador.getEmailPessoa());
+			stmt.setString(2, coordenador.getTelefonePessoa());
 
 			stmt.executeUpdate();
 			rs = stmt.getGeneratedKeys();
-			int idContatoPessoa = 0;
+			int idContatoUsuario = 0;
 			if(rs.next()){
-				idContatoPessoa = rs.getInt("idContatoUsuario");
+				idContatoUsuario = rs.getInt("idContatoUsuario");
 			}
-			System.out.println(idContatoPessoa);
+			System.out.println(idContatoUsuario);
 
 
-			String sql4 = "insert into usuario(nomePessoa,cpf,rg,senha,idEnderecoPessoa,idContatoPessoa) values(?,?,?,?,?,?)";
+			String sql4 = "insert into usuario(nomePessoa,cpf,rg,senha,idEnderecoPessoa,idContatoUsuario) values(?,?,?,?,?,?)";
 
 			stmt = con.prepareStatement(sql4, Statement.RETURN_GENERATED_KEYS);
-			stmt.setString(1, coordenador.getUsuario().getNome());
-			stmt.setString(2, coordenador.getUsuario().getCpf());
-			stmt.setString(3, coordenador.getUsuario().getRg());
-			stmt.setString(4, coordenador.getUsuario().getSenha());
+			stmt.setString(1, coordenador.getNome());
+			stmt.setString(2, coordenador.getCpf());
+			stmt.setString(3, coordenador.getRg());
+			stmt.setString(4, coordenador.getSenha());
 			stmt.setInt(5, idEnderecoPessoa);
-			stmt.setInt(6, idContatoPessoa);
+			stmt.setInt(6, idContatoUsuario);
 
 			stmt.executeUpdate();
 
@@ -118,4 +122,43 @@ public class CoordenadorDao {
 			}
 		}
 	}
+	public ArrayList<ArrayList<String>> buscaCoordenadoresdeEventoPorNome(Coordenador coordenador){
+
+		try {
+			ArrayList<ArrayList<String>> coordenadores = new ArrayList<ArrayList<String>>();
+			PreparedStatement stmt = new ConnectionFactory().getConnection().
+					prepareStatement("SELECT usuario.idusuario, usuario.nomePessoa, coordenador.idCoordenador,"
+							+ "coordenador.matriculasiape, evento.nomeEvento FROM usuario"
+							+ "INNER JOIN coordenador ON coordenador.idusuario = usuario.idUsuario"
+							+ "INNER JOIN coordenaEvento ON coordenador.idCoordenador = coordenaEvento.idCoordenador"
+							+ "INNER JOIN evento ON evento.idevento = coordenaEvento.idevento where="+coordenador.getNome());
+
+
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				// criando o objeto Contato
+				Evento evento = new Evento();
+				Coordenador coor = new Coordenador();
+				coor.setIdCoordenador(rs.getInt("idCoordenador"));
+				coor.setNome(rs.getString("nomePessoa"));
+				coor.setMatriculaSiape(rs.getString("matriculaSiape"));
+				evento.setNomeEvento(rs.getString("nomeEvento"));
+
+				ArrayList<String> colunas = new ArrayList<String>();
+				colunas.add(""+coordenador.getIdCoordenador());
+				colunas.add(coordenador.getNome());
+				colunas.add(coordenador.getMatriculaSiape());
+				colunas.add(evento.getNomeEvento());
+
+				coordenadores.add(colunas);
+			}
+			rs.close();
+			stmt.close();
+			return coordenadores;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 }

@@ -13,17 +13,15 @@ import edu.ifg.formosa.gerente.client.presenter.SubMenusGerentePresenter;
 public class MenuTelaInicialGerenteView extends Composite {
 	
 	private VerticalPanel vpMenu;
+	private VerticalPanel vpsubItem1;
+	private VerticalPanel vpAdicionaItensEvento;
+	private VerticalPanel vpAdicionaItensCoordenador;
+	private VerticalPanel vpAdicionaItensParticipante;
 	private HorizontalPanel hpEspacoLogoMenu;
 	private HorizontalPanel hpEspacoNomeGerente;
-	private Image iMenu;
-	private Image iLogo;
-	private Label lbEvento;
 	private HorizontalPanel hplbEvento;
-	private Label lbCoordenadores;
 	private HorizontalPanel hplbCoordenadores;
-	private Label lbParticipantes;
 	private HorizontalPanel hplbParticipantes;
-	private Label lbSair;
 	private HorizontalPanel hplbSair;
 	private Image iEvento;
 	private Image iCoordenador;
@@ -33,14 +31,18 @@ public class MenuTelaInicialGerenteView extends Composite {
 	private Image iCoordenador2;
 	private Image iParticipantes2;
 	private Image iSair2;
-	private VerticalPanel vpsubItem1;
+	private Image iMenu;
+	private Image iLogo;
 	private Label lbAdicionarEvento;
 	private Label lbSetaCimaE;
 	private Label lbSetaCimaC;
 	private Label lbSetaCimaP;
-	private VerticalPanel vpAdicionaItensEvento;
-	private VerticalPanel vpAdicionaItensCoordenador;
-	private VerticalPanel vpAdicionaItensParticipante;
+	private Label lbNomeGerente;
+	private Label lbEvento;
+	private Label lbCoordenadores;
+	private Label lbParticipantes;
+	private Label lbSair;
+	
 	
 	
 	public MenuTelaInicialGerenteView(){
@@ -66,9 +68,9 @@ public class MenuTelaInicialGerenteView extends Composite {
 		hpEspacoNomeGerente = new HorizontalPanel();
 		hpEspacoNomeGerente.setStyleName("hpEspacoNomeGerente");
 		
-		Label nomeGerente = new Label("Laiane Ricardo");
+		lbNomeGerente = new Label();
 		
-		hpEspacoNomeGerente.add(nomeGerente);
+		hpEspacoNomeGerente.add(lbNomeGerente);
 		
 		lbEvento = new Label("EVENTO");
 		lbEvento.setStyleName("lbEvento");
@@ -432,6 +434,14 @@ public class MenuTelaInicialGerenteView extends Composite {
 		this.hplbParticipantes = hplbParticipantes;
 	}
 
+
+	public Label getLbNomeGerente() {
+		return lbNomeGerente;
+	}
+
+	public void setLbNomeGerente(Label lbNomeGerente) {
+		this.lbNomeGerente = lbNomeGerente;
+	}
 
 	public Label getLbSair() {
 		return lbSair;

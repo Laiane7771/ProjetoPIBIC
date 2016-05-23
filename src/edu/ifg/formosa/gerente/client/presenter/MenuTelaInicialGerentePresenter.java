@@ -40,7 +40,7 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 		this.rpcService = rpcService;
 		bind();
 		prese = new SubMenusGerentePresenter(smgv, eventBus);
-		//exibeNomeGerente();
+		exibeNomeGerente();
 	}
 
 	public void bind(){
@@ -137,21 +137,20 @@ public class MenuTelaInicialGerentePresenter implements Presenter{
 
 	public void exibeNomeGerente(){
 		Gerente gerente = new Gerente();
-		gerente.getUsuario().setIdUsuario(6);
+		gerente.setIdUsuario(1);
 		rpcService.buscaNomeGerente(gerente, new AsyncCallback<ArrayList<String>>() {
 			
 			@Override
 			public void onSuccess(ArrayList<String> result) {
 				if(result!=null){
-					String nome = result.get(0);
-					Window.alert(nome);
+				
 				}
 				
 			}
 			
 			@Override
 			public void onFailure(Throwable caught) {
-				Window.alert("erro");
+				Window.alert("Não apareceu o nome");
 				GWT.log(caught.getMessage());
 				
 			}

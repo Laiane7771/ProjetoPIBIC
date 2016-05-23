@@ -3,7 +3,7 @@ package edu.ifg.formosa.gerente.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Endereco implements Serializable{
+public class Endereco  extends Cidade implements Serializable{
 	
 	private int idEndereco;
 	private String endereco;
@@ -11,7 +11,7 @@ public class Endereco implements Serializable{
 	private String bairro;
 	private String cep;
 	private String localDoEvento;
-	private Cidade Cidade;
+	
 	
 	
 	public String getEndereco() {
@@ -50,13 +50,7 @@ public class Endereco implements Serializable{
 	public void setLocalDoEvento(String localDoEvento) {
 		this.localDoEvento = localDoEvento;
 	}
-	public Cidade getCidade() {
-		return Cidade;
-	}
-	public void setCidade(Cidade cidade) {
-		Cidade = cidade;
-	}
-	
+
 	
 
 }

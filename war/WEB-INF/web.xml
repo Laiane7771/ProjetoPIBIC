@@ -4,8 +4,6 @@
               http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
-
-  <!-- Servlets -->
   
   <servlet>
     <servlet-name>PrincipalServiceServlet</servlet-name>
@@ -17,12 +15,12 @@
     <url-pattern>/eventif/principalservice</url-pattern>
   </servlet-mapping>
    
-   <servlet>
+  <servlet>
     <servlet-name>GerenteServiceServlet</servlet-name>
     <servlet-class>edu.ifg.formosa.gerente.server.GerenteServiceImpl</servlet-class>
   </servlet>
   
-  <servlet-mapping>
+   <servlet-mapping>
     <servlet-name>GerenteServiceServlet</servlet-name>
     <url-pattern>/gerente/gerenteservice</url-pattern>
   </servlet-mapping> 

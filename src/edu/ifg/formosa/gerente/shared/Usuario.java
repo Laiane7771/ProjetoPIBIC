@@ -3,7 +3,7 @@ package edu.ifg.formosa.gerente.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Usuario implements Serializable{
+public class Usuario extends EnderecoUsuario implements Serializable{
 	
 	private int idUsuario;
 	private String tipoUsuario;
@@ -11,8 +11,8 @@ public class Usuario implements Serializable{
 	private String cpf;
 	private String rg;
 	private String senha;
-	private EnderecoUsuario enderecoUsuario;
-	private ContatoUsuario contatoPessoa;
+	private String telefonePessoa;
+	private String emailPessoa;
 	
 	public int getIdUsuario() {
 		return idUsuario;
@@ -50,18 +50,19 @@ public class Usuario implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public EnderecoUsuario getEnderecoUsuario() {
-		return enderecoUsuario;
+	public String getTelefonePessoa() {
+		return telefonePessoa;
 	}
-	public void setEnderecoUsuario(EnderecoUsuario enderecoUsuario) {
-		this.enderecoUsuario = enderecoUsuario;
+	public void setTelefonePessoa(String telefonePessoa) {
+		this.telefonePessoa = telefonePessoa;
 	}
-	public ContatoUsuario getContatoPessoa() {
-		return contatoPessoa;
+	public String getEmailPessoa() {
+		return emailPessoa;
 	}
-	public void setContatoPessoa(ContatoUsuario contatoPessoa) {
-		this.contatoPessoa = contatoPessoa;
+	public void setEmailPessoa(String emailPessoa) {
+		this.emailPessoa = emailPessoa;
 	}
+	
 	
 	
 }

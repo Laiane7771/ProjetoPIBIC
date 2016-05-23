@@ -8,7 +8,7 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 		try {
 			return DriverManager.getConnection(
-					"jdbc:mariadb://localhost:3306/Eventif", "root","novosemestre");
+					"jdbc:mariadb://localhost:3306/EventifII", "root","novosemestre");
 		} catch (Exception e) {
 			throw new RuntimeException("falha ao tentar acessar o BD. Verifique sua conexão: " + e.getMessage());
 		}

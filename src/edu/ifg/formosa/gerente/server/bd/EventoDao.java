@@ -36,11 +36,7 @@ public class EventoDao {
 			stmt.setString(3,evento.getOrganizador());
 			stmt.setString(4, evento.getTelefoneContato());
 			stmt.setString(5, evento.getEmailContato());
-			/*stmt.setDate(6, new Date(
-					evento.getDataInicio().getTimeInMillis()));
-			stmt.setDate(7, new Date(
-					evento.getDataEncerra().getTimeInMillis()));
-			stmt.setInt(8, idEndereco);*/
+			
 
 			stmt.executeUpdate();
 
@@ -85,16 +81,9 @@ public class EventoDao {
 	             evento.getEndereco().setBairro(rs.getString("bairro"));
 	             evento.getEndereco().setCep(rs.getString("cep"));
 	             evento.getEndereco().setNumero(rs.getString("numero"));
-	             evento.getEndereco().getCidade().setNomeCidade(rs.getString("nomeCidade"));
-	             evento.getEndereco().getCidade().getEstado().setNomeEstado(rs.getString("nomeEstado"));
-	            
-	            /* Calendar data = Calendar.getInstance();
-	             data.setTime(rs.getDate("dataInicio"));
-	             evento.setDataInicio(data);
-	             
-	             Calendar data1 = Calendar.getInstance();
-	             data1.setTime(rs.getDate("dataEncerra"));
-	             evento.setDataEncerra(data1);*/
+	             evento.getEndereco().setNomeCidade(rs.getString("nomeCidade"));
+	             evento.getEndereco().setNomeEstado(rs.getString("nomeEstado"));
+	           
 	            
 	         }
 	         rs.close();
@@ -214,16 +203,16 @@ public class EventoDao {
 			
 			con = new ConnectionFactory().getConnection();
 			PreparedStatement stmt = con.prepareStatement(sql);
-			stmt.setString(1, endereco.getCidade().getEstado().getNomeEstado());
-			stmt.setInt(2, endereco.getCidade().getEstado().getIdEstado());
+			stmt.setString(1, endereco.getNomeEstado());
+			stmt.setInt(2, endereco.getIdEstado());
 			
 			stmt.executeUpdate();
 			
 			
 			String sql1 = "Update Cidade set nomeCidade=? where idCidade = ?";
 			stmt = con.prepareStatement(sql1);
-			stmt.setString(1, endereco.getCidade().getNomeCidade());
-			stmt.setInt(2,endereco.getCidade().getIdCidade());
+			stmt.setString(1, endereco.getNomeCidade());
+			stmt.setInt(2,endereco.getIdCidade());
 			stmt.executeUpdate();
 			
 			

@@ -11,7 +11,7 @@ import edu.ifg.formosa.gerente.shared.Gerente;
 
 public class GerenteDao {
 
-	public ArrayList<String> buscaNomeGerente(Gerente idGerente) throws SQLException{
+	public static ArrayList<String> buscaNomeGerente(Gerente idGerente) throws SQLException{
 		ArrayList<String> nomeDeGerente = new ArrayList<String>();
 		try{
 
@@ -23,10 +23,9 @@ public class GerenteDao {
 			while (rs.next()) {
 
 				Gerente gerente = new Gerente();
-				gerente = null;
-				gerente.getUsuario().setNome(rs.getString("nomePessoa"));
-				gerente.getUsuario().setIdUsuario(rs.getInt("idUsuario"));
-				nomeDeGerente.add(gerente.getUsuario().getNome());
+				gerente.setNome(rs.getString("nomePessoa"));
+				gerente.setIdUsuario(rs.getInt("idUsuario"));
+				nomeDeGerente.add(gerente.getNome());
 				
 			}
 			rs.close();
@@ -38,4 +37,5 @@ public class GerenteDao {
 		return null;
 	}
 
+	
 }

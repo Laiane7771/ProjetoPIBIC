@@ -3,21 +3,21 @@ package edu.ifg.formosa.gerente.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class EnderecoUsuario implements Serializable{
+public class EnderecoUsuario extends Cidade implements Serializable{
 	
 	private int idEnderecoPessoa; 
 	private String numero;
 	private String bairro;
 	private String cep;
-	private Cidade cidade;
-	private Estado estado;
+	private String endereco;
 	
 	
-	public Estado getEstado() {
-		return estado;
+	
+	public String getEndereco() {
+		return endereco;
 	}
-	public void setEstado(Estado estado) {
-		this.estado = estado;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 	public int getIdEnderecoPessoa() {
 		return idEnderecoPessoa;
@@ -43,14 +43,5 @@ public class EnderecoUsuario implements Serializable{
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	public Cidade getCidade() {
-		return cidade;
-	}
-	public void setCidade(Cidade cidade) {
-		this.cidade = cidade;
-	}
-	
-	
-	
 
 }
