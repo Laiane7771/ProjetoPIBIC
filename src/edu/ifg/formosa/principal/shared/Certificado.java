@@ -7,7 +7,7 @@ public class Certificado implements Serializable{
 	
 	private int idCodigoCertificado;
 	private Participante idParticipante;
-	private Atividade idAtividade;
+	private Atividade atividade;
 	
 	
 	public int getIdCodigoCertificado() {
@@ -22,12 +22,13 @@ public class Certificado implements Serializable{
 	public void setIdParticipante(Participante idParticipante) {
 		this.idParticipante = idParticipante;
 	}
-	public Atividade getIdAtividade() {
-		return idAtividade;
+	public Atividade getAtividade() {
+		return atividade;
 	}
-	public void setIdAtividade(Atividade idAtividade) {
-		this.idAtividade = idAtividade;
+	public void setAtividade(Atividade atividade) {
+		this.atividade = atividade;
 	}
+	
 	
 	
 

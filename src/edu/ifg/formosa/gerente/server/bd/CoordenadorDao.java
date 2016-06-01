@@ -6,10 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import edu.ifg.formosa.gerente.shared.Coordenador;
 import edu.ifg.formosa.gerente.shared.Evento;
-import edu.ifg.formosa.gerente.shared.Usuario;
+
 
 
 public class CoordenadorDao {
@@ -110,6 +109,7 @@ public class CoordenadorDao {
 			stmt.setInt(2,idPessoa);
 
 			stmt.executeUpdate();
+			System.out.println("Query executada com sucesso");
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -122,10 +122,10 @@ public class CoordenadorDao {
 			}
 		}
 	}
-	public ArrayList<ArrayList<String>> buscaCoordenadoresdeEventoPorNome(Coordenador coordenador){
+	public static ArrayList<Coordenador> buscaCoordenadoresdeEventoPorNome(Coordenador coordenador){
 
 		try {
-			ArrayList<ArrayList<String>> coordenadores = new ArrayList<ArrayList<String>>();
+			ArrayList<Coordenador> coordenadores = new ArrayList<Coordenador>();
 			PreparedStatement stmt = new ConnectionFactory().getConnection().
 					prepareStatement("SELECT usuario.idusuario, usuario.nomePessoa, coordenador.idCoordenador,"
 							+ "coordenador.matriculasiape, evento.nomeEvento FROM usuario"
@@ -137,7 +137,7 @@ public class CoordenadorDao {
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				// criando o objeto Contato
+				
 				Evento evento = new Evento();
 				Coordenador coor = new Coordenador();
 				coor.setIdCoordenador(rs.getInt("idCoordenador"));
@@ -145,13 +145,7 @@ public class CoordenadorDao {
 				coor.setMatriculaSiape(rs.getString("matriculaSiape"));
 				evento.setNomeEvento(rs.getString("nomeEvento"));
 
-				ArrayList<String> colunas = new ArrayList<String>();
-				colunas.add(""+coordenador.getIdCoordenador());
-				colunas.add(coordenador.getNome());
-				colunas.add(coordenador.getMatriculaSiape());
-				colunas.add(evento.getNomeEvento());
-
-				coordenadores.add(colunas);
+				coordenadores.add(coor);
 			}
 			rs.close();
 			stmt.close();
@@ -160,5 +154,66 @@ public class CoordenadorDao {
 			throw new RuntimeException(e);
 		}
 	}
+	public static ArrayList<Coordenador> buscaCoordenadoresdeEvento(){
+
+		try {
+			ArrayList<Coordenador> coordenadores = new ArrayList<Coordenador>();
+			PreparedStatement stmt = new ConnectionFactory().getConnection().
+					prepareStatement("SELECT usuario.idusuario, usuario.nomePessoa, coordenador.idCoordenador,"
+							+ "coordenador.matriculasiape FROM usuario"
+							+ "INNER JOIN coordenador ON coordenador.idusuario = usuario.idUsuario"
+							+ "INNER JOIN coordenaEvento ON coordenador.idCoordenador = coordenaEvento.idCoordenador");
+
+
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				
+				Coordenador coor = new Coordenador();
+				coor.setIdCoordenador(rs.getInt("idCoordenador"));
+				coor.setNome(rs.getString("nomePessoa"));
+				coor.setMatriculaSiape(rs.getString("matriculaSiape"));
+				
+				/*
+				coordenadores.add(coor.getIdCoordenador());
+				coordenadores.add(coor.getNome());
+				coordenadores.add(coor.getMatriculaSiape());*/
+				
+
+				
+			}
+			rs.close();
+			stmt.close();
+			return coordenadores;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public static boolean alteraCoordenador(){
+		
+		return true;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

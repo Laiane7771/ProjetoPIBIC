@@ -18,7 +18,7 @@ import edu.ifg.formosa.gerente.shared.Evento;
 
 public class EventoDao {
 
-	public int insira(Evento evento){
+	public static int insira(Evento evento){
 
 		EnderecoDao eDAO = new EnderecoDao();
 		int idEndereco = eDAO.inserir(evento.getEndereco());
@@ -60,7 +60,7 @@ public class EventoDao {
 		return idEvento;
 	}
 	
-	public Evento buscaEvento(Evento e){
+	public static Evento buscaEvento(Evento e){
 		System.out.println(e.getIdEvento());
 		 Evento evento = new Evento();
 		try {
@@ -70,7 +70,7 @@ public class EventoDao {
 	         ResultSet rs = stmt.executeQuery();
 	 
 	         if (rs.next()) {
-	             // criando o objeto Contato
+	            
 	            
 	             evento.setIdEvento(rs.getInt("idEvento"));
 	             evento.setNomeEvento(rs.getString("nomeEvento"));
@@ -128,73 +128,7 @@ public class EventoDao {
 		}
 	}
 
-	public ArrayList<ArrayList<String>> buscaEventoNome(Evento event){
-		try{
-			ArrayList<ArrayList<String>> eventos = new ArrayList<ArrayList<String>>();
-			PreparedStatement stmt = new ConnectionFactory().getConnection().
-					prepareStatement("Select idEvento, nomeEvento, organizador, descricao, dataInicio from evento " +
-							"where nomeEvento like '%"+event.getNomeEvento()+"%'");
 
-			ResultSet rs = stmt.executeQuery();
-
-			while(rs.next()){
-				//criando o objeto Evento
-				Evento evento =  new Evento();
-
-				evento.setIdEvento(rs.getInt("idEvento"));
-				evento.setNomeEvento(rs.getString("nomeEvento"));
-				evento.setOrganizador(rs.getString("organizador"));
-				evento.setDescricao(rs.getString("descricao"));
-				// montando a data através do Calendar
-				/*Calendar data = Calendar.getInstance();
-				data.setTime(rs.getDate("dataInicio"));
-				evento.setDataInicio(data);*/
-
-				ArrayList<String> colunas = new ArrayList<String>();
-				colunas.add(""+evento.getIdEvento());
-				colunas.add(evento.getNomeEvento());
-				colunas.add(evento.getOrganizador());
-				colunas.add(evento.getDescricao());
-				/*SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-				colunas.add(sdf.format(evento.getDataInicio().getTime()));*/
-
-				eventos.add(colunas);
-			}
-			rs.close();
-			stmt.close();
-			return eventos;
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	public void altera(Evento evento) {
-		String sql = "update evento set nomeevento= ?, descricao = ?, organizador = ?, telefone = ?, email = ?, datainicio=?, dataencerra=?" +
-				"  where idevento = ?";
-
-		try {
-			PreparedStatement stmt = new ConnectionFactory().getConnection().prepareStatement(sql);
-			stmt.setString(1, evento.getNomeEvento());
-			stmt.setString(2, evento.getDescricao());
-			stmt.setString(3, evento.getOrganizador());
-			stmt.setString(4, evento.getTelefoneContato());
-			stmt.setString(5, evento.getEmailContato());
-			
-			/*stmt.setDate(6, new Date(evento.getDataInicio()
-					.getTimeInMillis()));
-			stmt.setDate(7, new Date(evento.getDataEncerra()
-					.getTimeInMillis()));*/
-					
-			stmt.setInt(8, evento.getIdEvento());
-			//System.out.println(stmt.toString());
-
-			stmt.executeUpdate();
-			stmt.close();
-		} catch (SQLException e) {
-			System.out.println("Evento: " +e.getMessage());
-			throw new RuntimeException(e);
-		}
-	}
 	public void alteraEndereco(Endereco endereco){
 		Connection con = null;
 		

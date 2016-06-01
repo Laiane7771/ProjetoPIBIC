@@ -1,10 +1,9 @@
 package edu.ifg.formosa.principal.client.presenter;
 
-import com.google.apphosting.client.serviceapp.RpcService;
+
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.HasWidgets;
-
 import edu.ifg.formosa.principal.client.PrincipalServiceAsync;
 import edu.ifg.formosa.principal.client.view.EscolhaModuloView;
 import edu.ifg.formosa.principal.client.view.LoginCoordenadorView;
@@ -73,7 +72,7 @@ public class EscolhaModuloPresenter implements Presenter{
 	}
 
 	public void go(HasWidgets container,HasWidgets containerDois ) {
-		bind();
+		//bind();
 	}
 	
 	

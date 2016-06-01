@@ -19,8 +19,8 @@ public class LoginGerenteView extends DialogBox{
 	private HorizontalPanel hpAreaBotoes;
 	private TextBox tbNome;
 	private PasswordTextBox tbSenha;
-	private Button btnLogin;
 	private Button btnVoltar;
+	private Button btnLogin;
 	private Button btnFecharLogin;
 	private Image iLogoemLogin;
 	private Label lbLoginemLogin;
@@ -61,19 +61,19 @@ public class LoginGerenteView extends DialogBox{
 		vpAreaLogin.add(hpAreaBotoes);
 		vpAreaLogin.setCellWidth(hpAreaBotoes, "20%");
 		
-		btnLogin = new Button("Login");
-		btnLogin.setStyleName("btnLogin");
-		
 		btnVoltar = new Button("Voltar");
-		btnVoltar.setStyleName("btnVoltar");
+		btnVoltar.setStyleName("btnLogin");
+		
+		btnLogin = new Button("Login");
+		btnLogin.setStyleName("btnVoltar");
 		
 		btnFecharLogin = new Button("x");
 		btnFecharLogin.setStyleName("btnFecharLogin");
 		
 		
-		hpAreaBotoes.add(btnLogin);
-		hpAreaBotoes.setCellWidth(btnLogin, "5%");
 		hpAreaBotoes.add(btnVoltar);
+		hpAreaBotoes.setCellWidth(btnVoltar, "5%");
+		hpAreaBotoes.add(btnLogin);
 		
 		vpAreaFoto = new VerticalPanel();
 		vpAreaFoto.setStyleName("vpAreaFoto");
@@ -163,11 +163,11 @@ public class LoginGerenteView extends DialogBox{
 	}
 
 	public Button getBtnLogin() {
-		return btnLogin;
+		return btnVoltar;
 	}
 
 	public void setBtnLogin(Button btnLogin) {
-		this.btnLogin = btnLogin;
+		this.btnVoltar = btnLogin;
 	}
 
 	public Button getBtnVoltar() {

@@ -1,0 +1,17 @@
+@FinalFields, false
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+edu.ifg.formosa.principal.client.PrincipalService, false, false, false, false, _, 3225420729
+edu.ifg.formosa.principal.shared.Cidade, true, false, true, false, edu.ifg.formosa.principal.shared.Cidade/495951581, 495951581
+edu.ifg.formosa.principal.shared.Endereco, true, true, true, true, edu.ifg.formosa.principal.shared.Endereco/2771363577, 2771363577
+edu.ifg.formosa.principal.shared.EnderecoUsuario, true, false, true, false, edu.ifg.formosa.principal.shared.EnderecoUsuario/580873843, 580873843
+edu.ifg.formosa.principal.shared.Estado, true, false, true, false, edu.ifg.formosa.principal.shared.Estado/2967793875, 2967793875
+edu.ifg.formosa.principal.shared.Evento, true, true, true, true, edu.ifg.formosa.principal.shared.Evento/2598531178, 2598531178
+edu.ifg.formosa.principal.shared.Gerente, true, true, true, true, edu.ifg.formosa.principal.shared.Gerente/4157315362, 4157315362
+edu.ifg.formosa.principal.shared.Usuario, true, false, true, false, edu.ifg.formosa.principal.shared.Usuario/442162895, 442162895
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.util.ArrayList, true, true, false, false, java.util.ArrayList/4159755760, 4159755760

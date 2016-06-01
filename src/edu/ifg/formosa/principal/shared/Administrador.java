@@ -3,10 +3,9 @@ package edu.ifg.formosa.principal.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Administrador implements Serializable{
+public class Administrador extends Usuario implements Serializable{
 	
 	private int idAdministrador;
-	private Usuario idUsuario;
 	private String matriculaSiape;
 	
 	
@@ -16,12 +15,7 @@ public class Administrador implements Serializable{
 	public void setIdAdministrador(int idAdministrador) {
 		this.idAdministrador = idAdministrador;
 	}
-	public Usuario getIdUsuario() {
-		return idUsuario;
-	}
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
-	}
+	
 	public String getMatriculaSiape() {
 		return matriculaSiape;
 	}

@@ -8,7 +8,7 @@ public class Campus implements Serializable {
 	private int idCampus;
 	private String nomeCampus;
 	private Endereco idEndereco;
-	private Gerente idGerente;
+	private Gerente gerente;
 	
 	
 	public int getIdCampus() {
@@ -29,11 +29,11 @@ public class Campus implements Serializable {
 	public void setIdEndereco(Endereco idEndereco) {
 		this.idEndereco = idEndereco;
 	}
-	public Gerente getIdGerente() {
-		return idGerente;
+	public Gerente getGerente() {
+		return gerente;
 	}
-	public void setIdGerente(Gerente idGerente) {
-		this.idGerente = idGerente;
+	public void setGerente(Gerente gerente) {
+		this.gerente = gerente;
 	}
 	
 	

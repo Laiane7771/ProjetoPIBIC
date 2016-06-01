@@ -1,8 +1,9 @@
 package edu.ifg.formosa.gerente.server.bd;
 
+
 import java.sql.SQLException;
 
-
+import edu.ifg.formosa.gerente.shared.Coordenador;
 import edu.ifg.formosa.gerente.shared.Gerente;
 
 
@@ -21,16 +22,17 @@ public class TesteDao {
 		coordenador.setTelefonePessoa("996666-44");
 		coordenador.setEmailPessoa("ricardolaiane8@gmail.com");
 		
-		coordenador.setNome("Laiane Ricardo");
+		coordenador.setNome("Ricardo Dias");
 		coordenador.setCpf("05210945189");
 		coordenador.setRg("5987267");
 		coordenador.setSenha("1234");
 		coordenador.setMatriculaSiape("20141070130020");
-		*/
-		Gerente gerente = new Gerente();
-		gerente.setNome("Laiane Ricardo");
-		GerenteDao.buscaNomeGerente(gerente);
 		
+		CoordenadorDao.inserir(coordenador);*/
+		
+		/*Gerente gerente = new Gerente();
+		gerente.setIdUsuario(7);
+		System.out.println(GerenteDao.buscaNomeGerente(gerente));*/
 	}
 		
 }

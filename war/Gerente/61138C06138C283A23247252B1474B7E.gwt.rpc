@@ -1,0 +1,21 @@
+@FinalFields, false
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+edu.ifg.formosa.gerente.client.GerenteService, false, false, false, false, _, 131528041
+edu.ifg.formosa.gerente.shared.Administrador, true, true, true, true, edu.ifg.formosa.gerente.shared.Administrador/2301389439, 2301389439
+edu.ifg.formosa.gerente.shared.Cidade, true, false, true, false, edu.ifg.formosa.gerente.shared.Cidade/2880568674, 2880568674
+edu.ifg.formosa.gerente.shared.Coordenador, true, true, true, true, edu.ifg.formosa.gerente.shared.Coordenador/3935653334, 3935653334
+edu.ifg.formosa.gerente.shared.Endereco, true, true, true, true, edu.ifg.formosa.gerente.shared.Endereco/1857182137, 1857182137
+edu.ifg.formosa.gerente.shared.EnderecoUsuario, true, false, true, false, edu.ifg.formosa.gerente.shared.EnderecoUsuario/3379331674, 3379331674
+edu.ifg.formosa.gerente.shared.Estado, true, false, true, false, edu.ifg.formosa.gerente.shared.Estado/1825448219, 1825448219
+edu.ifg.formosa.gerente.shared.Evento, true, true, true, true, edu.ifg.formosa.gerente.shared.Evento/3271842270, 3271842270
+edu.ifg.formosa.gerente.shared.Gerente, true, true, true, true, edu.ifg.formosa.gerente.shared.Gerente/2818075364, 2818075364
+edu.ifg.formosa.gerente.shared.Monitor, true, true, true, true, edu.ifg.formosa.gerente.shared.Monitor/3849092530, 3849092530
+edu.ifg.formosa.gerente.shared.Participante, true, true, true, true, edu.ifg.formosa.gerente.shared.Participante/3002941006, 3002941006
+edu.ifg.formosa.gerente.shared.Usuario, true, true, true, true, edu.ifg.formosa.gerente.shared.Usuario/1965645692, 1965645692
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.util.ArrayList, true, true, false, false, java.util.ArrayList/4159755760, 4159755760

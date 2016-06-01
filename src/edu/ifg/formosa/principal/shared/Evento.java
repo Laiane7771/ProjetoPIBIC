@@ -15,8 +15,8 @@ public class Evento implements Serializable {
 	private String emailContato;
 	private String organizador;
 	private String dataHoraCertificado;
-	private Gerente idGerente;
-	private Endereco idEndereco;
+	private Gerente gerente;
+	private Endereco endereco;
 	
 	
 	
@@ -76,20 +76,17 @@ public class Evento implements Serializable {
 	public void setDataHoraCertificado(String dataHoraCertificado) {
 		this.dataHoraCertificado = dataHoraCertificado;
 	}
-	public Gerente getIdGerente() {
-		return idGerente;
+	public Gerente getGerente() {
+		return gerente;
 	}
-	public void setIdGerente(Gerente idGerente) {
-		this.idGerente = idGerente;
+	public void setGerente(Gerente gerente) {
+		this.gerente = gerente;
 	}
-	public Endereco getIdEndereco() {
-		return idEndereco;
+	public Endereco getEndereco() {
+		return endereco;
 	}
-	public void setIdEndereco(Endereco idEndereco) {
-		this.idEndereco = idEndereco;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 	
-	
-	
-
 }

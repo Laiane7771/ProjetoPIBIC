@@ -12,10 +12,12 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 import edu.ifg.formosa.gerente.client.GerenteServiceAsync;
 import edu.ifg.formosa.gerente.client.view.GerentePesquisarCoordenadorView;
 import edu.ifg.formosa.gerente.shared.Coordenador;
+import edu.ifg.formosa.gerente.shared.Evento;
 
 public class GerentePesquisarCoordenadorPresenter implements Presenter{
 
@@ -35,20 +37,10 @@ public class GerentePesquisarCoordenadorPresenter implements Presenter{
 
 	public void bind(){
 
-		ArrayList<Widget> colunas = new ArrayList<Widget>();
-		HTML nomeColuna = new HTML("Nome");
-		HTML evento = new HTML("Evento");
-
-		colunas.add(nomeColuna);
-		colunas.add(evento);
-
-	
-
 		gpcv.getBtnExcluirSelecionados().addClickHandler(new ClickHandler() {
 
 			public void onClick(ClickEvent event) {
-				// TODO Auto-generated method stub
-
+				
 			}
 		});
 
@@ -56,10 +48,11 @@ public class GerentePesquisarCoordenadorPresenter implements Presenter{
 
 			@Override
 			public void onClick(ClickEvent event) {
-				// TODO Auto-generated method stub
+				
 
 			}
 		});
+		
 	}
 
 

@@ -1,8 +1,11 @@
 /*-------------------------------------*/
 /*--Estilos para tela HomeView-------- */
 /*-------------------------------------*/
-
+html{
+	background:white !important;
+}
 body{
+	background: white !important;
 	float: none;
 	margin: 0 !important;
 	width: 100%;
@@ -15,22 +18,72 @@ p{
 	margin-bottom: 129px !important;
 	position: relative !important;
 }
+/*===========================================*/
+/* HomeView=================================*/
+
 .hpCabecalho{
-	position: relative;
+    position: absolute;
     width: 100%;
-    height: 100%;
-	background: #71964B;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-top: 0px !important;
-	clear: both;
-	box-shadow: 0px 3px 0px rgba(40, 2, 0, 0.62);
+    clear: both;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, 0.59);
 }
 
+
+
+.menu-fixo{
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.63);
+    
+}
+.hpTituloComoFunciona{
+	position:relative;
+	width:100%;
+	height:100%;
+	background: white;
+	color: black;
+	
+}
+.hpPainelRotativo{
+	background-image:  url(../Image/foto.jpg);
+	width: 100%;
+	height: 100%;
+}
+.vpPainelCriaEvento{
+    position: relative;
+    width: 33%;
+    height: 100%;
+    margin-top: 62px;
+    margin-bottom: 86px;
+    background: white;
+	
+}
+.vpPainelInscreverEvento{
+	position: relative;
+	width: 33%;
+	height:100%;
+	margin-top: 62px;
+    margin-bottom: 86px;
+	background: white;	
+}
+.vpPainelImprimirCertificado{
+	position: relative;
+	width: 33%;
+	height:100%;
+	margin-top: 62px;
+    margin-bottom: 86px;
+	background: white;
+}
 .lbCertificado{
     position: relative;
     margin-top: 41px;
-    margin-left: 10px;
+    margin-left: 82px;
     float: left;
     cursor: pointer;
     font-size: 1.30em;
@@ -54,7 +107,7 @@ p{
     position: relative;
     width: 134px;
     height: 22px;
-    margin-top: 40px;
+    margin-top: 41px;
     margin-right: 8%;
     float: left;
     cursor: pointer;
@@ -76,7 +129,7 @@ p{
 
 .lbEntrar{
     position: relative;
-    margin-top: 39px;
+    margin-top: 41px;
     margin-left: 14px;
     float: left;
     cursor: pointer;
@@ -93,10 +146,51 @@ p{
 	color:white;
 	animation: text-shadow 1s infinite alternate;
     text-shadow: 0 0 black;
-  
-
 }
 
+.linkPesquisarEvento{
+    position: relative;
+    width: 100%;
+    height: 22px;
+    margin-top: 41px;
+    margin-right: 8%;
+    float: left;
+    cursor: pointer;
+    color: black;
+    font-size: 17px;
+    text-decoration: none !important;
+}
+
+.lbImprimeCertificado{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    width: 97%;
+    color: darkred;
+}
+
+.lbVisualizaEvento{
+	position:relative;
+	margin-top:20px;
+	margin-left:20px;
+	margin-bottom:20px;
+	font-size:18px;
+	color: darkred;
+	text-align:center;
+}
+.lbInscreveEmEvento{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: darkred;
+    width: 106%;
+}
 .iLogo{
 	position:relative;
 	margin-left:127px;
@@ -105,19 +199,40 @@ p{
 	margin-bottom: 10px;
 }
 
-.hpPainelRotativo{
-	background-image:  url(../Image/foto-evento.jpg);
-	width: 100%;
-	height: 100%;
-}
-
 .iFotoPainel{
-	position: relative;
-	margin-top: 214px;
-	margin-left: 20px;
-	margin-bottom: 131px;
+    position: relative;
+    margin-top: 307px;
+    margin-left: 20px;
+    margin-bottom: 180px;
 }
 
+.icriaEvento{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 103px;
+    height: 96px;
+    align-items: center;
+}
+.iImprimeCertificado{
+	position:relative;
+	margin-top:10px;
+	margin-left:10px;
+	margin-bottom:10px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 96px;
+}
+.iInscreverEvento{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 136px;
+    height: 96px;
+
+}
 .hpPainelfoto{
 	width: 60%;
     height: 40%;
@@ -148,9 +263,9 @@ p{
 	margin-top: 10px;
 }
 
-.vpComoFunciona{
-    width: 100%;
-    height: 50%;
+.hpComoFunciona{
+	width: 100%;
+    /* height: 0%; */
     background: rgb(255, 255, 255);
     /* background-image: url(../Image/mini.jpg); */
 	

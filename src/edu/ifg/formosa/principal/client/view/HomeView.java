@@ -3,7 +3,6 @@ package edu.ifg.formosa.principal.client.view;
 
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.CheckBox;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockPanel;
 import com.google.gwt.user.client.ui.HTML;
@@ -22,22 +21,27 @@ public class HomeView extends Composite  {
 	private HorizontalPanel hpPainelFoto;
 	private HorizontalPanel hpPainelLabelPesquisarEvento;
 	private HorizontalPanel hpRodape;
-	private HorizontalPanel hpPainelModuloGerente;
-	private HorizontalPanel hpPainelModuloParticipante;
-	private HorizontalPanel hpPainelModuloCoordenador;
-	private VerticalPanel vpPainelAdicionaCabecalhoeEscolheModulo;
-	private VerticalPanel vpPainelAdicionaBotoesModulos;
-	private VerticalPanel vpComoFunciona;
+	private HorizontalPanel hpComoFunciona;
+	private HorizontalPanel hpTituloComoFunciona;
 	private VerticalPanel vpPesquisarEvento;
+	private VerticalPanel vpPainelCriaEvento;
+	private VerticalPanel vpPainelInscreverEvento;
+	private VerticalPanel vpPainelImprimirCertificado;
 	private VerticalPanel vpPai;
 	private Label lbCertificado;
 	private Label lbEntrar;
 	private Label lbEvento;
 	private Label btnSetaEsq;
 	private Label btnSetaDir;
+	private Label lbImprimeCertificado;
+	private Label lbVisualizaEvento;
+	private Label lbInscreveEmEvento;
 	private Image iLogo;
 	private Image iLogoCentro;
 	private Image iFotoPainel;
+	private Image icriaEvento;
+	private Image iImprimeCertificado;
+	private Image iInscreverEvento;
 	private FlexTableEventIF ftTabelaEvento;
 	private TextBox fieldEvento;
 	private Button btnPesquisar;
@@ -49,12 +53,18 @@ public class HomeView extends Composite  {
 	private HTML texto;
 	private Anchor linkComoFunciona;
 	private Anchor linkComoFunciona2;
+	private Anchor linkPesquisarEvento;
+	private Anchor linkPesquisarEvento2;
 	
 	public HomeView(){
 		
 		//cabeçalho-----------------------------
 		hpCabecalho = new HorizontalPanel();
 		hpCabecalho.setStyleName("hpCabecalho");
+		
+		iLogo = new Image();
+		iLogo.setUrl("../Image/logo.png");
+		iLogo.setStyleName("iLogo");
 		
 		lbCertificado = new Label("Certificado");
 		lbCertificado.setStyleName("lbCertificado");
@@ -65,52 +75,20 @@ public class HomeView extends Composite  {
 		lbEntrar = new Label("Login");
 		lbEntrar.setStyleName("lbEntrar");
 		
-		iLogo = new Image();
-		iLogo.setUrl("../Image/logo.png");
-		iLogo.setStyleName("iLogo");
+		linkPesquisarEvento = new Anchor("Eventos em Andamento", "#pesquisar");
+		linkPesquisarEvento.setStyleName("linkPesquisarEvento");
 		
 		hpCabecalho.add(iLogo);
+		hpCabecalho.setCellWidth(iLogo, "5%");
 		hpCabecalho.add(lbCertificado);
-		hpCabecalho.setCellWidth(lbCertificado, "10%");
+		hpCabecalho.setCellWidth(lbCertificado, "5%");
 		hpCabecalho.add(linkComoFunciona);
 		hpCabecalho.setCellWidth(linkComoFunciona, "5%");
+		hpCabecalho.add(linkPesquisarEvento);
+		hpCabecalho.setCellWidth(linkPesquisarEvento, "10%");
 		hpCabecalho.add(lbEntrar);
-		hpCabecalho.setCellWidth(lbEntrar, "10%");
+		hpCabecalho.setCellWidth(lbEntrar, "20%");
 		//-------------------------fim do cabecalho-------------------------
-		//painel escolhe modulo---------------------------------------------
-		
-		hpPainelModuloGerente = new HorizontalPanel();
-		hpPainelModuloGerente.setStyleName("hpPainelModuloGerente");
-		
-		btnModuloGerente = new Button("Gerente");
-		btnModuloGerente.setStyleName("btnModuloGerente");
-	
-		hpPainelModuloGerente.add(btnModuloGerente); //add itens
- 
-		hpPainelModuloCoordenador = new HorizontalPanel();
-		hpPainelModuloCoordenador.setStyleName("hpPainelModuloCoordenador");
-		
-		btnModuloCoordenador = new Button("Coordenador");
-		btnModuloCoordenador.setStyleName("btnModuloCoordenador");
-		
-		hpPainelModuloCoordenador.add(btnModuloCoordenador); //add itens
-		
-		hpPainelModuloParticipante = new HorizontalPanel();
-		hpPainelModuloParticipante.setStyleName("hpPainelModuloParticipante");
-		
-		btnModuloParticipante = new Button("Participante");
-		btnModuloParticipante.setStyleName("btnModuloParticipante");
-		
-		hpPainelModuloParticipante.add(btnModuloParticipante); //add itens
-		
-		vpPainelAdicionaBotoesModulos  = new VerticalPanel();
-		vpPainelAdicionaBotoesModulos.setStyleName("vpPainelAdicionaBotoesModulos");
-	
-		vpPainelAdicionaCabecalhoeEscolheModulo = new VerticalPanel();
-		vpPainelAdicionaCabecalhoeEscolheModulo.setStyleName("vpPainelAdicionaCabecalhoeEscolheModulo");
-		
-		vpPainelAdicionaCabecalhoeEscolheModulo.add(hpCabecalho);
-		vpPainelAdicionaCabecalhoeEscolheModulo.add(vpPainelAdicionaBotoesModulos);
 		
 		//painel--------------------------------
 		hpPainelRotativo = new HorizontalPanel();
@@ -140,23 +118,75 @@ public class HomeView extends Composite  {
 		hpPainelRotativo.setCellWidth(iFotoPainel, "80%");
 		hpPainelRotativo.add(btnSetaDir);
 		hpPainelRotativo.setCellWidth(btnSetaDir, "10%");
+		//Titulo Como Funciona-------------------------------------
 		
-		//Como Funciona------------------------
-		vpComoFunciona = new VerticalPanel();
-		vpComoFunciona.setStyleName("vpComoFunciona");
-		vpComoFunciona.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
+		hpTituloComoFunciona = new HorizontalPanel();
+		hpTituloComoFunciona.setStyleName("hpTituloComoFunciona");
 		
-		linkComoFunciona2 = new Anchor("Como funciona");
+		linkComoFunciona2 = new Anchor("Com o Eventif você pode...");
 		linkComoFunciona2.setName("comofunciona");
 		linkComoFunciona2.setStyleName("linkComoFunciona2");
 		
-		texto = new HTML(texto());
-		texto.setStyleName("texto");
+		hpTituloComoFunciona.add(linkComoFunciona2);//add item
+		//Como Funciona------------------------
+		hpComoFunciona = new HorizontalPanel();
+		hpComoFunciona.setStyleName("hpComoFunciona");
+		hpComoFunciona.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		
-		vpComoFunciona.add(linkComoFunciona2);
-		vpComoFunciona.setCellHeight(linkComoFunciona2, "20%");
-		vpComoFunciona.setSpacing(10);
-		vpComoFunciona.add(texto);
+		vpPainelCriaEvento = new VerticalPanel();
+		vpPainelCriaEvento.setStyleName("vpPainelCriaEvento");
+		
+		icriaEvento = new Image();
+		icriaEvento.setStyleName("icriaEvento");
+		icriaEvento.setUrl("../Image/VisualizarEventoM.png");
+		
+		lbVisualizaEvento = new Label("Visualizar Eventos que estão em andamento.");
+		lbVisualizaEvento.setStyleName("lbVisualizaEvento");
+		
+		vpPainelCriaEvento.add(icriaEvento);//add item
+		vpPainelCriaEvento.add(lbVisualizaEvento);//add item
+	
+		vpPainelInscreverEvento = new VerticalPanel();
+		vpPainelInscreverEvento.setStyleName("vpPainelInscreverEvento");
+		
+		iInscreverEvento = new Image();
+		iInscreverEvento.setStyleName("iInscreverEvento");
+		iInscreverEvento.setUrl("../Image/InscreverEventoM.png");
+		
+		lbInscreveEmEvento = new Label("Inscrever em Eventos."
+				+ " Todos os participantes poderão criar uma conta"
+				+ " e ter acesso as inscrições de todos os eventos.");
+		
+		lbInscreveEmEvento.setStyleName("lbInscreveEmEvento");
+		
+		vpPainelInscreverEvento.add(iInscreverEvento);//add item
+		vpPainelInscreverEvento.setCellHeight(iInscreverEvento, "50%");
+		vpPainelInscreverEvento.add(lbInscreveEmEvento);//add item
+		vpPainelInscreverEvento.setCellHeight(lbInscreveEmEvento, "50%");
+		
+		vpPainelImprimirCertificado = new VerticalPanel();
+		vpPainelImprimirCertificado.setStyleName("vpPainelImprimirCertificado");
+		
+		iImprimeCertificado = new Image();
+		iImprimeCertificado.setUrl("../Image/ImprimirCertificadoM.png");
+		iImprimeCertificado.setStyleName("iImprimeCertificado");
+		
+		lbImprimeCertificado = new Label("Imprimir Certificado. Todos os certificados agora"
+				+ " são online. Cada um contará com um código de verificação que comprovará sua autenticidade.");
+		lbImprimeCertificado.setStyleName("lbImprimeCertificado");
+		
+		vpPainelImprimirCertificado.add(iImprimeCertificado);//add item
+		vpPainelImprimirCertificado.setCellHeight(iImprimeCertificado, "50%");
+		vpPainelImprimirCertificado.add(lbImprimeCertificado);//add item
+		vpPainelImprimirCertificado.setCellHeight(lbImprimeCertificado, "50%");
+	
+		hpComoFunciona.add(vpPainelCriaEvento);
+		hpComoFunciona.setCellWidth(vpPainelCriaEvento, "30%");
+		hpComoFunciona.add(vpPainelInscreverEvento);
+		hpComoFunciona.setCellWidth(vpPainelInscreverEvento, "30%");
+		hpComoFunciona.add(vpPainelImprimirCertificado);
+		hpComoFunciona.setCellWidth(vpPainelImprimirCertificado, "30%");
+		
 		
 		//pesquisar Evento---------------------
 		vpPesquisarEvento = new VerticalPanel();
@@ -172,7 +202,6 @@ public class HomeView extends Composite  {
 		lbEvento.setStyleName("lbEvento");
 		
 		btnPesquisar = new Button("Pesquisar");
-		//btnPesquisar.setStyleName("btn-success");
 		btnPesquisar.setStyleName("btnPesquisar");
 		
 		hpPainelLabelPesquisarEvento.add(lbEvento);
@@ -206,28 +235,16 @@ public class HomeView extends Composite  {
 		//pai----------------------------------
 		vpPai = new VerticalPanel();
 		vpPai.setStyleName("vpPai");
-		vpPai.add(vpPainelAdicionaCabecalhoeEscolheModulo);
+		vpPai.add(hpCabecalho);
 		vpPai.add(hpPainelRotativo);
-		vpPai.add(vpComoFunciona);
+		vpPai.add(hpTituloComoFunciona);
+		vpPai.add(hpComoFunciona);
 		vpPai.add(vpPesquisarEvento);
 		vpPai.add(hpRodape);
 		initWidget(vpPai);
 
 	}
 
-	private String texto(){
-		return "<p>"
-				+ "O EventIF será uma plataforma que permitirá ao organizador criar de forma automatizada um evento, </br>"
-				+ "o site do evento e suas atividades como minicursos, oficinas e palestras. Os alunos interessados </br>"
-				+ "poderão se inscrever nas atividades através do próprio site do evento previamente criado pela plataforma,</br>"
-				+ "o que trará para o organizador estatísticas de inscritos entre outras informações importantes.</br>"
-				+ "Através do sistema, os organizadores poderão imprimir os crachás dos participantes do evento que </br>"
-				+ "contará com um QRCode de identificação, que pode ser visto como uma espécie código de barras bidimensional.</br>"
-				+ " O aplicativo mobile permitirá ler o QRCode dos crachás para registrar a frequência dos participantes, desta forma, </br>"
-				+ "ao término do evento, o EventIF estará com os certificados prontos e disponíveis online para emissão. </p>";
-		
-	}
-	
 	public HorizontalPanel getHpCabecalho() {
 		return hpCabecalho;
 	}
@@ -244,22 +261,21 @@ public class HomeView extends Composite  {
 		this.hpPainelRotativo = hpPainelRotativo;
 	}
 
-	public VerticalPanel getVpComoFunciona() {
-		return vpComoFunciona;
+	public HorizontalPanel getHpPainelFoto() {
+		return hpPainelFoto;
 	}
 
-	public void setVpComoFunciona(VerticalPanel vpComoFunciona) {
-		this.vpComoFunciona = vpComoFunciona;
+	public void setHpPainelFoto(HorizontalPanel hpPainelFoto) {
+		this.hpPainelFoto = hpPainelFoto;
 	}
 
-	public VerticalPanel getVpPesquisarEvento() {
-		return vpPesquisarEvento;
+	public HorizontalPanel getHpPainelLabelPesquisarEvento() {
+		return hpPainelLabelPesquisarEvento;
 	}
 
-	public void setVpPesquisarEvento(VerticalPanel vpPesquisarEvento) {
-		this.vpPesquisarEvento = vpPesquisarEvento;
+	public void setHpPainelLabelPesquisarEvento(HorizontalPanel hpPainelLabelPesquisarEvento) {
+		this.hpPainelLabelPesquisarEvento = hpPainelLabelPesquisarEvento;
 	}
-
 
 	public HorizontalPanel getHpRodape() {
 		return hpRodape;
@@ -269,6 +285,15 @@ public class HomeView extends Composite  {
 		this.hpRodape = hpRodape;
 	}
 
+
+	public VerticalPanel getVpPesquisarEvento() {
+		return vpPesquisarEvento;
+	}
+
+	public void setVpPesquisarEvento(VerticalPanel vpPesquisarEvento) {
+		this.vpPesquisarEvento = vpPesquisarEvento;
+	}
+
 	public VerticalPanel getVpPai() {
 		return vpPai;
 	}
@@ -276,7 +301,6 @@ public class HomeView extends Composite  {
 	public void setVpPai(VerticalPanel vpPai) {
 		this.vpPai = vpPai;
 	}
-
 
 	public Label getLbCertificado() {
 		return lbCertificado;
@@ -294,6 +318,29 @@ public class HomeView extends Composite  {
 		this.lbEntrar = lbEntrar;
 	}
 
+	public Label getLbEvento() {
+		return lbEvento;
+	}
+
+	public void setLbEvento(Label lbEvento) {
+		this.lbEvento = lbEvento;
+	}
+
+	public Label getBtnSetaEsq() {
+		return btnSetaEsq;
+	}
+
+	public void setBtnSetaEsq(Label btnSetaEsq) {
+		this.btnSetaEsq = btnSetaEsq;
+	}
+
+	public Label getBtnSetaDir() {
+		return btnSetaDir;
+	}
+
+	public void setBtnSetaDir(Label btnSetaDir) {
+		this.btnSetaDir = btnSetaDir;
+	}
 
 	public Image getiLogo() {
 		return iLogo;
@@ -301,15 +348,6 @@ public class HomeView extends Composite  {
 
 	public void setiLogo(Image iLogo) {
 		this.iLogo = iLogo;
-	}
-
-	
-	public Image getiFotoPainel() {
-		return iFotoPainel;
-	}
-
-	public void setiFotoPainel(Image iFotoPainel) {
-		this.iFotoPainel = iFotoPainel;
 	}
 
 	public Image getiLogoCentro() {
@@ -320,6 +358,13 @@ public class HomeView extends Composite  {
 		this.iLogoCentro = iLogoCentro;
 	}
 
+	public Image getiFotoPainel() {
+		return iFotoPainel;
+	}
+
+	public void setiFotoPainel(Image iFotoPainel) {
+		this.iFotoPainel = iFotoPainel;
+	}
 
 	public FlexTableEventIF getFtTabelaEvento() {
 		return ftTabelaEvento;
@@ -329,17 +374,6 @@ public class HomeView extends Composite  {
 		this.ftTabelaEvento = ftTabelaEvento;
 	}
 
-	public HorizontalPanel getVpPainelLabelPesquisarEvento() {
-		return hpPainelLabelPesquisarEvento;
-	}
-
-	public void setVpPainelLabelPesquisarEvento(
-			HorizontalPanel vpPainelLabelPesquisarEvento) {
-		this.hpPainelLabelPesquisarEvento = vpPainelLabelPesquisarEvento;
-	}
-
-	
-
 	public TextBox getFieldEvento() {
 		return fieldEvento;
 	}
@@ -348,61 +382,20 @@ public class HomeView extends Composite  {
 		this.fieldEvento = fieldEvento;
 	}
 
-	
-	public HorizontalPanel getHpPainelLabelPesquisarEvento() {
-		return hpPainelLabelPesquisarEvento;
-	}
-
-	public void setHpPainelLabelPesquisarEvento(HorizontalPanel hpPainelLabelPesquisarEvento) {
-		this.hpPainelLabelPesquisarEvento = hpPainelLabelPesquisarEvento;
-	}
-
-	public HorizontalPanel getHpPainelModuloGerente() {
-		return hpPainelModuloGerente;
-	}
-
-	public void setHpPainelModuloGerente(HorizontalPanel hpPainelModuloGerente) {
-		this.hpPainelModuloGerente = hpPainelModuloGerente;
-	}
-
-	public HorizontalPanel getHpPainelModuloParticipante() {
-		return hpPainelModuloParticipante;
-	}
-
-	public void setHpPainelModuloParticipante(HorizontalPanel hpPainelModuloParticipante) {
-		this.hpPainelModuloParticipante = hpPainelModuloParticipante;
-	}
-
-	public HorizontalPanel getHpPainelModuloCoordenador() {
-		return hpPainelModuloCoordenador;
-	}
-
-	public void setHpPainelModuloCoordenador(HorizontalPanel hpPainelModuloCoordenador) {
-		this.hpPainelModuloCoordenador = hpPainelModuloCoordenador;
-	}
-
-	public VerticalPanel getVpPainelAdicionaCabecalhoeEscolheModulo() {
-		return vpPainelAdicionaCabecalhoeEscolheModulo;
-	}
-
-	public void setVpPainelAdicionaCabecalhoeEscolheModulo(VerticalPanel vpPainelAdicionaCabecalhoeEscolheModulo) {
-		this.vpPainelAdicionaCabecalhoeEscolheModulo = vpPainelAdicionaCabecalhoeEscolheModulo;
-	}
-
-	public VerticalPanel getVpPainelAdicionaBotoesModulos() {
-		return vpPainelAdicionaBotoesModulos;
-	}
-
-	public void setVpPainelAdicionaBotoesModulos(VerticalPanel vpPainelAdicionaBotoesModulos) {
-		this.vpPainelAdicionaBotoesModulos = vpPainelAdicionaBotoesModulos;
-	}
-
 	public Button getBtnPesquisar() {
 		return btnPesquisar;
 	}
 
 	public void setBtnPesquisar(Button btnPesquisar) {
 		this.btnPesquisar = btnPesquisar;
+	}
+
+	public Button getBtnPause() {
+		return btnPause;
+	}
+
+	public void setBtnPause(Button btnPause) {
+		this.btnPause = btnPause;
 	}
 
 	public Button getBtnModuloGerente() {
@@ -429,14 +422,6 @@ public class HomeView extends Composite  {
 		this.btnModuloCoordenador = btnModuloCoordenador;
 	}
 
-	public Button getBtnPause() {
-		return btnPause;
-	}
-
-	public void setBtnPause(Button btnPause) {
-		this.btnPause = btnPause;
-	}
-
 	public Label getLbPesquisaEvento() {
 		return lbPesquisaEvento;
 	}
@@ -453,30 +438,6 @@ public class HomeView extends Composite  {
 		this.texto = texto;
 	}
 
-	public Label getBtnSetaEsq() {
-		return btnSetaEsq;
-	}
-
-	public void setBtnSetaEsq(Label btnSetaEsq) {
-		this.btnSetaEsq = btnSetaEsq;
-	}
-
-	public Label getBtnSetaDir() {
-		return btnSetaDir;
-	}
-
-	public void setBtnSetaDir(Label btnSetaDir) {
-		this.btnSetaDir = btnSetaDir;
-	}
-
-	public Label getLbEvento() {
-		return lbEvento;
-	}
-
-	public void setLbEvento(Label lbEvento) {
-		this.lbEvento = lbEvento;
-	}
-
 	public Anchor getLinkComoFunciona() {
 		return linkComoFunciona;
 	}
@@ -484,8 +445,6 @@ public class HomeView extends Composite  {
 	public void setLinkComoFunciona(Anchor linkComoFunciona) {
 		this.linkComoFunciona = linkComoFunciona;
 	}
-
-	
 
 	public Anchor getLinkComoFunciona2() {
 		return linkComoFunciona2;
@@ -495,14 +454,9 @@ public class HomeView extends Composite  {
 		this.linkComoFunciona2 = linkComoFunciona2;
 	}
 
-	public HorizontalPanel getHpPainelFoto() {
-		return hpPainelFoto;
-	}
-
-	public void setHpPainelFoto(HorizontalPanel hpPainelFoto) {
-		this.hpPainelFoto = hpPainelFoto;
-	}
 	
+	
+
 	
 	
 }

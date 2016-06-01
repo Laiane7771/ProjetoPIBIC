@@ -15,9 +15,16 @@ public class Atividade implements Serializable{
 	private int cargaHoraria;
 	private int vagasDisponíveis;
 	private int numeroVagas;
-	private Evento idEvento;
-	private TipoAtividade idTipoAtividade;
+	private TipoAtividade tipoAtividade;
+	private Evento evento;
 	
+	
+	public Evento getEvento() {
+		return evento;
+	}
+	public void setEvento(Evento evento) {
+		this.evento = evento;
+	}
 	public int getIdAtividade() {
 		return idAtividade;
 	}
@@ -72,17 +79,12 @@ public class Atividade implements Serializable{
 	public void setNumeroVagas(int numeroVagas) {
 		this.numeroVagas = numeroVagas;
 	}
-	public Evento getIdEvento() {
-		return idEvento;
+
+	public TipoAtividade getTipoAtividade() {
+		return tipoAtividade;
 	}
-	public void setIdEvento(Evento idEvento) {
-		this.idEvento = idEvento;
-	}
-	public TipoAtividade getIdTipoAtividade() {
-		return idTipoAtividade;
-	}
-	public void setIdTipoAtividade(TipoAtividade idTipoAtividade) {
-		this.idTipoAtividade = idTipoAtividade;
+	public void setTipoAtividade(TipoAtividade tipoAtividade) {
+		this.tipoAtividade = tipoAtividade;
 	}
 	
 	

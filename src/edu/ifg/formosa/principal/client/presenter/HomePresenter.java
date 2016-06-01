@@ -2,10 +2,7 @@ package edu.ifg.formosa.principal.client.presenter;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Vector;
-
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dev.ModulePanel;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.HandlerManager;
@@ -14,9 +11,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasWidgets;
-import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.Widget;
-
 import edu.ifg.formosa.principal.client.PrincipalServiceAsync;
 import edu.ifg.formosa.principal.client.event.EntrarEvent;
 import edu.ifg.formosa.principal.client.view.EscolhaModuloView;

@@ -17,6 +17,6 @@ public interface GerenteService extends RemoteService{
 	public boolean adicionaCoordenador(Coordenador coordenador);
 	public ArrayList<Evento> buscarEventos(Evento nome);
 	public ArrayList<String> buscaNomeGerente(Gerente id);
-	public ArrayList<Coordenador> buscaCoordenadoresdeEventoPorNome(Coordenador coordenador);
+	public ArrayList<String> buscaCoordenadoresdeEvento();
 
 }

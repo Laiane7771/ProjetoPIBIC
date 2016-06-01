@@ -3,16 +3,16 @@ package edu.ifg.formosa.principal.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Usuario implements Serializable{
+public class Usuario extends EnderecoUsuario implements Serializable{
 	
 	private int idUsuario;
 	private String tipoUsuario;
+	private String nome;
 	private String cpf;
 	private String rg;
 	private String senha;
-	private Endereco idEndereco;
-	private ContatoUsuario idContatoPessoa;
-	
+	private String telefonePessoa;
+	private String emailPessoa;
 	
 	public int getIdUsuario() {
 		return idUsuario;
@@ -25,6 +25,12 @@ public class Usuario implements Serializable{
 	}
 	public void setTipoUsuario(String tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public String getCpf() {
 		return cpf;
@@ -44,21 +50,19 @@ public class Usuario implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public Endereco getIdEndereco() {
-		return idEndereco;
+	public String getTelefonePessoa() {
+		return telefonePessoa;
 	}
-	public void setIdEndereco(Endereco idEndereco) {
-		this.idEndereco = idEndereco;
+	public void setTelefonePessoa(String telefonePessoa) {
+		this.telefonePessoa = telefonePessoa;
 	}
-	public ContatoUsuario getIdContatoPessoa() {
-		return idContatoPessoa;
+	public String getEmailPessoa() {
+		return emailPessoa;
 	}
-	public void setIdContatoPessoa(ContatoUsuario idContatoPessoa) {
-		this.idContatoPessoa = idContatoPessoa;
+	public void setEmailPessoa(String emailPessoa) {
+		this.emailPessoa = emailPessoa;
 	}
 	
 	
 	
-	
-
 }

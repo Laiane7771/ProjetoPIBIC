@@ -3,11 +3,10 @@ package edu.ifg.formosa.principal.shared;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Monitor implements Serializable{
+public class Monitor extends Usuario implements Serializable{
 	
 	private int idMonitor;
 	private String matricula;
-	private Usuario idUsuario;
 	
 	
 	public int getIdMonitor() {
@@ -22,13 +21,6 @@ public class Monitor implements Serializable{
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	public Usuario getIdUsuario() {
-		return idUsuario;
-	}
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
-	}
-	
 
 	
 }

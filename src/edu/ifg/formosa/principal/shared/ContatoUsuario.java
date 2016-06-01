@@ -9,7 +9,6 @@ public class ContatoUsuario implements Serializable{
 	private String telefonePessoa;
 	private String email;
 	
-	
 	public int getIdContatoPessoa() {
 		return idContatoPessoa;
 	}

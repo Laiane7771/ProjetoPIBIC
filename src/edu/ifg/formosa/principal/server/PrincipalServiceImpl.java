@@ -7,7 +7,9 @@ import javax.servlet.http.HttpSession;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import edu.ifg.formosa.principal.client.PrincipalService;
 import edu.ifg.formosa.principal.server.bd.EventoDAO;
+import edu.ifg.formosa.principal.server.bd.GerenteDao;
 import edu.ifg.formosa.principal.shared.Evento;
+import edu.ifg.formosa.principal.shared.Gerente;
 
 @SuppressWarnings("serial")
 public class PrincipalServiceImpl extends RemoteServiceServlet implements
@@ -41,7 +43,11 @@ PrincipalService {
 		this.getThreadLocalRequest().getSession().setAttribute("idEvento", idEvento);
 		return true;
 	}
-	
-	
-	
+
+	@Override
+	public Gerente buscaLogin() {
+		return GerenteDao.buscaLogineSenha();
+		
+	}
+
 }
